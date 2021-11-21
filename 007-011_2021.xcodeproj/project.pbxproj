@@ -13,6 +13,11 @@
 		4DA9A2732748EFFF00070A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2712748EFFF00070A45 /* Main.storyboard */; };
 		4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2742748F00100070A45 /* Assets.xcassets */; };
 		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
+		74057E09274A3FC9004C9231 /* SavedWords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74057E08274A3FC9004C9231 /* SavedWords.storyboard */; };
+		74057E0C274A4306004C9231 /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74057E0B274A4306004C9231 /* PersistableService.swift */; };
+		7444B0CC274A560800296E2F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0CB274A560800296E2F /* NetworkService.swift */; };
+		7444B0CE274A654200296E2F /* SavedWordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0CD274A654200296E2F /* SavedWordsTableViewController.swift */; };
+		7444B0D1274A9FF000296E2F /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0D0274A9FF000296E2F /* Word.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		4DA9A2742748F00100070A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA9A2772748F00100070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		74057E08274A3FC9004C9231 /* SavedWords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedWords.storyboard; sourceTree = "<group>"; };
+		74057E0B274A4306004C9231 /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
+		7444B0CB274A560800296E2F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		7444B0CD274A654200296E2F /* SavedWordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsTableViewController.swift; sourceTree = "<group>"; };
+		7444B0D0274A9FF000296E2F /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,9 @@
 		4DA9A26A2748EFFF00070A45 /* 007-011_2021 */ = {
 			isa = PBXGroup;
 			children = (
+				7444B0CF274A658900296E2F /* Entities */,
+				74057E0A274A42F2004C9231 /* Services */,
+				74057E02274A3F4D004C9231 /* Presentation */,
 				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
 				4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */,
 				4DA9A26F2748EFFF00070A45 /* ViewController.swift */,
@@ -65,6 +78,72 @@
 				4DA9A2792748F00100070A45 /* Info.plist */,
 			);
 			path = "007-011_2021";
+			sourceTree = "<group>";
+		};
+		74057E02274A3F4D004C9231 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				74057E04274A3F6B004C9231 /* SearchWords */,
+				74057E03274A3F5D004C9231 /* SavedWords */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		74057E03274A3F5D004C9231 /* SavedWords */ = {
+			isa = PBXGroup;
+			children = (
+				74057E07274A3FAE004C9231 /* Controller */,
+				74057E06274A3F88004C9231 /* View */,
+				74057E05274A3F82004C9231 /* Model */,
+			);
+			path = SavedWords;
+			sourceTree = "<group>";
+		};
+		74057E04274A3F6B004C9231 /* SearchWords */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SearchWords;
+			sourceTree = "<group>";
+		};
+		74057E05274A3F82004C9231 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		74057E06274A3F88004C9231 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				74057E08274A3FC9004C9231 /* SavedWords.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		74057E07274A3FAE004C9231 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7444B0CD274A654200296E2F /* SavedWordsTableViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		74057E0A274A42F2004C9231 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				74057E0B274A4306004C9231 /* PersistableService.swift */,
+				7444B0CB274A560800296E2F /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		7444B0CF274A658900296E2F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				7444B0D0274A9FF000296E2F /* Word.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,6 +206,7 @@
 			files = (
 				4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */,
 				4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */,
+				74057E09274A3FC9004C9231 /* SavedWords.storyboard in Resources */,
 				4DA9A2732748EFFF00070A45 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -138,9 +218,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7444B0CC274A560800296E2F /* NetworkService.swift in Sources */,
+				7444B0D1274A9FF000296E2F /* Word.swift in Sources */,
 				4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
+				74057E0C274A4306004C9231 /* PersistableService.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
+				7444B0CE274A654200296E2F /* SavedWordsTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
