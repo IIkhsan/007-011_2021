@@ -9,76 +9,70 @@ import UIKit
 
 class WelcomeViewController: UIViewController {
     
-    @IBOutlet var holderView: UIView!
+    // MARK: - IBOutlets
+    @IBOutlet weak var collectionView: UICollectionView!
+    @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var pageControl: UIPageControl!
     
-    let scrollView = UIScrollView()
+    //Properties
+    var slides: [WelcomeSlide] = []
+    
+    var currentPage = 0 {
+        didSet {
+            pageControl.currentPage = currentPage
+            if currentPage == slides.count - 1 {
+                nextButton.setTitle("Get Started", for: .normal)
+            } else {
+                nextButton.setTitle("Next", for: .normal)
+            }
+        }
+    }
     
     // MARK: -  View Life cycle
-    override func viewDidLayoutSubviews() {
-        super.viewDidLayoutSubviews()
-        config()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        slides = [
+            WelcomeSlide(title: "Welcome", description: "Welcome to dictionary app", image: #imageLiteral(resourceName: "welcome_0")),
+            WelcomeSlide(title: "About us", description:  "The dictionary will help you learn new words. Easy to use - effective in learning.", image: #imageLiteral(resourceName: "icons8-literature-64")),
+        ]
+        
+        pageControl.numberOfPages = slides.count
     }
     
-    //Private functions
-    private func config() {
-        
-        scrollView.frame = holderView.bounds
-        holderView.addSubview(scrollView)
-        
-        let titles = ["Welcome", "About app"]
-        
-        for i in 0..<2 {
-            let pageView = UIView(frame: CGRect(x: CGFloat(i) * holderView.frame.size.width, y: 0, width: holderView.frame.size.width, height: holderView.frame.size.height))
-            scrollView.addSubview(pageView)
-            
-            // Title, image, button
-            let label = UILabel(frame: CGRect(x: 10, y: 10, width: pageView.frame.width-20, height: 120))
-            let text = UILabel(frame: CGRect(x: 10, y: 140, width: pageView.frame.width-20, height: pageView.frame.size.height - 205))
-            let imageView = UIImageView(frame: CGRect(x: 10, y: 140, width: pageView.frame.width-20, height: pageView.frame.size.height - 205))
-            let button = UIButton(frame: CGRect(x: 10, y: pageView.frame.size.height-60, width: pageView.frame.width-20, height: 50))
-            
-            label.textAlignment = .center
-            label.font = UIFont(name: "Helvetica-Bold", size: 32)
-            pageView.addSubview(label)
-            label.text = titles[i]
-            label.textColor = .purple
-            
-            if i == 0 {
-                imageView.contentMode = .scaleAspectFit
-                imageView.image = UIImage(named: "welcome_0")
-            }
-            pageView.addSubview(imageView)
-            
-            if i == 1 {
-                text.textAlignment = .center
-                text.font = UIFont(name: "Helvetica", size: 25)
-                pageView.addSubview(label)
-                text.text = "Our dictionary will help you learn new English words. Easy to use - effective in action"
-            }
-            pageView.addSubview(text)
-            
-            button.setTitleColor(.white, for: .normal)
-            button.backgroundColor = .purple
-            button.setTitle("Continue", for: .normal)
-            if i == 1 {
-                button.setTitle("Start", for: .normal)
-            }
-            button.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
-            button.tag = i+1
-            pageView.addSubview(button)
+    //MARK: - IBActions
+    @IBAction func nextButtonClicked(_ sender: UIButton) {
+        if currentPage == slides.count - 1 {
+            let controller = storyboard?.instantiateViewController(identifier: "NavigationController") as! UINavigationController
+            controller.modalPresentationStyle = .fullScreen
+            controller.modalTransitionStyle = .flipHorizontal
+            present(controller, animated: true, completion: nil)
+        } else {
+            currentPage += 1
+            let indexPath = IndexPath(item: currentPage, section: 0)
+            collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         }
-        scrollView.contentSize = CGSize(width: holderView.frame.size.width*3, height: 0)
-        scrollView.isPagingEnabled = true
+    }
+}
+
+//MARK: - WelcomeViewController
+extension WelcomeViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return slides.count
     }
     
-    //objc func
-    @objc func didTapButton(_ button: UIButton) {
-        guard button.tag < 2 else {
-            dismiss(animated: true, completion: nil)
-            return
-        }
-        
-        // scroll to next page
-        scrollView.setContentOffset(CGPoint(x: holderView.frame.size.width * CGFloat(button.tag), y: 0), animated: true)
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WelcomeCollectionViewCell.identifier, for: indexPath) as! WelcomeCollectionViewCell
+        cell.config(slides[indexPath.row])
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width, height: collectionView.frame.height)
+    }
+    
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        let width = scrollView.frame.width
+        currentPage = Int(scrollView.contentOffset.x / width)
     }
 }

@@ -23,6 +23,8 @@
 		D6ADD75C274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD754274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift */; };
 		D6ADD75D274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD755274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift */; };
 		D6ADD764274DAB3200F53FD1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD763274DAB3200F53FD1 /* WelcomeViewController.swift */; };
+		D6ADD76B274E6CD400F53FD1 /* WelcomeSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD76A274E6CD400F53FD1 /* WelcomeSlide.swift */; };
+		D6ADD76D274E6F1400F53FD1 /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD76C274E6F1400F53FD1 /* WelcomeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +46,8 @@
 		D6ADD754274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		D6ADD755274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D6ADD763274DAB3200F53FD1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		D6ADD76A274E6CD400F53FD1 /* WelcomeSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSlide.swift; sourceTree = "<group>"; };
+		D6ADD76C274E6F1400F53FD1 /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +80,8 @@
 		4DA9A26A2748EFFF00070A45 /* 007-011_2021 */ = {
 			isa = PBXGroup;
 			children = (
-				D6ADD75E274D92E400F53FD1 /* Models */,
 				D6ADD769274DBE7300F53FD1 /* UI */,
+				D6ADD75E274D92E400F53FD1 /* Models */,
 				D6ADD768274DBE5600F53FD1 /* Services */,
 				D6ADD767274DBE3600F53FD1 /* Resources */,
 				D6ADD765274DBDFC00F53FD1 /* Presentation */,
@@ -115,6 +119,8 @@
 		D6ADD766274DBE2700F53FD1 /* Welcome */ = {
 			isa = PBXGroup;
 			children = (
+				D6ADD76A274E6CD400F53FD1 /* WelcomeSlide.swift */,
+				D6ADD76C274E6F1400F53FD1 /* WelcomeCollectionViewCell.swift */,
 				D6ADD763274DAB3200F53FD1 /* WelcomeViewController.swift */,
 			);
 			path = Welcome;
@@ -223,10 +229,12 @@
 				D6ADD75B274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift in Sources */,
 				D6ADD758274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift in Sources */,
 				D6ADD75A274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift in Sources */,
+				D6ADD76B274E6CD400F53FD1 /* WelcomeSlide.swift in Sources */,
 				D6ADD75C274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift in Sources */,
 				D6ADD75D274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift in Sources */,
 				D6ADD756274D92C900F53FD1 /* WordEntity+CoreDataClass.swift in Sources */,
 				D6ADD759274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift in Sources */,
+				D6ADD76D274E6F1400F53FD1 /* WelcomeCollectionViewCell.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
 				D6ADD764274DAB3200F53FD1 /* WelcomeViewController.swift in Sources */,
 			);
@@ -371,7 +379,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 939KD425D9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "007-011_2021/Info.plist";
+				INFOPLIST_FILE = "007-011_2021/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -400,7 +408,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 939KD425D9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "007-011_2021/Info.plist";
+				INFOPLIST_FILE = "007-011_2021/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
