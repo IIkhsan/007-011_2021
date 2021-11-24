@@ -19,6 +19,8 @@
 		92C6917B274B7AFA00684757 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C6917A274B7AFA00684757 /* Meaning.swift */; };
 		92C6917F274B7E3F00684757 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C6917E274B7E3F00684757 /* OnboardingViewController.swift */; };
 		92C69181274B7ED300684757 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C69180274B7ED300684757 /* OnboardingView.swift */; };
+		92D1DA1F274E9344000678A0 /* SavedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1DA1E274E9343000678A0 /* SavedWordsViewController.swift */; };
+		92D1DA21274E9B95000678A0 /* SearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92D1DA20274E9B95000678A0 /* SearchingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		92C6917A274B7AFA00684757 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
 		92C6917E274B7E3F00684757 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		92C69180274B7ED300684757 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		92D1DA1E274E9343000678A0 /* SavedWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsViewController.swift; sourceTree = "<group>"; };
+		92D1DA20274E9B95000678A0 /* SearchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +117,8 @@
 			isa = PBXGroup;
 			children = (
 				92C6917E274B7E3F00684757 /* OnboardingViewController.swift */,
+				92D1DA1E274E9343000678A0 /* SavedWordsViewController.swift */,
+				92D1DA20274E9B95000678A0 /* SearchingViewController.swift */,
 			);
 			path = "Controllers ";
 			sourceTree = "<group>";
@@ -191,11 +197,13 @@
 				92C69177274B7ABD00684757 /* Phonetic.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
 				92C69181274B7ED300684757 /* OnboardingView.swift in Sources */,
+				92D1DA21274E9B95000678A0 /* SearchingViewController.swift in Sources */,
 				92C69175274AD2D700684757 /* Word.swift in Sources */,
 				92C69179274B7AE200684757 /* Definition.swift in Sources */,
 				92C69172274ACDEB00684757 /* NetworkService.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
 				92C6917F274B7E3F00684757 /* OnboardingViewController.swift in Sources */,
+				92D1DA1F274E9344000678A0 /* SavedWordsViewController.swift in Sources */,
 				92C6917B274B7AFA00684757 /* Meaning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

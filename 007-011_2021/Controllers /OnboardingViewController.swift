@@ -8,15 +8,20 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-    let networkService: NetworkService = NetworkService()
+//    let networkService: NetworkService = NetworkService()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configure()
+//        configure()
     }
     
-//    private func getWord() {
+    @IBAction func okayButtonAction(_ sender: Any) {
+        let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let viewController = storyboard.instantiateViewController(withIdentifier:  "SavedWordsViewController") as? SavedWordsViewController else { return }
+        navigationController?.pushViewController(viewController, animated: true)
+    }
+    //    private func getWord() {
 //        DispatchQueue.global(qos: .userInitiated).async {
 //            self.networkService.getWord { result in
 //                switch result {
@@ -30,7 +35,7 @@ class OnboardingViewController: UIViewController {
 //        }
 //    }
     
-    private func configure() {
-        guard let onboardingView = view as? OnboardingView else { return }
-    }
+//    private func configure() {
+//        guard let onboardingView = view as? OnboardingView else { return }
+//    }
 }
