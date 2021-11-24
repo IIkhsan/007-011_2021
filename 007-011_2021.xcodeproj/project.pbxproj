@@ -13,6 +13,21 @@
 		4DA9A2732748EFFF00070A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2712748EFFF00070A45 /* Main.storyboard */; };
 		4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2742748F00100070A45 /* Assets.xcassets */; };
 		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
+		A3FA03AB274E976100C7CBC4 /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA03AA274E976100C7CBC4 /* PersistableService.swift */; };
+		A3FA03D4274E9B8400C7CBC4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA03D3274E9B8400C7CBC4 /* NetworkService.swift */; };
+		A3FA0425274EABFF00C7CBC4 /* 007-011_2021.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3FA03D0274E99A100C7CBC4 /* 007-011_2021.xcdatamodeld */; };
+		A3FA0471274EC0B800C7CBC4 /* PhoneticEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA0469274EC0B800C7CBC4 /* PhoneticEntity+CoreDataClass.swift */; };
+		A3FA0472274EC0B800C7CBC4 /* PhoneticEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA046A274EC0B800C7CBC4 /* PhoneticEntity+CoreDataProperties.swift */; };
+		A3FA0473274EC0B800C7CBC4 /* WordEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA046B274EC0B800C7CBC4 /* WordEntity+CoreDataClass.swift */; };
+		A3FA0474274EC0B800C7CBC4 /* WordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA046C274EC0B800C7CBC4 /* WordEntity+CoreDataProperties.swift */; };
+		A3FA0475274EC0B800C7CBC4 /* MeaningEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA046D274EC0B800C7CBC4 /* MeaningEntity+CoreDataClass.swift */; };
+		A3FA0476274EC0B800C7CBC4 /* MeaningEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA046E274EC0B800C7CBC4 /* MeaningEntity+CoreDataProperties.swift */; };
+		A3FA0477274EC0B800C7CBC4 /* DefinitionEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA046F274EC0B800C7CBC4 /* DefinitionEntity+CoreDataClass.swift */; };
+		A3FA0478274EC0B800C7CBC4 /* DefinitionEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA0470274EC0B800C7CBC4 /* DefinitionEntity+CoreDataProperties.swift */; };
+		A3FA047A274EC12400C7CBC4 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA0479274EC12300C7CBC4 /* Definition.swift */; };
+		A3FA047C274EC13700C7CBC4 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA047B274EC13700C7CBC4 /* Word.swift */; };
+		A3FA047E274EC14600C7CBC4 /* Phonetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA047D274EC14600C7CBC4 /* Phonetic.swift */; };
+		A3FA0480274EC15700C7CBC4 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA047F274EC15700C7CBC4 /* Meaning.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +39,21 @@
 		4DA9A2742748F00100070A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA9A2772748F00100070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A3FA03AA274E976100C7CBC4 /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
+		A3FA03D1274E99A100C7CBC4 /* 007-011_2021.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "007-011_2021.xcdatamodel"; sourceTree = "<group>"; };
+		A3FA03D3274E9B8400C7CBC4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		A3FA0469274EC0B800C7CBC4 /* PhoneticEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A3FA046A274EC0B800C7CBC4 /* PhoneticEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A3FA046B274EC0B800C7CBC4 /* WordEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A3FA046C274EC0B800C7CBC4 /* WordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A3FA046D274EC0B800C7CBC4 /* MeaningEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeaningEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A3FA046E274EC0B800C7CBC4 /* MeaningEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeaningEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A3FA046F274EC0B800C7CBC4 /* DefinitionEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		A3FA0470274EC0B800C7CBC4 /* DefinitionEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A3FA0479274EC12300C7CBC4 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		A3FA047B274EC13700C7CBC4 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		A3FA047D274EC14600C7CBC4 /* Phonetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phonetic.swift; sourceTree = "<group>"; };
+		A3FA047F274EC15700C7CBC4 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +86,78 @@
 		4DA9A26A2748EFFF00070A45 /* 007-011_2021 */ = {
 			isa = PBXGroup;
 			children = (
-				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
+				A3FA0456274EBE8200C7CBC4 /* Models */,
+				A3FA03A8274E958D00C7CBC4 /* Services */,
+				A3FA03A7274E958400C7CBC4 /* Resource */,
+				A3FA03A6274E957C00C7CBC4 /* Presentation */,
 				4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */,
-				4DA9A26F2748EFFF00070A45 /* ViewController.swift */,
-				4DA9A2712748EFFF00070A45 /* Main.storyboard */,
-				4DA9A2742748F00100070A45 /* Assets.xcassets */,
-				4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */,
-				4DA9A2792748F00100070A45 /* Info.plist */,
+				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
+				A3FA03D0274E99A100C7CBC4 /* 007-011_2021.xcdatamodeld */,
 			);
 			path = "007-011_2021";
+			sourceTree = "<group>";
+		};
+		A3FA03A6274E957C00C7CBC4 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A2712748EFFF00070A45 /* Main.storyboard */,
+				4DA9A26F2748EFFF00070A45 /* ViewController.swift */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		A3FA03A7274E958400C7CBC4 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A2742748F00100070A45 /* Assets.xcassets */,
+				4DA9A2792748F00100070A45 /* Info.plist */,
+				4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		A3FA03A8274E958D00C7CBC4 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A3FA03AA274E976100C7CBC4 /* PersistableService.swift */,
+				A3FA03D3274E9B8400C7CBC4 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A3FA0456274EBE8200C7CBC4 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A3FA0458274EBE8D00C7CBC4 /* Entities */,
+				A3FA0457274EBE8A00C7CBC4 /* Structs */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A3FA0457274EBE8A00C7CBC4 /* Structs */ = {
+			isa = PBXGroup;
+			children = (
+				A3FA0479274EC12300C7CBC4 /* Definition.swift */,
+				A3FA047B274EC13700C7CBC4 /* Word.swift */,
+				A3FA047D274EC14600C7CBC4 /* Phonetic.swift */,
+				A3FA047F274EC15700C7CBC4 /* Meaning.swift */,
+			);
+			path = Structs;
+			sourceTree = "<group>";
+		};
+		A3FA0458274EBE8D00C7CBC4 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				A3FA0469274EC0B800C7CBC4 /* PhoneticEntity+CoreDataClass.swift */,
+				A3FA046A274EC0B800C7CBC4 /* PhoneticEntity+CoreDataProperties.swift */,
+				A3FA046B274EC0B800C7CBC4 /* WordEntity+CoreDataClass.swift */,
+				A3FA046C274EC0B800C7CBC4 /* WordEntity+CoreDataProperties.swift */,
+				A3FA046D274EC0B800C7CBC4 /* MeaningEntity+CoreDataClass.swift */,
+				A3FA046E274EC0B800C7CBC4 /* MeaningEntity+CoreDataProperties.swift */,
+				A3FA046F274EC0B800C7CBC4 /* DefinitionEntity+CoreDataClass.swift */,
+				A3FA0470274EC0B800C7CBC4 /* DefinitionEntity+CoreDataProperties.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,8 +232,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */,
+				A3FA047C274EC13700C7CBC4 /* Word.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
+				A3FA0474274EC0B800C7CBC4 /* WordEntity+CoreDataProperties.swift in Sources */,
+				A3FA0478274EC0B800C7CBC4 /* DefinitionEntity+CoreDataProperties.swift in Sources */,
+				A3FA03AB274E976100C7CBC4 /* PersistableService.swift in Sources */,
+				A3FA0425274EABFF00C7CBC4 /* 007-011_2021.xcdatamodeld in Sources */,
+				A3FA047E274EC14600C7CBC4 /* Phonetic.swift in Sources */,
+				A3FA0472274EC0B800C7CBC4 /* PhoneticEntity+CoreDataProperties.swift in Sources */,
+				A3FA047A274EC12400C7CBC4 /* Definition.swift in Sources */,
+				A3FA03D4274E9B8400C7CBC4 /* NetworkService.swift in Sources */,
+				A3FA0475274EC0B800C7CBC4 /* MeaningEntity+CoreDataClass.swift in Sources */,
+				A3FA0476274EC0B800C7CBC4 /* MeaningEntity+CoreDataProperties.swift in Sources */,
+				A3FA0477274EC0B800C7CBC4 /* DefinitionEntity+CoreDataClass.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
+				A3FA0473274EC0B800C7CBC4 /* WordEntity+CoreDataClass.swift in Sources */,
+				A3FA0471274EC0B800C7CBC4 /* PhoneticEntity+CoreDataClass.swift in Sources */,
+				A3FA0480274EC15700C7CBC4 /* Meaning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +399,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 939KD425D9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "007-011_2021/Info.plist";
+				INFOPLIST_FILE = "007-011_2021/Resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -319,7 +427,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 939KD425D9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "007-011_2021/Info.plist";
+				INFOPLIST_FILE = "007-011_2021/Resource/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -360,6 +468,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3FA03D0274E99A100C7CBC4 /* 007-011_2021.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3FA03D1274E99A100C7CBC4 /* 007-011_2021.xcdatamodel */,
+			);
+			currentVersion = A3FA03D1274E99A100C7CBC4 /* 007-011_2021.xcdatamodel */;
+			path = "007-011_2021.xcdatamodeld";
+			sourceTree = "<group>";
+			usesTabs = 0;
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4DA9A2602748EFFF00070A45 /* Project object */;
 }
