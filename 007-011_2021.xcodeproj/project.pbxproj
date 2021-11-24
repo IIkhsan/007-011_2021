@@ -12,7 +12,17 @@
 		4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26F2748EFFF00070A45 /* ViewController.swift */; };
 		4DA9A2732748EFFF00070A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2712748EFFF00070A45 /* Main.storyboard */; };
 		4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2742748F00100070A45 /* Assets.xcassets */; };
-		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
+		D6ADD74A274D652C00F53FD1 /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD749274D652C00F53FD1 /* PersistableService.swift */; };
+		D6ADD74D274D6B3400F53FD1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD74B274D6B3400F53FD1 /* Model.xcdatamodeld */; };
+		D6ADD756274D92C900F53FD1 /* WordEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD74E274D92C900F53FD1 /* WordEntity+CoreDataClass.swift */; };
+		D6ADD757274D92C900F53FD1 /* WordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD74F274D92C900F53FD1 /* WordEntity+CoreDataProperties.swift */; };
+		D6ADD758274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD750274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift */; };
+		D6ADD759274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD751274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift */; };
+		D6ADD75A274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD752274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift */; };
+		D6ADD75B274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD753274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift */; };
+		D6ADD75C274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD754274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift */; };
+		D6ADD75D274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD755274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift */; };
+		D6ADD764274DAB3200F53FD1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD763274DAB3200F53FD1 /* WelcomeViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,8 +32,18 @@
 		4DA9A26F2748EFFF00070A45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4DA9A2722748EFFF00070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA9A2742748F00100070A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		4DA9A2772748F00100070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6ADD749274D652C00F53FD1 /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
+		D6ADD74C274D6B3400F53FD1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		D6ADD74E274D92C900F53FD1 /* WordEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D6ADD74F274D92C900F53FD1 /* WordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D6ADD750274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D6ADD751274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D6ADD752274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeaningsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D6ADD753274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeaningsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D6ADD754274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		D6ADD755274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		D6ADD763274DAB3200F53FD1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +76,73 @@
 		4DA9A26A2748EFFF00070A45 /* 007-011_2021 */ = {
 			isa = PBXGroup;
 			children = (
-				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
+				D6ADD75E274D92E400F53FD1 /* Models */,
+				D6ADD769274DBE7300F53FD1 /* UI */,
+				D6ADD768274DBE5600F53FD1 /* Services */,
+				D6ADD767274DBE3600F53FD1 /* Resources */,
+				D6ADD765274DBDFC00F53FD1 /* Presentation */,
+				D6ADD74B274D6B3400F53FD1 /* Model.xcdatamodeld */,
 				4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */,
-				4DA9A26F2748EFFF00070A45 /* ViewController.swift */,
-				4DA9A2712748EFFF00070A45 /* Main.storyboard */,
-				4DA9A2742748F00100070A45 /* Assets.xcassets */,
-				4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */,
-				4DA9A2792748F00100070A45 /* Info.plist */,
+				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
 			);
 			path = "007-011_2021";
+			sourceTree = "<group>";
+		};
+		D6ADD75E274D92E400F53FD1 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D6ADD74E274D92C900F53FD1 /* WordEntity+CoreDataClass.swift */,
+				D6ADD74F274D92C900F53FD1 /* WordEntity+CoreDataProperties.swift */,
+				D6ADD750274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift */,
+				D6ADD751274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift */,
+				D6ADD752274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift */,
+				D6ADD753274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift */,
+				D6ADD754274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift */,
+				D6ADD755274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D6ADD765274DBDFC00F53FD1 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A26F2748EFFF00070A45 /* ViewController.swift */,
+				D6ADD766274DBE2700F53FD1 /* Welcome */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		D6ADD766274DBE2700F53FD1 /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				D6ADD763274DAB3200F53FD1 /* WelcomeViewController.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		D6ADD767274DBE3600F53FD1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A2742748F00100070A45 /* Assets.xcassets */,
+				4DA9A2792748F00100070A45 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D6ADD768274DBE5600F53FD1 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D6ADD749274D652C00F53FD1 /* PersistableService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D6ADD769274DBE7300F53FD1 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A2712748EFFF00070A45 /* Main.storyboard */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,7 +203,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */,
 				4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */,
 				4DA9A2732748EFFF00070A45 /* Main.storyboard in Resources */,
 			);
@@ -140,7 +217,18 @@
 			files = (
 				4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
+				D6ADD757274D92C900F53FD1 /* WordEntity+CoreDataProperties.swift in Sources */,
+				D6ADD74D274D6B3400F53FD1 /* Model.xcdatamodeld in Sources */,
+				D6ADD74A274D652C00F53FD1 /* PersistableService.swift in Sources */,
+				D6ADD75B274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift in Sources */,
+				D6ADD758274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift in Sources */,
+				D6ADD75A274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift in Sources */,
+				D6ADD75C274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift in Sources */,
+				D6ADD75D274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift in Sources */,
+				D6ADD756274D92C900F53FD1 /* WordEntity+CoreDataClass.swift in Sources */,
+				D6ADD759274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
+				D6ADD764274DAB3200F53FD1 /* WelcomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,14 +241,6 @@
 				4DA9A2722748EFFF00070A45 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4DA9A2772748F00100070A45 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -297,6 +377,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -325,6 +406,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,6 +442,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D6ADD74B274D6B3400F53FD1 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D6ADD74C274D6B3400F53FD1 /* Model.xcdatamodel */,
+			);
+			currentVersion = D6ADD74C274D6B3400F53FD1 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4DA9A2602748EFFF00070A45 /* Project object */;
 }
