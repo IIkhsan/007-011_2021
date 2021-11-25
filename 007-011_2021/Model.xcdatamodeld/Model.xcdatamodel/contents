@@ -21,7 +21,7 @@
         <relationship name="phonetics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhoneticsEntity" inverseName="word" inverseEntity="PhoneticsEntity"/>
     </entity>
     <elements>
-        <element name="DefinitionsEntity" positionX="-7.61383056640625" positionY="134.6005249023438" width="128" height="88"/>
+        <element name="DefinitionsEntity" positionX="-7.61383056640625" positionY="134.6005249023438" width="128" height="74"/>
         <element name="MeaningsEntity" positionX="8.61798095703125" positionY="-63.30215454101562" width="128" height="88"/>
         <element name="PhoneticsEntity" positionX="-341.2801513671875" positionY="131.0961608886719" width="128" height="88"/>
         <element name="WordEntity" positionX="-277.1954956054688" positionY="-64.96563720703125" width="128" height="88"/>

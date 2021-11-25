@@ -12,16 +12,14 @@
 		4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26F2748EFFF00070A45 /* ViewController.swift */; };
 		4DA9A2732748EFFF00070A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2712748EFFF00070A45 /* Main.storyboard */; };
 		4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2742748F00100070A45 /* Assets.xcassets */; };
+		D6331E4A274EAE0C002F08D9 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6331E49274EAE0C002F08D9 /* NetworkService.swift */; };
+		D6331E4D274EAE70002F08D9 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6331E4C274EAE70002F08D9 /* Word.swift */; };
+		D6331E4F274EAE7E002F08D9 /* Phonetics.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6331E4E274EAE7E002F08D9 /* Phonetics.swift */; };
+		D6331E51274EAE93002F08D9 /* Meanings.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6331E50274EAE93002F08D9 /* Meanings.swift */; };
+		D6331E53274EAEA1002F08D9 /* Definitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6331E52274EAEA1002F08D9 /* Definitions.swift */; };
+		D6331E55274EBEEA002F08D9 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6331E54274EBEEA002F08D9 /* Interactor.swift */; };
 		D6ADD74A274D652C00F53FD1 /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD749274D652C00F53FD1 /* PersistableService.swift */; };
 		D6ADD74D274D6B3400F53FD1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD74B274D6B3400F53FD1 /* Model.xcdatamodeld */; };
-		D6ADD756274D92C900F53FD1 /* WordEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD74E274D92C900F53FD1 /* WordEntity+CoreDataClass.swift */; };
-		D6ADD757274D92C900F53FD1 /* WordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD74F274D92C900F53FD1 /* WordEntity+CoreDataProperties.swift */; };
-		D6ADD758274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD750274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift */; };
-		D6ADD759274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD751274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift */; };
-		D6ADD75A274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD752274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift */; };
-		D6ADD75B274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD753274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift */; };
-		D6ADD75C274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD754274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift */; };
-		D6ADD75D274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD755274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift */; };
 		D6ADD764274DAB3200F53FD1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD763274DAB3200F53FD1 /* WelcomeViewController.swift */; };
 		D6ADD76B274E6CD400F53FD1 /* WelcomeSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD76A274E6CD400F53FD1 /* WelcomeSlide.swift */; };
 		D6ADD76D274E6F1400F53FD1 /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD76C274E6F1400F53FD1 /* WelcomeCollectionViewCell.swift */; };
@@ -35,16 +33,14 @@
 		4DA9A2722748EFFF00070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA9A2742748F00100070A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D6331E49274EAE0C002F08D9 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		D6331E4C274EAE70002F08D9 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		D6331E4E274EAE7E002F08D9 /* Phonetics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phonetics.swift; sourceTree = "<group>"; };
+		D6331E50274EAE93002F08D9 /* Meanings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meanings.swift; sourceTree = "<group>"; };
+		D6331E52274EAEA1002F08D9 /* Definitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definitions.swift; sourceTree = "<group>"; };
+		D6331E54274EBEEA002F08D9 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		D6ADD749274D652C00F53FD1 /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
 		D6ADD74C274D6B3400F53FD1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
-		D6ADD74E274D92C900F53FD1 /* WordEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D6ADD74F274D92C900F53FD1 /* WordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D6ADD750274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D6ADD751274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D6ADD752274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeaningsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D6ADD753274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeaningsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		D6ADD754274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticsEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
-		D6ADD755274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D6ADD763274DAB3200F53FD1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		D6ADD76A274E6CD400F53FD1 /* WelcomeSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeSlide.swift; sourceTree = "<group>"; };
 		D6ADD76C274E6F1400F53FD1 /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -92,17 +88,21 @@
 			path = "007-011_2021";
 			sourceTree = "<group>";
 		};
+		D6331E4B274EAE4D002F08D9 /* Models Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Models Entity";
+			sourceTree = "<group>";
+		};
 		D6ADD75E274D92E400F53FD1 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				D6ADD74E274D92C900F53FD1 /* WordEntity+CoreDataClass.swift */,
-				D6ADD74F274D92C900F53FD1 /* WordEntity+CoreDataProperties.swift */,
-				D6ADD750274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift */,
-				D6ADD751274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift */,
-				D6ADD752274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift */,
-				D6ADD753274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift */,
-				D6ADD754274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift */,
-				D6ADD755274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift */,
+				D6331E4B274EAE4D002F08D9 /* Models Entity */,
+				D6331E4C274EAE70002F08D9 /* Word.swift */,
+				D6331E4E274EAE7E002F08D9 /* Phonetics.swift */,
+				D6331E50274EAE93002F08D9 /* Meanings.swift */,
+				D6331E52274EAEA1002F08D9 /* Definitions.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -139,6 +139,8 @@
 			isa = PBXGroup;
 			children = (
 				D6ADD749274D652C00F53FD1 /* PersistableService.swift */,
+				D6331E49274EAE0C002F08D9 /* NetworkService.swift */,
+				D6331E54274EBEEA002F08D9 /* Interactor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -223,17 +225,15 @@
 			files = (
 				4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
-				D6ADD757274D92C900F53FD1 /* WordEntity+CoreDataProperties.swift in Sources */,
+				D6331E55274EBEEA002F08D9 /* Interactor.swift in Sources */,
 				D6ADD74D274D6B3400F53FD1 /* Model.xcdatamodeld in Sources */,
 				D6ADD74A274D652C00F53FD1 /* PersistableService.swift in Sources */,
-				D6ADD75B274D92C900F53FD1 /* MeaningsEntity+CoreDataProperties.swift in Sources */,
-				D6ADD758274D92C900F53FD1 /* DefinitionsEntity+CoreDataClass.swift in Sources */,
-				D6ADD75A274D92C900F53FD1 /* MeaningsEntity+CoreDataClass.swift in Sources */,
+				D6331E4A274EAE0C002F08D9 /* NetworkService.swift in Sources */,
+				D6331E53274EAEA1002F08D9 /* Definitions.swift in Sources */,
+				D6331E51274EAE93002F08D9 /* Meanings.swift in Sources */,
+				D6331E4F274EAE7E002F08D9 /* Phonetics.swift in Sources */,
 				D6ADD76B274E6CD400F53FD1 /* WelcomeSlide.swift in Sources */,
-				D6ADD75C274D92C900F53FD1 /* PhoneticsEntity+CoreDataClass.swift in Sources */,
-				D6ADD75D274D92C900F53FD1 /* PhoneticsEntity+CoreDataProperties.swift in Sources */,
-				D6ADD756274D92C900F53FD1 /* WordEntity+CoreDataClass.swift in Sources */,
-				D6ADD759274D92C900F53FD1 /* DefinitionsEntity+CoreDataProperties.swift in Sources */,
+				D6331E4D274EAE70002F08D9 /* Word.swift in Sources */,
 				D6ADD76D274E6F1400F53FD1 /* WelcomeCollectionViewCell.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
 				D6ADD764274DAB3200F53FD1 /* WelcomeViewController.swift in Sources */,
