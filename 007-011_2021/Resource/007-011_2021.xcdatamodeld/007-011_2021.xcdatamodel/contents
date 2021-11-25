@@ -3,22 +3,22 @@
     <entity name="DefinitionEntity" representedClassName=".DefinitionEntity" syncable="YES">
         <attribute name="definition" optional="YES" attributeType="String"/>
         <attribute name="example" optional="YES" attributeType="String"/>
-        <relationship name="meaning" maxCount="1" deletionRule="Nullify" destinationEntity="MeaningEntity" inverseName="definitions" inverseEntity="MeaningEntity"/>
+        <relationship name="meaning" maxCount="1" deletionRule="Cascade" destinationEntity="MeaningEntity" inverseName="definitions" inverseEntity="MeaningEntity"/>
     </entity>
     <entity name="MeaningEntity" representedClassName=".MeaningEntity" syncable="YES">
         <attribute name="partOfSpeach" attributeType="String"/>
-        <relationship name="definitions" toMany="YES" deletionRule="Nullify" destinationEntity="DefinitionEntity" inverseName="meaning" inverseEntity="DefinitionEntity"/>
-        <relationship name="word" maxCount="1" deletionRule="Nullify" destinationEntity="WordEntity" inverseName="meanings" inverseEntity="WordEntity"/>
+        <relationship name="definitions" toMany="YES" deletionRule="Cascade" destinationEntity="DefinitionEntity" inverseName="meaning" inverseEntity="DefinitionEntity"/>
+        <relationship name="word" maxCount="1" deletionRule="Cascade" destinationEntity="WordEntity" inverseName="meanings" inverseEntity="WordEntity"/>
     </entity>
     <entity name="PhoneticEntity" representedClassName=".PhoneticEntity" syncable="YES">
         <attribute name="audio" optional="YES" attributeType="String"/>
         <attribute name="text" attributeType="String"/>
-        <relationship name="word" maxCount="1" deletionRule="Nullify" destinationEntity="WordEntity" inverseName="phonetics" inverseEntity="WordEntity"/>
+        <relationship name="word" maxCount="1" deletionRule="Cascade" destinationEntity="WordEntity" inverseName="phonetics" inverseEntity="WordEntity"/>
     </entity>
     <entity name="WordEntity" representedClassName=".WordEntity" syncable="YES">
         <attribute name="word" attributeType="String"/>
-        <relationship name="meanings" toMany="YES" deletionRule="Nullify" destinationEntity="MeaningEntity" inverseName="word" inverseEntity="MeaningEntity"/>
-        <relationship name="phonetics" toMany="YES" deletionRule="Nullify" destinationEntity="PhoneticEntity" inverseName="word" inverseEntity="PhoneticEntity"/>
+        <relationship name="meanings" toMany="YES" deletionRule="Cascade" destinationEntity="MeaningEntity" inverseName="word" inverseEntity="MeaningEntity"/>
+        <relationship name="phonetics" toMany="YES" deletionRule="Cascade" destinationEntity="PhoneticEntity" inverseName="word" inverseEntity="PhoneticEntity"/>
     </entity>
     <elements>
         <element name="DefinitionEntity" positionX="565.55859375" positionY="174.640625" width="128" height="74"/>
