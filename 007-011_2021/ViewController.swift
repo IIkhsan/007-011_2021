@@ -8,12 +8,33 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        // FIXME: In last time should turn on onboarding view
+        UserDefaults.standard.set(false, forKey: "isOldUser")
     }
+    
+    override func viewDidLayoutSubviews() {
+//        if !Core.shared.isOldUser() {
+//            let onboardingStoryboard = UIStoryboard(name: "Onboarding", bundle: nil)
+//            let viewController = onboardingStoryboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+//            viewController.modalPresentationStyle = .fullScreen
+//            present(viewController, animated: true)
+//        }
+    }
+}
 
-
+class Core{
+    static let shared = Core()
+    
+    func isOldUser() -> Bool {
+        return UserDefaults.standard.bool(forKey: "isOldUser")
+    }
+    
+    func setIsOldUser() {
+        UserDefaults.standard.set(true, forKey: "isOldUser")
+    }
 }
 
