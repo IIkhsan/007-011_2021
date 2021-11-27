@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */; };
 		4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */; };
-		4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26F2748EFFF00070A45 /* ViewController.swift */; };
 		4DA9A2732748EFFF00070A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2712748EFFF00070A45 /* Main.storyboard */; };
 		4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2742748F00100070A45 /* Assets.xcassets */; };
 		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
+		A31AC17D27527E3C00BE8CDD /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31AC17C27527E3C00BE8CDD /* Interactor.swift */; };
+		A36F31AB27512C680083FB28 /* SearchWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A36F31AA27512C680083FB28 /* SearchWordsViewController.swift */; };
 		A3FA03AB274E976100C7CBC4 /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA03AA274E976100C7CBC4 /* PersistableService.swift */; };
 		A3FA03D4274E9B8400C7CBC4 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA03D3274E9B8400C7CBC4 /* NetworkService.swift */; };
 		A3FA0425274EABFF00C7CBC4 /* 007-011_2021.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3FA03D0274E99A100C7CBC4 /* 007-011_2021.xcdatamodeld */; };
@@ -28,17 +29,19 @@
 		A3FA047C274EC13700C7CBC4 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA047B274EC13700C7CBC4 /* Word.swift */; };
 		A3FA047E274EC14600C7CBC4 /* Phonetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA047D274EC14600C7CBC4 /* Phonetic.swift */; };
 		A3FA0480274EC15700C7CBC4 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA047F274EC15700C7CBC4 /* Meaning.swift */; };
+		A3FA0483274EC4EC00C7CBC4 /* SavedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3FA0482274EC4EC00C7CBC4 /* SavedWordsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4DA9A2682748EFFF00070A45 /* 007-011_2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "007-011_2021.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DA9A26F2748EFFF00070A45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4DA9A2722748EFFF00070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA9A2742748F00100070A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA9A2772748F00100070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A31AC17C27527E3C00BE8CDD /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		A36F31AA27512C680083FB28 /* SearchWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWordsViewController.swift; sourceTree = "<group>"; };
 		A3FA03AA274E976100C7CBC4 /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
 		A3FA03D1274E99A100C7CBC4 /* 007-011_2021.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "007-011_2021.xcdatamodel"; sourceTree = "<group>"; };
 		A3FA03D3274E9B8400C7CBC4 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
@@ -54,6 +57,7 @@
 		A3FA047B274EC13700C7CBC4 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		A3FA047D274EC14600C7CBC4 /* Phonetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phonetic.swift; sourceTree = "<group>"; };
 		A3FA047F274EC15700C7CBC4 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
+		A3FA0482274EC4EC00C7CBC4 /* SavedWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +101,20 @@
 			path = "007-011_2021";
 			sourceTree = "<group>";
 		};
+		A36F31AC27512D730083FB28 /* SearchWords */ = {
+			isa = PBXGroup;
+			children = (
+				A36F31AA27512C680083FB28 /* SearchWordsViewController.swift */,
+			);
+			path = SearchWords;
+			sourceTree = "<group>";
+		};
 		A3FA03A6274E957C00C7CBC4 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A36F31AC27512D730083FB28 /* SearchWords */,
+				A3FA0481274EC4AD00C7CBC4 /* SavedWords */,
 				4DA9A2712748EFFF00070A45 /* Main.storyboard */,
-				4DA9A26F2748EFFF00070A45 /* ViewController.swift */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -121,6 +134,7 @@
 			children = (
 				A3FA03AA274E976100C7CBC4 /* PersistableService.swift */,
 				A3FA03D3274E9B8400C7CBC4 /* NetworkService.swift */,
+				A31AC17C27527E3C00BE8CDD /* Interactor.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -158,6 +172,14 @@
 				A3FA0470274EC0B800C7CBC4 /* DefinitionEntity+CoreDataProperties.swift */,
 			);
 			path = Entities;
+			sourceTree = "<group>";
+		};
+		A3FA0481274EC4AD00C7CBC4 /* SavedWords */ = {
+			isa = PBXGroup;
+			children = (
+				A3FA0482274EC4EC00C7CBC4 /* SavedWordsViewController.swift */,
+			);
+			path = SavedWords;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,9 +253,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */,
+				A36F31AB27512C680083FB28 /* SearchWordsViewController.swift in Sources */,
 				A3FA047C274EC13700C7CBC4 /* Word.swift in Sources */,
+				A31AC17D27527E3C00BE8CDD /* Interactor.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
+				A3FA0483274EC4EC00C7CBC4 /* SavedWordsViewController.swift in Sources */,
 				A3FA0474274EC0B800C7CBC4 /* WordEntity+CoreDataProperties.swift in Sources */,
 				A3FA0478274EC0B800C7CBC4 /* DefinitionEntity+CoreDataProperties.swift in Sources */,
 				A3FA03AB274E976100C7CBC4 /* PersistableService.swift in Sources */,
