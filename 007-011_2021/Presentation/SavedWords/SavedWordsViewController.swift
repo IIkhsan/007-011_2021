@@ -15,7 +15,6 @@ class SavedWordsViewController: UIViewController {
     //MARK: - View controller's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    
     }
     
     override func viewDidLayoutSubviews() {

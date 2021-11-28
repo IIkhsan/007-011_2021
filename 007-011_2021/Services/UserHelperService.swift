@@ -9,8 +9,10 @@ import Foundation
 
 class UserHelperService {
     
+    //MARK: - Dependencies
     static let shared = UserHelperService()
     
+    //MARK: - Functions to set new user
     func isNewUser() -> Bool {
         return !UserDefaults.standard.bool(forKey: "isNewUser")
     }
