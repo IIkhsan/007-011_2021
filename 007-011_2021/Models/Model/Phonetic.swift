@@ -8,6 +8,6 @@
 import Foundation
 
 struct Phonetic: Codable {
-    let audio: String?
     let text: String
+    let audio: String?
 }

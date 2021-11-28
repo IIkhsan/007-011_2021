@@ -17,8 +17,8 @@ extension WordEntity {
     }
 
     @NSManaged public var word: String
-    @NSManaged public var meanings: Set<MeaningEntity>
-    @NSManaged public var phonetics: Set<PhoneticEntity>
+    @NSManaged public var meanings: NSSet
+    @NSManaged public var phonetics: NSSet
 
 }
 

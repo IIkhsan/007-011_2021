@@ -17,7 +17,7 @@ extension MeaningEntity {
     }
 
     @NSManaged public var partOfSpeach: String
-    @NSManaged public var definitions: Set<DefinitionEntity>
+    @NSManaged public var definitions: NSSet
     @NSManaged public var word: WordEntity
 
 }

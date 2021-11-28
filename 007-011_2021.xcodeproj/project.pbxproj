@@ -9,10 +9,13 @@
 /* Begin PBXBuildFile section */
 		4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */; };
 		4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */; };
-		4DA9A2702748EFFF00070A45 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26F2748EFFF00070A45 /* MainViewController.swift */; };
+		4DA9A2702748EFFF00070A45 /* SavedWordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26F2748EFFF00070A45 /* SavedWordsViewController.swift */; };
 		4DA9A2732748EFFF00070A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2712748EFFF00070A45 /* Main.storyboard */; };
 		4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2742748F00100070A45 /* Assets.xcassets */; };
 		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
+		A5203D3427527DC5005AA122 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5203D3327527DC5005AA122 /* Interactor.swift */; };
+		A5203D372752904E005AA122 /* SearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5203D362752904E005AA122 /* SearchingViewController.swift */; };
+		A5203D3A27529184005AA122 /* SearchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5203D3927529184005AA122 /* SearchingView.swift */; };
 		A5369638274C473C009F6460 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5369637274C473C009F6460 /* Word.swift */; };
 		A536963A274C475E009F6460 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5369639274C475E009F6460 /* Meaning.swift */; };
 		A536963C274C4776009F6460 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A536963B274C4776009F6460 /* Definition.swift */; };
@@ -25,6 +28,8 @@
 		A536964C274C4963009F6460 /* PhoneticEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5369644274C4963009F6460 /* PhoneticEntity+CoreDataProperties.swift */; };
 		A536964D274C4963009F6460 /* WordEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5369645274C4963009F6460 /* WordEntity+CoreDataClass.swift */; };
 		A536964E274C4963009F6460 /* WordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5369646274C4963009F6460 /* WordEntity+CoreDataProperties.swift */; };
+		A54DC629275010C3007FC755 /* SavedWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54DC628275010C3007FC755 /* SavedWordsView.swift */; };
+		A54DC62B2750110A007FC755 /* SavedWordsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A54DC62A2750110A007FC755 /* SavedWordsTableViewCell.swift */; };
 		A553B9E4274D41E7007C312F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A553B9E3274D41E7007C312F /* NetworkService.swift */; };
 		A5A27A8D2749918E00B3B20E /* 007-011_2021.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A5A27A8B2749918E00B3B20E /* 007-011_2021.xcdatamodeld */; };
 		A5EB07EC274C222A00D1643A /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5EB07EB274C222A00D1643A /* PersistableService.swift */; };
@@ -34,11 +39,14 @@
 		4DA9A2682748EFFF00070A45 /* 007-011_2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "007-011_2021.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DA9A26F2748EFFF00070A45 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4DA9A26F2748EFFF00070A45 /* SavedWordsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsViewController.swift; sourceTree = "<group>"; };
 		4DA9A2722748EFFF00070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA9A2742748F00100070A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA9A2772748F00100070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A5203D3327527DC5005AA122 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		A5203D362752904E005AA122 /* SearchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingViewController.swift; sourceTree = "<group>"; };
+		A5203D3927529184005AA122 /* SearchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingView.swift; sourceTree = "<group>"; };
 		A5369637274C473C009F6460 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		A5369639274C475E009F6460 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
 		A536963B274C4776009F6460 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
@@ -51,6 +59,8 @@
 		A5369644274C4963009F6460 /* PhoneticEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		A5369645274C4963009F6460 /* WordEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
 		A5369646274C4963009F6460 /* WordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		A54DC628275010C3007FC755 /* SavedWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsView.swift; sourceTree = "<group>"; };
+		A54DC62A2750110A007FC755 /* SavedWordsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsTableViewCell.swift; sourceTree = "<group>"; };
 		A553B9E3274D41E7007C312F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		A5A27A8C2749918E00B3B20E /* 007-011_2021.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "007-011_2021.xcdatamodel"; sourceTree = "<group>"; };
 		A5EB07EB274C222A00D1643A /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
@@ -96,6 +106,23 @@
 			path = "007-011_2021";
 			sourceTree = "<group>";
 		};
+		A5203D3527528D50005AA122 /* SearchingPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				A5203D382752916B005AA122 /* View */,
+				A5203D362752904E005AA122 /* SearchingViewController.swift */,
+			);
+			path = SearchingPresentation;
+			sourceTree = "<group>";
+		};
+		A5203D382752916B005AA122 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A5203D3927529184005AA122 /* SearchingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		A5369635274C471A009F6460 /* ModelEntity */ = {
 			isa = PBXGroup;
 			children = (
@@ -125,9 +152,19 @@
 		A54DC606275005AD007FC755 /* MainPresentation */ = {
 			isa = PBXGroup;
 			children = (
-				4DA9A26F2748EFFF00070A45 /* MainViewController.swift */,
+				A54DC627275010AB007FC755 /* View */,
+				4DA9A26F2748EFFF00070A45 /* SavedWordsViewController.swift */,
 			);
 			path = MainPresentation;
+			sourceTree = "<group>";
+		};
+		A54DC627275010AB007FC755 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A54DC628275010C3007FC755 /* SavedWordsView.swift */,
+				A54DC62A2750110A007FC755 /* SavedWordsTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		A553B9E2274D41DD007C312F /* NetworkService */ = {
@@ -141,6 +178,7 @@
 		A5A27A88274965FB00B3B20E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A5203D3527528D50005AA122 /* SearchingPresentation */,
 				A54DC606275005AD007FC755 /* MainPresentation */,
 				4DA9A2712748EFFF00070A45 /* Main.storyboard */,
 			);
@@ -150,6 +188,7 @@
 		A5A27A892749666300B3B20E /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				A5203D3327527DC5005AA122 /* Interactor.swift */,
 				A553B9E2274D41DD007C312F /* NetworkService */,
 				A5EB07EA274C21FB00D1643A /* PersistableService */,
 			);
@@ -257,17 +296,22 @@
 			files = (
 				A5369649274C4963009F6460 /* MeaningEntity+CoreDataClass.swift in Sources */,
 				A5369638274C473C009F6460 /* Word.swift in Sources */,
-				4DA9A2702748EFFF00070A45 /* MainViewController.swift in Sources */,
+				4DA9A2702748EFFF00070A45 /* SavedWordsViewController.swift in Sources */,
+				A5203D372752904E005AA122 /* SearchingViewController.swift in Sources */,
 				A536963C274C4776009F6460 /* Definition.swift in Sources */,
 				A553B9E4274D41E7007C312F /* NetworkService.swift in Sources */,
+				A54DC629275010C3007FC755 /* SavedWordsView.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
 				A5369648274C4963009F6460 /* DefinitionEntity+CoreDataProperties.swift in Sources */,
 				A536964D274C4963009F6460 /* WordEntity+CoreDataClass.swift in Sources */,
 				A536964B274C4963009F6460 /* PhoneticEntity+CoreDataClass.swift in Sources */,
 				A536963A274C475E009F6460 /* Meaning.swift in Sources */,
 				A536964A274C4963009F6460 /* MeaningEntity+CoreDataProperties.swift in Sources */,
+				A5203D3427527DC5005AA122 /* Interactor.swift in Sources */,
 				A536963E274C4785009F6460 /* Phonetic.swift in Sources */,
 				A536964C274C4963009F6460 /* PhoneticEntity+CoreDataProperties.swift in Sources */,
+				A54DC62B2750110A007FC755 /* SavedWordsTableViewCell.swift in Sources */,
+				A5203D3A27529184005AA122 /* SearchingView.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
 				A5369647274C4963009F6460 /* DefinitionEntity+CoreDataClass.swift in Sources */,
 				A5EB07EC274C222A00D1643A /* PersistableService.swift in Sources */,

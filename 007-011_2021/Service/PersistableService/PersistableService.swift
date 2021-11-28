@@ -50,7 +50,7 @@ final class PersistableService {
     
     func addMeaningEntity(meaning: Meaning) -> MeaningEntity {
         let meaningEntity = MeaningEntity(context: viewContext)
-        meaningEntity.partOfSpeach = meaning.partOfSpeach
+        meaningEntity.partOfSpeach = meaning.partOfSpeech
         meaningEntity.definitions = definitionsToSetEntity(definitions: meaning.definitions)
         
         saveContext()
@@ -77,28 +77,29 @@ final class PersistableService {
     
     // MARK: - Transformation to entity
     
-    func meaningsToSetEntity(meanings: [Meaning]) -> Set<MeaningEntity> {
-        var meaningsEntity: Set<MeaningEntity> = []
+    func meaningsToSetEntity(meanings: [Meaning]) -> NSSet {
+        var meaningsEntity: [MeaningEntity] = []
         for meaning in meanings {
-            meaningsEntity.insert(addMeaningEntity(meaning: meaning))
+            meaningsEntity.append(addMeaningEntity(meaning: meaning))
         }
-        return meaningsEntity
+        
+        return NSSet(array: meaningsEntity)
     }
     
-    func phoneticsToSetEntity(phonetics: [Phonetic]) -> Set<PhoneticEntity> {
-        var phoneticsEntity: Set<PhoneticEntity> = []
+    func phoneticsToSetEntity(phonetics: [Phonetic]) -> NSSet {
+        var phoneticsEntity: [PhoneticEntity] = []
         for phonetic in phonetics {
-            phoneticsEntity.insert(addPhoneticEntity(phonetic: phonetic))
+            phoneticsEntity.append(addPhoneticEntity(phonetic: phonetic))
         }
-        return phoneticsEntity
+        return NSSet(array: phoneticsEntity)
     }
     
-    func definitionsToSetEntity(definitions: [Definition]) -> Set<DefinitionEntity> {
-        var definitionsEntity: Set<DefinitionEntity> = []
+    func definitionsToSetEntity(definitions: [Definition]) -> NSSet {
+        var definitionsEntity: [DefinitionEntity] = []
         for definition in definitions {
-            definitionsEntity.insert(addDefinitionEntity(definition: definition))
+            definitionsEntity.append(addDefinitionEntity(definition: definition))
         }
-        return definitionsEntity
+        return NSSet(array: definitionsEntity)
     }
     
     // MARK: - Core data remove entity
@@ -115,5 +116,21 @@ final class PersistableService {
         } catch {
             print(error)
         }
+    }
+    
+    func isTrue(word: Word) -> Bool{
+        let fetchRequest = WordEntity.fetchRequest()
+        fetchRequest.predicate = NSPredicate(format: "word == %@", word.word)
+        do {
+            let wordsEntity = try viewContext.fetch(fetchRequest)
+            if(wordsEntity.isEmpty) {
+                return false
+            } else {
+                return true
+            }
+        } catch {
+            print(error)
+        }
+        return false
     }
 }
