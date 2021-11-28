@@ -15,14 +15,15 @@ class SavedWordsViewController: UIViewController {
     //MARK: - View controller's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        networkService.getWord { result in
-            switch result {
-            case .failure(let error):
-                print(error)
-            case .success(let word):
-                print(word)
-            }
-        }
+    
     }
     
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if UserHelperService.shared.isNewUser() {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "onboarding") as! OnboardingViewController
+            vc.modalPresentationStyle = .fullScreen
+            present(vc, animated: true)
+        }
+    }
 }
