@@ -15,7 +15,14 @@ class SavedWordsTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("---------------------------")
-        print(networkService.getWord(word: "hello"))
+        networkService.fetchWord(word: "hello", completion: { result in
+            switch result {
+            case .failure(let error):
+                print(error)
+            case .success(let word):
+                print(word[0])
+            }
+        })
     }
 
     // MARK: - Table view data source

@@ -19,34 +19,37 @@ class NetworkService {
     }
     
     private init() {
-        
     }
     
-    public func getWord(word: String) -> Result<Word, Error>  {
-        let wordURL = URL(string: resourceURL + word)
-        let session = URLSession(configuration: configuration)
-        guard let wordURL = wordURL else {
-            return Result.failure(NetworkErrors.invalidURL)
+    public func fetchWord(word: String, completion: @escaping(Result<Word, Error>) -> Void)  {
+        let queue = OperationQueue()
+        queue.qualityOfService = .utility
+        queue.addOperation { [weak self] in
+            guard let strongSelf = self else { return }
+            let wordURL = URL(string: strongSelf.resourceURL + word)
+            let session = URLSession(configuration: strongSelf.configuration)
+            guard let wordURL = wordURL else {
+                completion(Result.failure(NetworkErrors.invalidURL))
+                return
+                }
+            session.dataTask(with: wordURL) { data, response, err in
+                if err != nil {
+                    completion(Result.failure(err!))
+                    return
+                }
+                guard let data = data else {
+                    completion(Result.failure(NetworkErrors.unknownError))
+                    return
+                }
+                do {
+                    let word = try JSONDecoder().decode(Word.self, from: data)
+                    completion(Result.success(word))
+                } catch {
+                    completion(Result.failure((error)))
+                    print("cant decode")
+                }
+            }.resume()
         }
-        var result: Result<Word, Error> = Result.failure(NetworkErrors.unknownError)
-        session.dataTask(with: wordURL) { data, response, err in
-            if err != nil {
-                result = Result.failure(err!)
-                return
-            }
-            guard let data = data else {
-                result = Result.failure(NetworkErrors.unknownError)
-                return
-            }
-            do {
-                let word = try JSONDecoder().decode(Word.self, from: data)
-                result = Result.success(word)
-            } catch {
-                result = Result.failure(error)
-                print("cant decode")
-            }
-        }.resume()
-        return result
     }
 }
 
