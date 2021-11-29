@@ -39,7 +39,6 @@ class SearchingViewController: UIViewController {
         operationQueue.addOperation { [weak self] in
             guard let audio = self?.word?.phonetics[0].audio else { return }
             guard let url = URL(string: "https:\(audio)") else { return }
-            try? AVAudioSession.sharedInstance().setCategory(.multiRoute)
             self?.player = AVPlayer(url: URL.init(string: "\(url)")!)
             self?.player?.play()
         }
