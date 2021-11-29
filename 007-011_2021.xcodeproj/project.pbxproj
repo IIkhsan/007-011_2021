@@ -16,6 +16,7 @@
 		A5203D3427527DC5005AA122 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5203D3327527DC5005AA122 /* Interactor.swift */; };
 		A5203D372752904E005AA122 /* SearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5203D362752904E005AA122 /* SearchingViewController.swift */; };
 		A5203D3A27529184005AA122 /* SearchingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5203D3927529184005AA122 /* SearchingView.swift */; };
+		A525BBC9275413D000127E16 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A525BBC8275413D000127E16 /* OnboardingViewController.swift */; };
 		A5369638274C473C009F6460 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5369637274C473C009F6460 /* Word.swift */; };
 		A536963A274C475E009F6460 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5369639274C475E009F6460 /* Meaning.swift */; };
 		A536963C274C4776009F6460 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = A536963B274C4776009F6460 /* Definition.swift */; };
@@ -47,6 +48,7 @@
 		A5203D3327527DC5005AA122 /* Interactor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
 		A5203D362752904E005AA122 /* SearchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingViewController.swift; sourceTree = "<group>"; };
 		A5203D3927529184005AA122 /* SearchingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchingView.swift; sourceTree = "<group>"; };
+		A525BBC8275413D000127E16 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		A5369637274C473C009F6460 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		A5369639274C475E009F6460 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
 		A536963B274C4776009F6460 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
@@ -123,6 +125,14 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		A525BBC7275413A200127E16 /* OnboardingPresentation */ = {
+			isa = PBXGroup;
+			children = (
+				A525BBC8275413D000127E16 /* OnboardingViewController.swift */,
+			);
+			path = OnboardingPresentation;
+			sourceTree = "<group>";
+		};
 		A5369635274C471A009F6460 /* ModelEntity */ = {
 			isa = PBXGroup;
 			children = (
@@ -149,13 +159,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		A54DC606275005AD007FC755 /* MainPresentation */ = {
+		A54DC606275005AD007FC755 /* SavedWordsPresentation */ = {
 			isa = PBXGroup;
 			children = (
 				A54DC627275010AB007FC755 /* View */,
 				4DA9A26F2748EFFF00070A45 /* SavedWordsViewController.swift */,
 			);
-			path = MainPresentation;
+			path = SavedWordsPresentation;
 			sourceTree = "<group>";
 		};
 		A54DC627275010AB007FC755 /* View */ = {
@@ -178,8 +188,9 @@
 		A5A27A88274965FB00B3B20E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				A525BBC7275413A200127E16 /* OnboardingPresentation */,
 				A5203D3527528D50005AA122 /* SearchingPresentation */,
-				A54DC606275005AD007FC755 /* MainPresentation */,
+				A54DC606275005AD007FC755 /* SavedWordsPresentation */,
 				4DA9A2712748EFFF00070A45 /* Main.storyboard */,
 			);
 			path = Presentation;
@@ -313,6 +324,7 @@
 				A54DC62B2750110A007FC755 /* SavedWordsTableViewCell.swift in Sources */,
 				A5203D3A27529184005AA122 /* SearchingView.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
+				A525BBC9275413D000127E16 /* OnboardingViewController.swift in Sources */,
 				A5369647274C4963009F6460 /* DefinitionEntity+CoreDataClass.swift in Sources */,
 				A5EB07EC274C222A00D1643A /* PersistableService.swift in Sources */,
 				A5A27A8D2749918E00B3B20E /* 007-011_2021.xcdatamodeld in Sources */,

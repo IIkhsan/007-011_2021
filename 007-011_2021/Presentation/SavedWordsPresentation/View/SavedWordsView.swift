@@ -8,7 +8,7 @@
 import UIKit
 
 class SavedWordsView: UIView {
-    
+    /// Outlets
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchTextField: UITextField!
 }

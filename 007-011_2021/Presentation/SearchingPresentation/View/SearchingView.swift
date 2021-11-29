@@ -8,6 +8,11 @@
 import UIKit
 
 class SearchingView: UIView {
-    
+    ///Outlets
     @IBOutlet weak var wordLabel: UILabel!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var phoneticLabel: UILabel!
+    @IBOutlet weak var partOfSpeechLabel: UILabel!
+    @IBOutlet weak var exampleLabel: UILabel!
+    @IBOutlet weak var definitionLabel: UILabel!
 }

@@ -15,11 +15,10 @@ extension DefinitionEntity {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<DefinitionEntity> {
         return NSFetchRequest<DefinitionEntity>(entityName: "DefinitionEntity")
     }
-
+    
     @NSManaged public var definition: String?
     @NSManaged public var example: String?
-    @NSManaged public var meaning: MeaningEntity
-
+    @NSManaged public var meaning: MeaningEntity?
 }
 
 extension DefinitionEntity : Identifiable {
