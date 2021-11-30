@@ -1,0 +1,35 @@
+PODS:
+  - AudioKit (5.1.0):
+    - AudioKit/C (= 5.1.0)
+    - AudioKit/Core (= 5.1.0)
+    - AudioKit/Soundpipe (= 5.1.0)
+    - AudioKit/Sporth (= 5.1.0)
+    - AudioKit/STK (= 5.1.0)
+  - AudioKit/C (5.1.0):
+    - AudioKit/Soundpipe
+    - AudioKit/Sporth
+    - AudioKit/STK
+  - AudioKit/Core (5.1.0):
+    - AudioKit/C
+  - AudioKit/Soundpipe (5.1.0)
+  - AudioKit/Sporth (5.1.0):
+    - AudioKit/Soundpipe
+  - AudioKit/STK (5.1.0)
+  - SnapKit (5.0.1)
+
+DEPENDENCIES:
+  - AudioKit
+  - SnapKit
+
+SPEC REPOS:
+  trunk:
+    - AudioKit
+    - SnapKit
+
+SPEC CHECKSUMS:
+  AudioKit: 81246a4ccdd7ca3c6e0076f913070e90987b4369
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+
+PODFILE CHECKSUM: 25039a02e4a41e53de3a0cb45ed006c9cd846005
+
+COCOAPODS: 1.11.2
