@@ -20,7 +20,10 @@ final class NetworkService {
         let operationQueue = OperationQueue()
         operationQueue.addOperation {
             let session = URLSession(configuration: self.configuration)
-            let wordURL = URL(string:"https://api.dictionaryapi.dev/api/v2/entries/en/\(request)")!
+            guard let wordURL = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(request)") else {
+                completion(.failure(NSLocalizedString("Invalid url", comment: "Invalid url") as! Error))
+                return
+            }
             var request = URLRequest(url: wordURL)
             request.cachePolicy = .reloadIgnoringLocalCacheData
             request.httpMethod = "GET"
