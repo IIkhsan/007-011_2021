@@ -22,7 +22,7 @@ final class SavedWordsViewController: UIViewController {
   private var words: [Word] = []
   
   // Dependencies
-  private let interacror: Interactor = InteractorImpl()
+  private let interactor: Interactor = InteractorImpl()
   
   // MARK: - Lifecycle
   override func viewDidLoad() {
@@ -30,7 +30,7 @@ final class SavedWordsViewController: UIViewController {
     addSubviews()
     setConstraints()
     configure()
-    words = interacror.readWords()
+    words = interactor.readWords()
   }
   
   // MARK: - Private
@@ -56,7 +56,7 @@ final class SavedWordsViewController: UIViewController {
   private func deleteWord(indexPath indexpath: IndexPath) -> UIContextualAction {
     let action = UIContextualAction(style: .destructive, title: nil) { [weak self] _, _, _ in
       guard let self = self else { return }
-      self.interacror.deleteWord(self.words[indexpath.row])
+      self.interactor.deleteWord(self.words[indexpath.row])
       self.words.remove(at: indexpath.row)
       self.savedWordsTableView.reloadData()
     }
@@ -98,7 +98,7 @@ extension SavedWordsViewController: UITableViewDataSource, UITableViewDelegate {
 // MARK: - SaveWordDelegate
 extension SavedWordsViewController: SaveWordDelegate {
   func saveWord(_ word: Word) {
-    interacror.saveWord(word)
+    interactor.saveWord(word)
     words.append(word)
     DispatchQueue.main.async {
       self.savedWordsTableView.reloadData()
