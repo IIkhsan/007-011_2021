@@ -10,6 +10,7 @@
 		4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */; };
 		4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2742748F00100070A45 /* Assets.xcassets */; };
 		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
+		D210ED15275673750010F23C /* Crypto in Frameworks */ = {isa = PBXBuildFile; productRef = D210ED14275673750010F23C /* Crypto */; };
 		D2334720274CF702008BB3CE /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D233471F274CF702008BB3CE /* Interactor.swift */; };
 		D2540E30274CE97000454F93 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2540E2F274CE97000454F93 /* Errors.swift */; };
 		D25E825B274E80EF006879C3 /* UIColor+CustomColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D25E825A274E80EE006879C3 /* UIColor+CustomColor.swift */; };
@@ -74,6 +75,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE520325A7610267BCC4289F /* Pods_007_011_2021.framework in Frameworks */,
+				D210ED15275673750010F23C /* Crypto in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,6 +248,9 @@
 			dependencies = (
 			);
 			name = "007-011_2021";
+			packageProductDependencies = (
+				D210ED14275673750010F23C /* Crypto */,
+			);
 			productName = "007-011_2021";
 			productReference = 4DA9A2682748EFFF00070A45 /* 007-011_2021.app */;
 			productType = "com.apple.product-type.application";
@@ -274,6 +279,9 @@
 				Base,
 			);
 			mainGroup = 4DA9A25F2748EFFF00070A45;
+			packageReferences = (
+				D210ED13275673750010F23C /* XCRemoteSwiftPackageReference "swift-crypto" */,
+			);
 			productRefGroup = 4DA9A2692748EFFF00070A45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -578,6 +586,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D210ED13275673750010F23C /* XCRemoteSwiftPackageReference "swift-crypto" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-crypto.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D210ED14275673750010F23C /* Crypto */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D210ED13275673750010F23C /* XCRemoteSwiftPackageReference "swift-crypto" */;
+			productName = Crypto;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D2726B08274ACCB900028B4D /* Model.xcdatamodeld */ = {
