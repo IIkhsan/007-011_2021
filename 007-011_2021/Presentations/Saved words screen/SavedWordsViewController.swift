@@ -9,65 +9,99 @@ import UIKit
 import SnapKit
 
 final class SavedWordsViewController: UIViewController {
-    // MARK: - UI
-    private lazy var savedWordsTableView: UITableView = {
-        let tableView = UITableView()
-        tableView.separatorStyle = .singleLine
-        tableView.register(WordTableViewCell.self, forCellReuseIdentifier: WordTableViewCell.identifier)
-        tableView.backgroundColor = UIColor(red: 241/255, green: 238/255, blue: 228/255, alpha: 1)
-        return tableView
-    }()
+  // MARK: - UI
+  private lazy var savedWordsTableView: UITableView = {
+    let tableView = UITableView()
+    tableView.separatorStyle = .singleLine
+    tableView.register(WordTableViewCell.self, forCellReuseIdentifier: WordTableViewCell.identifier)
+    tableView.backgroundColor = .customColor
+    return tableView
+  }()
+  
+  // MARK: - Propetrties
+  private var words: [Word] = []
+  
+  // Dependencies
+  private let interacror: Interactor = InteractorImpl()
+  
+  // MARK: - Lifecycle
+  override func viewDidLoad() {
+    super.viewDidLoad()
+    addSubviews()
+    setConstraints()
+    configure()
+    words = interacror.readWords()
+  }
+  
+  // MARK: - Private
+  private func configure() {
+    title = "Сохраненные слова"
     
-    // MARK: - Propetrties
-    private var words: [Word] = []
+    savedWordsTableView.delegate = self
+    savedWordsTableView.dataSource = self
     
-    // MARK: - Lifecycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        addSubviews()
-        setConstraints()
-        configure()
-        let word = Word(name: "test", phonetic: "test", phonetics: [], meanings: [])
-        words.append(word)
+    navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonTapped))
+  }
+  
+  private func addSubviews() {
+    view.addSubview(savedWordsTableView)
+  }
+  
+  private func setConstraints() {
+    savedWordsTableView.snp.makeConstraints { make in
+      make.top.left.bottom.right.equalToSuperview().inset(0)
     }
-    
-    // MARK: - Private
-    private func configure() {
-        savedWordsTableView.delegate = self
-        savedWordsTableView.dataSource = self
-        
-        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonTapped))
+  }
+  
+  private func deleteWord(indexPath indexpath: IndexPath) -> UIContextualAction {
+    let action = UIContextualAction(style: .destructive, title: nil) { [weak self] _, _, _ in
+      guard let self = self else { return }
+      self.interacror.deleteWord(self.words[indexpath.row])
+      self.words.remove(at: indexpath.row)
+      self.savedWordsTableView.reloadData()
     }
-    
-    private func addSubviews() {
-        view.addSubview(savedWordsTableView)
-    }
-    
-    private func setConstraints() {
-        savedWordsTableView.snp.makeConstraints { make in
-            make.top.left.bottom.right.equalToSuperview().inset(0)
-        }
-    }
-    
-    // objc
-    @objc private func searchButtonTapped() {
-        print(1)
-    }
+    action.image = UIImage(named: "trash")
+    return action
+  }
+  
+  // objc
+  @objc private func searchButtonTapped() {
+    let searchViewController = SearchWordViewController()
+    searchViewController.saveWordDelegate = self
+    navigationController?.pushViewController(searchViewController, animated: true)
+  }
 }
 
 // MARK: - UITableViewDataSource & UITableViewDelegate
 extension SavedWordsViewController: UITableViewDataSource, UITableViewDelegate {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return words.count
+  func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    return words.count
+  }
+  
+  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    guard let cell = tableView.dequeueReusableCell(withIdentifier: WordTableViewCell.identifier, for: indexPath) as? WordTableViewCell else { return UITableViewCell() }
+    cell.configure(words[indexPath.row])
+    return cell
+  }
+  
+  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    tableView.deselectRow(at: indexPath, animated: true)
+  }
+  
+  func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+    let delete = deleteWord(indexPath: indexPath)
+    let swipe = UISwipeActionsConfiguration(actions: [delete])
+    return swipe
+  }
+}
+
+// MARK: - SaveWordDelegate
+extension SavedWordsViewController: SaveWordDelegate {
+  func saveWord(_ word: Word) {
+    interacror.saveWord(word)
+    words.append(word)
+    DispatchQueue.main.async {
+      self.savedWordsTableView.reloadData()
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: WordTableViewCell.identifier, for: indexPath) as? WordTableViewCell else { return UITableViewCell() }
-        cell.configure(words[indexPath.row])
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        tableView.deselectRow(at: indexPath, animated: true)
-    }
+  }
 }
