@@ -95,7 +95,7 @@ final class OnboardingPageViewController: UIPageViewController {
   }
   
   @objc private func nextPageButtonTapped() {
-    guard let currentPage = viewControllers?[0],
+      guard let currentPage = viewControllers?.first,
           let nextPage = dataSource?.pageViewController(self, viewControllerAfter: currentPage),
           let currentIndex = pages.firstIndex(of: nextPage) else { return }
     pageControl.currentPage = pageControl.currentPage < currentIndex ? pageControl.currentPage + 1 : 0
