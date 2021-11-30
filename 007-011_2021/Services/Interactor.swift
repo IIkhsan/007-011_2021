@@ -7,9 +7,7 @@
 
 import Foundation
 
-protocol Interactor: NetworkService, PersistableService {
-
-}
+protocol Interactor: NetworkService, PersistableService {}
 
 final class InteractorImpl: Interactor {
   // MARK: - Dependencies
