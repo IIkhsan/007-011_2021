@@ -34,4 +34,4 @@ struct Phonetic: Codable {
     let audio: String?
 }
 
-typealias Word = [WordElement]
+typealias Word = WordElement

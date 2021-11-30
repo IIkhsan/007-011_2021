@@ -6,25 +6,32 @@
 //
 
 import Foundation
+import UIKit
+import CoreData
 class PersistableService {
     
     //MARK: - Properties
     static let shared = PersistableService()
+    var context: NSManagedObjectContext  {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context = appDelegate.persistentContainer.viewContext
+        return context
+    }
     
     private init() {
         
     }
     
     //MARK: - Public functions
-    func getSavedWords() {
+    func getSavedWord(word: String) -> WordEntity {
         
     }
     
-    func deleteSavedWord() {
+    func deleteSavedWord(wordEntity: WordEntity) {
         
     }
     
-    func addNewWord() {
+    func saveWord(wordEntity: WordEntity) {
         
     }
 }

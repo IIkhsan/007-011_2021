@@ -15,9 +15,18 @@
 		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
 		74057E09274A3FC9004C9231 /* SavedWords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74057E08274A3FC9004C9231 /* SavedWords.storyboard */; };
 		74057E0C274A4306004C9231 /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74057E0B274A4306004C9231 /* PersistableService.swift */; };
+		7407E8322753DC2C004A8B2F /* MainModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7407E8302753DC2C004A8B2F /* MainModel.xcdatamodeld */; };
+		7407E83F2753E703004A8B2F /* PhoneticEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407E8332753E703004A8B2F /* PhoneticEntity.swift */; };
+		7407E8412753E703004A8B2F /* SynonymEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407E8352753E703004A8B2F /* SynonymEntity.swift */; };
+		7407E8432753E703004A8B2F /* WordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407E8372753E703004A8B2F /* WordEntity.swift */; };
+		7407E8452753E703004A8B2F /* AntonymEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407E8392753E703004A8B2F /* AntonymEntity.swift */; };
+		7407E8472753E703004A8B2F /* MeaningEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407E83B2753E703004A8B2F /* MeaningEntity.swift */; };
+		7407E8492753E703004A8B2F /* DefinitionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407E83D2753E703004A8B2F /* DefinitionEntity.swift */; };
+		7432543B27556B6F0075A5F1 /* WordServicesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7432543A27556B6F0075A5F1 /* WordServicesInteractor.swift */; };
 		7444B0CC274A560800296E2F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0CB274A560800296E2F /* NetworkService.swift */; };
 		7444B0CE274A654200296E2F /* SavedWordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0CD274A654200296E2F /* SavedWordsTableViewController.swift */; };
 		7444B0D1274A9FF000296E2F /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0D0274A9FF000296E2F /* Word.swift */; };
+		7456305227567AA800426309 /* WordFormatTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7456305127567AA800426309 /* WordFormatTransfer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,9 +40,18 @@
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74057E08274A3FC9004C9231 /* SavedWords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SavedWords.storyboard; sourceTree = "<group>"; };
 		74057E0B274A4306004C9231 /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
+		7407E8312753DC2C004A8B2F /* MainModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MainModel.xcdatamodel; sourceTree = "<group>"; };
+		7407E8332753E703004A8B2F /* PhoneticEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneticEntity.swift; sourceTree = "<group>"; };
+		7407E8352753E703004A8B2F /* SynonymEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynonymEntity.swift; sourceTree = "<group>"; };
+		7407E8372753E703004A8B2F /* WordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEntity.swift; sourceTree = "<group>"; };
+		7407E8392753E703004A8B2F /* AntonymEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AntonymEntity.swift; sourceTree = "<group>"; };
+		7407E83B2753E703004A8B2F /* MeaningEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningEntity.swift; sourceTree = "<group>"; };
+		7407E83D2753E703004A8B2F /* DefinitionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionEntity.swift; sourceTree = "<group>"; };
+		7432543A27556B6F0075A5F1 /* WordServicesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordServicesInteractor.swift; sourceTree = "<group>"; };
 		7444B0CB274A560800296E2F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7444B0CD274A654200296E2F /* SavedWordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsTableViewController.swift; sourceTree = "<group>"; };
 		7444B0D0274A9FF000296E2F /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		7456305127567AA800426309 /* WordFormatTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFormatTransfer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +84,7 @@
 		4DA9A26A2748EFFF00070A45 /* 007-011_2021 */ = {
 			isa = PBXGroup;
 			children = (
+				7407E82F2753DBEE004A8B2F /* Resources */,
 				7444B0CF274A658900296E2F /* Entities */,
 				74057E0A274A42F2004C9231 /* Services */,
 				74057E02274A3F4D004C9231 /* Presentation */,
@@ -134,13 +153,37 @@
 			children = (
 				74057E0B274A4306004C9231 /* PersistableService.swift */,
 				7444B0CB274A560800296E2F /* NetworkService.swift */,
+				7432543A27556B6F0075A5F1 /* WordServicesInteractor.swift */,
+				7456305127567AA800426309 /* WordFormatTransfer.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		7407E82F2753DBEE004A8B2F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7407E8302753DC2C004A8B2F /* MainModel.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7407E84B2753E8A5004A8B2F /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				7407E8332753E703004A8B2F /* PhoneticEntity.swift */,
+				7407E8352753E703004A8B2F /* SynonymEntity.swift */,
+				7407E8372753E703004A8B2F /* WordEntity.swift */,
+				7407E8392753E703004A8B2F /* AntonymEntity.swift */,
+				7407E83B2753E703004A8B2F /* MeaningEntity.swift */,
+				7407E83D2753E703004A8B2F /* DefinitionEntity.swift */,
+			);
+			path = CoreData;
 			sourceTree = "<group>";
 		};
 		7444B0CF274A658900296E2F /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				7407E84B2753E8A5004A8B2F /* CoreData */,
 				7444B0D0274A9FF000296E2F /* Word.swift */,
 			);
 			path = Entities;
@@ -218,11 +261,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7432543B27556B6F0075A5F1 /* WordServicesInteractor.swift in Sources */,
+				7407E8432753E703004A8B2F /* WordEntity.swift in Sources */,
+				7407E8472753E703004A8B2F /* MeaningEntity.swift in Sources */,
 				7444B0CC274A560800296E2F /* NetworkService.swift in Sources */,
 				7444B0D1274A9FF000296E2F /* Word.swift in Sources */,
+				7407E8492753E703004A8B2F /* DefinitionEntity.swift in Sources */,
+				7407E8412753E703004A8B2F /* SynonymEntity.swift in Sources */,
 				4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
+				7407E8322753DC2C004A8B2F /* MainModel.xcdatamodeld in Sources */,
+				7407E83F2753E703004A8B2F /* PhoneticEntity.swift in Sources */,
 				74057E0C274A4306004C9231 /* PersistableService.swift in Sources */,
+				7407E8452753E703004A8B2F /* AntonymEntity.swift in Sources */,
+				7456305227567AA800426309 /* WordFormatTransfer.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
 				7444B0CE274A654200296E2F /* SavedWordsTableViewController.swift in Sources */,
 			);
@@ -373,7 +425,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 939KD425D9;
+				DEVELOPMENT_TEAM = K2W9WPT8C4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "007-011_2021/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -401,7 +453,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 939KD425D9;
+				DEVELOPMENT_TEAM = K2W9WPT8C4;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "007-011_2021/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -444,6 +496,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7407E8302753DC2C004A8B2F /* MainModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7407E8312753DC2C004A8B2F /* MainModel.xcdatamodel */,
+			);
+			currentVersion = 7407E8312753DC2C004A8B2F /* MainModel.xcdatamodel */;
+			path = MainModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4DA9A2602748EFFF00070A45 /* Project object */;
 }

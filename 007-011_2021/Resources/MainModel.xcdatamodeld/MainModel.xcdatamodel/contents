@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AntonymEntity" representedClassName="AntonymEntity" syncable="YES">
+        <attribute name="antonym" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="DefinitionEntity" representedClassName="DefinitionEntity" syncable="YES">
+        <attribute name="definition" attributeType="String"/>
+        <attribute name="example" optional="YES" attributeType="String"/>
+        <relationship name="antonyms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AntonymEntity"/>
+        <relationship name="synonyms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SynonymEntity"/>
+    </entity>
+    <entity name="MeaningEntity" representedClassName="MeaningEntity" syncable="YES">
+        <attribute name="partOfSpeech" attributeType="String"/>
+        <relationship name="definitions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DefinitionEntity"/>
+    </entity>
+    <entity name="PhoneticEntity" representedClassName="PhoneticEntity" syncable="YES">
+        <attribute name="audio" optional="YES" attributeType="String"/>
+        <attribute name="text" attributeType="String"/>
+    </entity>
+    <entity name="SynonymEntity" representedClassName="SynonymEntity" syncable="YES">
+        <attribute name="synonym" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="WordEntity" representedClassName="WordEntity" syncable="YES">
+        <attribute name="origin" optional="YES" attributeType="String"/>
+        <attribute name="phonetic" attributeType="String"/>
+        <attribute name="word" attributeType="String"/>
+        <relationship name="meanings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MeaningEntity"/>
+        <relationship name="phonetics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhoneticEntity"/>
+    </entity>
+    <elements>
+        <element name="WordEntity" positionX="69.7890625" positionY="-155.08203125" width="128" height="118"/>
+        <element name="MeaningEntity" positionX="-184.671875" positionY="-42.05859375" width="128" height="73"/>
+        <element name="DefinitionEntity" positionX="80.2734375" positionY="-5.734375" width="128" height="103"/>
+        <element name="SynonymEntity" positionX="-38.7734375" positionY="192.4296875" width="128" height="58"/>
+        <element name="AntonymEntity" positionX="251.3828125" positionY="-1.12109375" width="128" height="58"/>
+        <element name="PhoneticEntity" positionX="250.85546875" positionY="217.83984375" width="128" height="73"/>
+    </elements>
+</model>
