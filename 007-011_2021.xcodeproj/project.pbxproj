@@ -23,6 +23,7 @@
 		7407E8472753E703004A8B2F /* MeaningEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407E83B2753E703004A8B2F /* MeaningEntity.swift */; };
 		7407E8492753E703004A8B2F /* DefinitionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7407E83D2753E703004A8B2F /* DefinitionEntity.swift */; };
 		7432543B27556B6F0075A5F1 /* WordServicesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7432543A27556B6F0075A5F1 /* WordServicesInteractor.swift */; };
+		743AC22627574FBB005C2703 /* WordSaver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 743AC22527574FBB005C2703 /* WordSaver.swift */; };
 		7444B0CC274A560800296E2F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0CB274A560800296E2F /* NetworkService.swift */; };
 		7444B0CE274A654200296E2F /* SavedWordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0CD274A654200296E2F /* SavedWordsTableViewController.swift */; };
 		7444B0D1274A9FF000296E2F /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0D0274A9FF000296E2F /* Word.swift */; };
@@ -48,6 +49,7 @@
 		7407E83B2753E703004A8B2F /* MeaningEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeaningEntity.swift; sourceTree = "<group>"; };
 		7407E83D2753E703004A8B2F /* DefinitionEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefinitionEntity.swift; sourceTree = "<group>"; };
 		7432543A27556B6F0075A5F1 /* WordServicesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordServicesInteractor.swift; sourceTree = "<group>"; };
+		743AC22527574FBB005C2703 /* WordSaver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSaver.swift; sourceTree = "<group>"; };
 		7444B0CB274A560800296E2F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7444B0CD274A654200296E2F /* SavedWordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsTableViewController.swift; sourceTree = "<group>"; };
 		7444B0D0274A9FF000296E2F /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
@@ -155,6 +157,7 @@
 				7444B0CB274A560800296E2F /* NetworkService.swift */,
 				7432543A27556B6F0075A5F1 /* WordServicesInteractor.swift */,
 				7456305127567AA800426309 /* WordFormatTransfer.swift */,
+				743AC22527574FBB005C2703 /* WordSaver.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
 				7407E8322753DC2C004A8B2F /* MainModel.xcdatamodeld in Sources */,
 				7407E83F2753E703004A8B2F /* PhoneticEntity.swift in Sources */,
+				743AC22627574FBB005C2703 /* WordSaver.swift in Sources */,
 				74057E0C274A4306004C9231 /* PersistableService.swift in Sources */,
 				7407E8452753E703004A8B2F /* AntonymEntity.swift in Sources */,
 				7456305227567AA800426309 /* WordFormatTransfer.swift in Sources */,

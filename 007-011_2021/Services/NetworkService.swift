@@ -42,8 +42,14 @@ class NetworkService {
                     return
                 }
                 do {
-                    let word = try JSONDecoder().decode(Word.self, from: data)
-                    completion(Result.success(word))
+                    let word = try JSONDecoder().decode([Word].self, from: data)
+                    guard word.first != nil else {
+                        completion(Result.failure(NetworkErrors.unknownError))
+                        return
+                    }
+                    DispatchQueue.main.async {
+                    completion(Result.success(word.first!))
+                    }
                 } catch {
                     completion(Result.failure((error)))
                     print("cant decode")

@@ -17,9 +17,13 @@ class WordServicesInteractor {
     }()
     
     //MARK: - Public functions
-    func getSavedWord(word: String) -> Word {
-        let wordEntity = persistableService.getSavedWord(word: word)
-        return transfer.transferWordEntityToElement(wordEntity: wordEntity)
+    func getSavedWordsContaining(word: String) -> [Word] {
+        let wordEntities = persistableService.getSavedWordsContaining(word: word)
+        var result: [Word] = []
+        for entity in wordEntities {
+            result.append(transfer.transferWordEntityToElement(wordEntity: entity))
+        }
+        return result
     }
     
     func deleteSavedWord(word: Word) {
@@ -30,5 +34,9 @@ class WordServicesInteractor {
     func saveWord(word: Word) {
         let wordEntity = transfer.transferWordEntityToElement(word: word)
         persistableService.saveWord(wordEntity: wordEntity)
+    }
+    
+    func fetchWord(word: String, completion: @escaping (Result<Word, Error>) -> Void) {
+        return networkService.fetchWord(word: word, completion: completion)
     }
 }

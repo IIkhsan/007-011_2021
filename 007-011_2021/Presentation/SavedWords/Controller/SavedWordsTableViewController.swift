@@ -10,10 +10,24 @@ import UIKit
 class SavedWordsTableViewController: UITableViewController {
 
     //MARK: - Properties
-    let networkService = NetworkService.shared
+    let interactor: WordServicesInteractor = WordServicesInteractor()
+    let service = NetworkService.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //print(interactor.getSavedWord(word: "hello"))
+        //interactor.fetchWord(word: "hello", completion: { [weak self] result in
+        //    switch result {
+        //    case .success(let word):
+        //        print(word.word)
+       //         self!.interactor.saveWord(word: word)
+        //    case .failure(let error):
+         //       print(error)
+         //   }
+       // })
+        print("--------------")
+        print(interactor.getSavedWordsContaining(word: "hel"))
+        
     }
 
     // MARK: - Table view data source
