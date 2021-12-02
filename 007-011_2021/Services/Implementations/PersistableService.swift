@@ -1,6 +1,6 @@
 //
 //  PersistableService.swift
-//  English is simple
+//  007-011_2021
 //
 //  Created by Руслан on 27.11.2021.
 //
@@ -15,7 +15,7 @@ final class PersistableService: PersistableServiceProtocol {
     
     // MARK: - Core Data stack
     lazy private var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "English_is_simple")
+        let container = NSPersistentContainer(name: "007-011_2021")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
                 fatalError("Unresolved error \(error), \(error.userInfo)")
