@@ -31,6 +31,8 @@
 		44B3E35E2758B5600077213C /* WordsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3E3482758B5600077213C /* WordsViewController.swift */; };
 		44B3E36E2758C2FF0077213C /* 007-011_2021.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 44B3E36C2758C2FF0077213C /* 007-011_2021.xcdatamodeld */; };
 		44B3E3732758D38D0077213C /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 44B3E3722758D38D0077213C /* RxSwift */; };
+		44B3E3752758DFCD0077213C /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3E3742758DFCD0077213C /* AudioPlayer.swift */; };
+		44B3E3772758E0070077213C /* AudioPlayerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44B3E3762758E0070077213C /* AudioPlayerProtocol.swift */; };
 		4B01DC4D3BAC4254118A471A /* Pods_007_011_2021.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 542BACBB728E6B07B507E154 /* Pods_007_011_2021.framework */; };
 		4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */; };
 		4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2742748F00100070A45 /* Assets.xcassets */; };
@@ -62,6 +64,8 @@
 		44B3E3472758B5600077213C /* SavedWordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavedWordsViewController.swift; sourceTree = "<group>"; };
 		44B3E3482758B5600077213C /* WordsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordsViewController.swift; sourceTree = "<group>"; };
 		44B3E36D2758C2FF0077213C /* 007-011_2021.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "007-011_2021.xcdatamodel"; sourceTree = "<group>"; };
+		44B3E3742758DFCD0077213C /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		44B3E3762758E0070077213C /* AudioPlayerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayerProtocol.swift; sourceTree = "<group>"; };
 		4DA9A2682748EFFF00070A45 /* 007-011_2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "007-011_2021.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA9A2742748F00100070A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -87,9 +91,9 @@
 		44B3E32C2758B5600077213C /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				44B3E32F2758B5600077213C /* CoreDataEntities */,
 				44B3E32D2758B5600077213C /* CoreDataModels.swift */,
 				44B3E32E2758B5600077213C /* OnboardingPageData.swift */,
-				44B3E32F2758B5600077213C /* CoreDataEntities */,
 				44B3E3362758B5600077213C /* WordsTableCellData.swift */,
 			);
 			path = Models;
@@ -111,10 +115,10 @@
 		44B3E3372758B5600077213C /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				44B3E33D2758B5600077213C /* Protocols */,
+				44B3E33A2758B5600077213C /* Implementations */,
 				44B3E3382758B5600077213C /* Interactor.swift */,
 				44B3E3392758B5600077213C /* Errors.swift */,
-				44B3E33A2758B5600077213C /* Implementations */,
-				44B3E33D2758B5600077213C /* Protocols */,
 				44B3E3402758B5600077213C /* UIViewController+ShowConfirmationAlert.swift */,
 			);
 			path = Services;
@@ -125,6 +129,7 @@
 			children = (
 				44B3E33B2758B5600077213C /* PersistableService.swift */,
 				44B3E33C2758B5600077213C /* NetworkService.swift */,
+				44B3E3742758DFCD0077213C /* AudioPlayer.swift */,
 			);
 			path = Implementations;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 			children = (
 				44B3E33E2758B5600077213C /* PersistableServiceProtocol.swift */,
 				44B3E33F2758B5600077213C /* NetworkServiceProtocol.swift */,
+				44B3E3762758E0070077213C /* AudioPlayerProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -365,8 +371,10 @@
 				44B3E3532758B5600077213C /* Errors.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
 				44B3E36E2758C2FF0077213C /* 007-011_2021.xcdatamodeld in Sources */,
+				44B3E3752758DFCD0077213C /* AudioPlayer.swift in Sources */,
 				44B3E3562758B5600077213C /* PersistableServiceProtocol.swift in Sources */,
 				44B3E35B2758B5600077213C /* OnboardingPageViewController.swift in Sources */,
+				44B3E3772758E0070077213C /* AudioPlayerProtocol.swift in Sources */,
 				44B3E3542758B5600077213C /* PersistableService.swift in Sources */,
 				44B3E3582758B5600077213C /* UIViewController+ShowConfirmationAlert.swift in Sources */,
 				44B3E3492758B5600077213C /* CoreDataModels.swift in Sources */,
