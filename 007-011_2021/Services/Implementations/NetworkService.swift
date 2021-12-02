@@ -9,18 +9,18 @@ import Foundation
 
 final class NetworkService: NetworkServiceProtocol {
 
-    // MARK: Properties
+    // MARK: - Properties
     static let shared: NetworkServiceProtocol = NetworkService(configuration: URLSessionConfiguration.default)
     
     private let decoder = JSONDecoder()
     private let configuration: URLSessionConfiguration
     
-    // MARK: Initializers
+    // MARK: - Initializers
     private init(configuration: URLSessionConfiguration) {
         self.configuration = configuration
     }
     
-    // MARK: Public methods
+    // MARK: - Public methods
     func getWordInfo(word: String, completion: @escaping (Result<[Word], NetworkError>) -> Void) {
         let session = URLSession(configuration: configuration)
         let URLString = "https://api.dictionaryapi.dev/api/v2/entries/en/\(word)"
