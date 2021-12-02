@@ -76,12 +76,16 @@ class OnboardingViewController: UIViewController {
 
     // MARK: - Animation
     func animateDisappear(_ animations: @escaping () -> Void) {
-        titleLabel.snp.makeConstraints { make in
+        titleLabel.snp.updateConstraints { make in
             make.top.equalTo(view.safeAreaLayoutGuide).inset(-80)
+        }
+        functionalityImageView.snp.updateConstraints { make in
+            make.centerY.equalTo(view.safeAreaLayoutGuide).offset(100)
         }
         UIViewPropertyAnimator.runningPropertyAnimator(withDuration: 0.5, delay: 0, options: [.curveEaseOut], animations: { [weak self] in
             guard let self = self else { return }
             self.view.backgroundColor = .white
+            self.functionalityImageView.layer.opacity = 0
             self.view.layoutIfNeeded()
             animations()
         }, completion: nil)

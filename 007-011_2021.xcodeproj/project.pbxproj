@@ -139,12 +139,8 @@
 		44B3E3412758B5600077213C /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				44B3E3422758B5600077213C /* Cells */,
-				44B3E3442758B5600077213C /* LoadWordsViewController.swift */,
-				44B3E3452758B5600077213C /* OnboardingPageViewController.swift */,
-				44B3E3462758B5600077213C /* OnboardingViewController.swift */,
-				44B3E3472758B5600077213C /* SavedWordsViewController.swift */,
-				44B3E3482758B5600077213C /* WordsViewController.swift */,
+				44B3E36F2758C7460077213C /* Onboarding */,
+				44B3E3702758C78A0077213C /* Words */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -166,6 +162,26 @@
 				4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		44B3E36F2758C7460077213C /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				44B3E3452758B5600077213C /* OnboardingPageViewController.swift */,
+				44B3E3462758B5600077213C /* OnboardingViewController.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		44B3E3702758C78A0077213C /* Words */ = {
+			isa = PBXGroup;
+			children = (
+				44B3E3422758B5600077213C /* Cells */,
+				44B3E3442758B5600077213C /* LoadWordsViewController.swift */,
+				44B3E3472758B5600077213C /* SavedWordsViewController.swift */,
+				44B3E3482758B5600077213C /* WordsViewController.swift */,
+			);
+			path = Words;
 			sourceTree = "<group>";
 		};
 		4DA9A25F2748EFFF00070A45 = {

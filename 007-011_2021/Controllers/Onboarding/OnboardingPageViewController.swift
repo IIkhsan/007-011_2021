@@ -101,7 +101,7 @@ class OnboardingPageViewController: UIPageViewController {
 
     @objc private func nextButtonDidTap(_ sender: UIButton) {
         if sender.titleLabel?.text == "Finish" {
-            nextButton.snp.makeConstraints { make in
+            nextButton.snp.updateConstraints { make in
                 make.top.equalTo(view.safeAreaLayoutGuide).inset(-80)
             }
             pagesViewControllers[pageControl.currentPage].animateDisappear { [weak self] in
