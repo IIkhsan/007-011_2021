@@ -88,7 +88,7 @@ class OnboardingPageViewController: UIPageViewController {
             make.top.equalTo(view.safeAreaLayoutGuide).inset(5)
         }
         pageControl.snp.makeConstraints { make in
-            make.bottom.equalTo(view.safeAreaLayoutGuide).inset(5)
+            make.bottom.equalTo(view.safeAreaLayoutGuide)
             make.centerX.equalTo(view.safeAreaLayoutGuide)
         }
     }
@@ -104,8 +104,12 @@ class OnboardingPageViewController: UIPageViewController {
             nextButton.snp.updateConstraints { make in
                 make.top.equalTo(view.safeAreaLayoutGuide).inset(-80)
             }
+            pageControl.snp.updateConstraints { make in
+                make.bottom.equalTo(view.safeAreaLayoutGuide).inset(-50)
+            }
             pagesViewControllers[pageControl.currentPage].animateDisappear { [weak self] in
                 guard let self = self else { return }
+                self.pageControl.layer.opacity = 0
                 self.view.layoutIfNeeded()
             }
             present(self.homeViewController, animated: true, completion: nil)
