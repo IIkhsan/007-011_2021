@@ -155,7 +155,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="eHT-wM-mxQ"/>
                     <connections>
-                        <segue destination="CWP-Fl-Ve1" kind="push" identifier="searchingSegue" id="zW1-xD-vbv"/>
+                        <segue destination="CWP-Fl-Ve1" kind="show" identifier="searchingSegue" id="zW1-xD-vbv"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
