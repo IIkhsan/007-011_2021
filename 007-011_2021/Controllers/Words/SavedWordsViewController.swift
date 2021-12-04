@@ -25,8 +25,9 @@ final class SavedWordsViewController: WordsViewController {
         
         savedWordsTableView.delegate = self
         savedWordsTableView.dataSource = self
+        searchController.searchBar.delegate = self
         
-        navigationItem.title = "Saved words"
+        title = "Saved words"
         obtainSavedWords(wordPart: nil)
     }
     
@@ -61,7 +62,7 @@ extension SavedWordsViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive,
-                                              title: "Delete") { [weak self] (contextualAction, view, nil) in
+                                              title: "Delete") { [weak self] (_, _, _) in
             guard let self = self else { return }
             self.interactor.deleteSavedWord(
                 named: self.words[indexPath.row].word
@@ -69,12 +70,12 @@ extension SavedWordsViewController: UITableViewDelegate {
                 if deletedSuccessfully {
                     tableView.performBatchUpdates {
                         self.words.remove(at: indexPath.row)
-                        self.savedWordsTableView.deleteRows(at: [indexPath], with: .automatic)
+                        self.savedWordsTableView.deleteRows(at: [indexPath],
+                                                            with: .automatic)
                     }
                 }
             }
         }
-        
         return UISwipeActionsConfiguration(actions: [deleteAction])
     }
 

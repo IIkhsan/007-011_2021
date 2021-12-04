@@ -7,23 +7,22 @@
 
 import UIKit
 
-class WordsTableViewCell: UITableViewCell {
+final class WordsTableViewCell: UITableViewCell {
 
     // MARK: - UI
     lazy private var wordLabel = UILabel()
     lazy private var phoneticLabel = UILabel()
     lazy private var audioButton: UIButton = {
         let button = UIButton()
-        button.setImage(UIImage(systemName: "play.fill"),
-                        for: .normal)
+        button.setImage(UIImage(systemName: "play.fill"), for: .normal)
         button.addTarget(self, action: #selector(audioButtonDidTap), for: .touchUpInside)
         return button
     }()
-    private var audioURL: String?
-    private var audioPlayer: AudioPlayerProtocol = AudioPlayer()
 
     // MARK: - Properties
     static let reuseIdentifier = String(describing: WordsTableViewCell.self)
+    private var audioURL: String?
+    private var audioPlayer: AudioPlayerProtocol = AudioPlayer()
 
     // MARK: - Initializers
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -32,6 +31,8 @@ class WordsTableViewCell: UITableViewCell {
         contentView.addSubview(wordLabel)
         contentView.addSubview(phoneticLabel)
         contentView.addSubview(audioButton)
+
+        layoutMargins = .zero
     }
 
     required init?(coder: NSCoder) {

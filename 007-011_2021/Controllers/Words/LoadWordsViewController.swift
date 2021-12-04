@@ -25,23 +25,9 @@ final class LoadWordsViewController: WordsViewController {
 
         loadedWordsTableView.delegate = self
         loadedWordsTableView.dataSource = self
+        searchController.searchBar.delegate = self
         
-        navigationItem.title = "New words"
-    }
-    
-    // MARK: - Private methods
-    private func getNewWordInfo(named wordName: String) {
-        if wordName.isEmpty {
-            words = []
-            loadedWordsTableView.reloadData()
-            return
-        }
-        interactor.getNewWordInfo(named: wordName) { [weak self] words in
-            if let words = words, let self = self {
-                self.words = words
-                self.loadedWordsTableView.reloadData()
-            }
-        }
+        title = "New words"
     }
 
 }
@@ -65,7 +51,17 @@ extension LoadWordsViewController: UITableViewDelegate {
 extension LoadWordsViewController {
 
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        getNewWordInfo(named: searchText)
+        if searchText.isEmpty {
+            words = []
+            loadedWordsTableView.reloadData()
+        } else {
+            interactor.getNewWordInfo(named: searchText) { [weak self] words in
+                if let words = words, let self = self {
+                    self.words = words
+                    self.loadedWordsTableView.reloadData()
+                }
+            }
+        }
     }
 
 }

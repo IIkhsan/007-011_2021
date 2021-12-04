@@ -10,12 +10,12 @@ import UIKit
 class WordsViewController: UIViewController {
 
     // MARK: - UI
-    lazy final var searchBar: UISearchBar = {
-        let searchBar = UISearchBar()
-        searchBar.delegate = self
-        searchBar.placeholder = "Enter word"
-        searchBar.sizeToFit()
-        return searchBar
+    lazy final var searchController: UISearchController = {
+        let searchController = UISearchController()
+        searchController.searchBar.placeholder = "Enter word"
+        navigationItem.searchController = searchController
+        navigationItem.hidesSearchBarWhenScrolling = false
+        return searchController
     }()
 
     // MARK: - Properties
@@ -26,7 +26,8 @@ class WordsViewController: UIViewController {
     final func createWordsTableView() -> UITableView {
         let tableView = UITableView()
         tableView.rowHeight = 40
-        tableView.tableHeaderView = searchBar
+        tableView.layoutMargins = .zero
+        tableView.separatorInset = .zero
         tableView.register(WordsTableViewCell.self,
                            forCellReuseIdentifier: WordsTableViewCell.reuseIdentifier)
         return tableView
@@ -35,15 +36,10 @@ class WordsViewController: UIViewController {
     // MARK: - Layout methods
     func configureLayout(for tableView: UITableView) {
         view.addSubview(tableView)
-        tableView.addSubview(searchBar)
 
         tableView.snp.makeConstraints { make in
             make.left.top.right.equalTo(view.safeAreaLayoutGuide).inset(5)
             make.bottom.equalTo(view.safeAreaLayoutGuide)
-        }
-        searchBar.snp.makeConstraints { make in
-            make.height.equalTo(50)
-            make.width.equalTo(tableView.snp.width)
         }
     }
 
