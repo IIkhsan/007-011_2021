@@ -18,7 +18,7 @@ class WordFormatTransfer {
         self.context = context
     }
     
-    //MARK: - Private functions
+    //MARK: - Public functions
     public func transferWordEntityToElement(word: Word) -> WordEntity {
         let wordStored = persistableService.getSavedWord(word: word.word)
         if wordStored != nil {

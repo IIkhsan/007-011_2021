@@ -17,26 +17,19 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="chW-jj-lcE">
-                        <rect key="frame" x="12" y="12" width="176" height="20"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="176" id="Y9o-9s-XcV"/>
-                        </constraints>
+                        <rect key="frame" x="12" y="12" width="41.5" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dey-CC-jfl">
-                        <rect key="frame" x="208" y="12" width="52" height="20"/>
+                        <rect key="frame" x="73.5" y="12" width="41.5" height="20"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9K2-dt-oGZ">
                         <rect key="frame" x="272" y="6.5" width="44" height="31"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="31" id="Uie-qh-gCO"/>
-                            <constraint firstAttribute="width" constant="44" id="y44-ue-85t"/>
-                        </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="plus.app" catalog="system" title=""/>
                         <connections>
@@ -47,7 +40,7 @@
                 <constraints>
                     <constraint firstItem="chW-jj-lcE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="1Yb-e6-tzz"/>
                     <constraint firstAttribute="bottom" secondItem="9K2-dt-oGZ" secondAttribute="bottom" constant="6.5" id="4hA-uh-b6p"/>
-                    <constraint firstItem="9K2-dt-oGZ" firstAttribute="leading" secondItem="dey-CC-jfl" secondAttribute="trailing" constant="12" id="FIz-UM-AQ3"/>
+                    <constraint firstItem="9K2-dt-oGZ" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="dey-CC-jfl" secondAttribute="trailing" constant="5" id="8eI-gT-jnx"/>
                     <constraint firstAttribute="bottom" secondItem="dey-CC-jfl" secondAttribute="bottom" constant="12" id="KOf-bL-bfD"/>
                     <constraint firstItem="dey-CC-jfl" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="12" id="KZF-MV-WHK"/>
                     <constraint firstAttribute="bottom" secondItem="chW-jj-lcE" secondAttribute="bottom" constant="12" id="QSI-iD-bUZ"/>

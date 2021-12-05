@@ -14,6 +14,7 @@ class SearchWordsTableViewController: UITableViewController {
     let searchController = UISearchController()
     var delegate: SearchWordVCDelegate? = nil
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         setUpSearchController()
         tableView.register(UINib(nibName: "WordTableViewCell", bundle: nil), forCellReuseIdentifier: "wordCell")

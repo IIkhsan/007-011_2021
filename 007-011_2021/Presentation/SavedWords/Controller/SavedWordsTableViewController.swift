@@ -16,6 +16,7 @@ class SavedWordsTableViewController: UITableViewController {
     //MARK: - Properties
     let model = SavedWordsModel()
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         setUpSearchBar()
         setUpDelegates()

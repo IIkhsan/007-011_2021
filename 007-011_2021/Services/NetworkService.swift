@@ -21,6 +21,7 @@ class NetworkService {
     private init() {
     }
     
+    //MARK: - Public functions
     public func fetchWord(word: String, completion: @escaping(Result<Word, Error>) -> Void)  {
         let queue = OperationQueue()
         queue.qualityOfService = .utility
@@ -57,7 +58,6 @@ class NetworkService {
         }
     }
 }
-
 
 enum NetworkErrors: Error {
     case invalidURL
