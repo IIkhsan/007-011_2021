@@ -3,43 +3,12 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Saved-->
-        <scene sceneID="gGD-3B-Oa5">
-            <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Hkp-RD-12Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tableViewController id="iuC-aS-6Wf" customClass="SavedWordsTableViewController" customModule="_07_011_2021" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="RCC-ji-SHB">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Oy5-Ju-2rv">
-                                <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Oy5-Ju-2rv" id="Y5f-Md-4my">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="iuC-aS-6Wf" id="sud-a4-I98"/>
-                            <outlet property="delegate" destination="iuC-aS-6Wf" id="Jvn-CF-caG"/>
-                        </connections>
-                    </tableView>
-                    <tabBarItem key="tabBarItem" title="Saved" selectedImage="list.bullet.rectangle.portrait" catalog="system" id="CnI-t3-IKT"/>
-                </tableViewController>
-            </objects>
-            <point key="canvasLocation" x="742.02898550724649" y="67.633928571428569"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="XXE-1d-Ulh">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lun-qz-evW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="HrC-0F-77T" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QKY-gn-CZV">
@@ -48,28 +17,74 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="iuC-aS-6Wf" kind="relationship" relationship="viewControllers" id="7tn-fl-b4v"/>
-                        <segue destination="DGk-Yu-zmp" kind="show" id="hxx-hC-ifF"/>
+                        <segue destination="oEr-xK-Ps3" kind="relationship" relationship="viewControllers" id="tTV-NP-Eca"/>
+                        <segue destination="DGk-Yu-zmp" kind="relationship" relationship="viewControllers" id="E2q-Sd-EYc"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lun-qz-evW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-168.11594202898553" y="67.633928571428569"/>
         </scene>
-        <!--Storyboard Reference-->
+        <!--Stored words-->
+        <scene sceneID="aPB-nu-jVT">
+            <objects>
+                <tableViewController id="QBJ-c6-XHa" customClass="SavedWordsTableViewController" customModule="_07_011_2021" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" id="kNd-Py-0Jj" customClass="SavedWordsView" customModule="_07_011_2021" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wordCell" id="RJp-l5-Oak">
+                                <rect key="frame" x="0.0" y="49.5" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="RJp-l5-Oak" id="kR2-F8-eub">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="QBJ-c6-XHa" id="EQC-13-90S"/>
+                            <outlet property="delegate" destination="QBJ-c6-XHa" id="mQX-h5-U2u"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Stored words" id="r76-t4-MSp"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ao-ce-BS5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1532" y="68"/>
+        </scene>
+        <!--Saved-->
+        <scene sceneID="onH-Js-Zh4">
+            <objects>
+                <navigationController id="oEr-xK-Ps3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Saved" image="list.bullet.rectangle.portrait" catalog="system" id="Nle-4K-jV6"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="XNg-wm-E7u">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <navigationBarAppearance key="compactScrollEdgeAppearance"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="QBJ-c6-XHa" kind="relationship" relationship="rootViewController" id="8Yo-vz-7Gv"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bbG-vY-e7d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="655" y="68"/>
+        </scene>
+        <!--SearchWords-->
         <scene sceneID="MdU-cE-2Wy">
             <objects>
-                <viewControllerPlaceholder id="DGk-Yu-zmp" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardName="SearchWords" id="DGk-Yu-zmp" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="Rav-B2-u3L"/>
                     <navigationItem key="navigationItem" id="zTG-l6-kqe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sw-Si-Cz0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-145" y="579"/>
+            <point key="canvasLocation" x="-168" y="543"/>
         </scene>
     </scenes>
     <resources>
         <image name="list.bullet.rectangle.portrait" catalog="system" width="115" height="128"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

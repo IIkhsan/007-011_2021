@@ -56,10 +56,6 @@ class WordFormatTransfer {
     
     //MARK: - Private functions
     private func transferMeanings(meaning: Meaning) -> MeaningEntity {
-        let meaningStored = persistableService.getMeaningEntity(partOfSpeech: meaning.partOfSpeech, definitions: meaning.definitions)
-        if meaningStored != nil {
-            return meaningStored!
-        }
         let meaningEntity = MeaningEntity(context: context)
         meaningEntity.partOfSpeech = meaning.partOfSpeech
         let definitions = meaning.definitions
@@ -70,10 +66,6 @@ class WordFormatTransfer {
     }
     
     private func transferDefinition(definition: Definition) -> DefinitionEntity {
-        let definitionStored = persistableService.getDefinition(definition: definition.definition)
-        if definitionStored != nil {
-            return definitionStored!
-        }
         let definitionEntity = DefinitionEntity(context: context)
         definitionEntity.definition = definition.definition
         let synonyms = definition.synonyms
@@ -88,30 +80,18 @@ class WordFormatTransfer {
     }
     
     private func transferAntonyms(antonym: String) -> AntonymEntity {
-        let antonymStored = persistableService.getAntonym(antonym: antonym)
-        if antonymStored != nil {
-            return antonymStored!
-        }
         let antonymEntity = AntonymEntity(context: context)
         antonymEntity.antonym = antonym
         return antonymEntity
     }
     
     private func transferSynonym(synonym: String) -> SynonymEntity  {
-        let synonymStored = persistableService.getSynonym(synonym: synonym)
-        if synonymStored != nil {
-            return synonymStored!
-        }
         let synonymEntity = SynonymEntity(context: context)
         synonymEntity.synonym = synonym
         return synonymEntity
     }
     
     private func transferPhonetic(phonetic: Phonetic) -> PhoneticEntity {
-        let phoneticStored = persistableService.getPhoneticWith(text: phonetic.text)
-        if phoneticStored != nil {
-            return phoneticStored!
-        }
         let phoneticEntity = PhoneticEntity(context: context)
         phoneticEntity.audio = phonetic.audio
         phoneticEntity.text = phonetic.text
@@ -120,7 +100,6 @@ class WordFormatTransfer {
     
     private func transferMeaningEntity(meaningEntity: MeaningEntity) -> Meaning {
         let partOfSpeech = meaningEntity.partOfSpeech ?? ""
-        
         var definitions: [Definition] = []
         for definition in meaningEntity.definitions ?? [] {
             definitions.append(transferDefinitionEntity(definitionEntity: definition))

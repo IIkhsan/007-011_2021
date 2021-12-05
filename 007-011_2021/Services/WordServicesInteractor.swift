@@ -39,4 +39,13 @@ class WordServicesInteractor {
     func fetchWord(word: String, completion: @escaping (Result<Word, Error>) -> Void) {
         return networkService.fetchWord(word: word, completion: completion)
     }
+    
+    func getAllStoredWords() -> [Word] {
+        let words = persistableService.getAllSavedWords()
+        var result: [Word] = []
+        for word in words {
+            result.append(transfer.transferWordEntityToElement(wordEntity: word))
+        }
+        return result
+    }
 }

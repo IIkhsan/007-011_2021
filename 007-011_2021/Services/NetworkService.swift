@@ -52,7 +52,6 @@ class NetworkService {
                     }
                 } catch {
                     completion(Result.failure((error)))
-                    print("cant decode")
                 }
             }.resume()
         }

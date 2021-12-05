@@ -57,75 +57,14 @@ class PersistableService {
         return []
     }
     
-    func getPhoneticWith(text: String) -> PhoneticEntity? {
-        let request: NSFetchRequest<PhoneticEntity> = PhoneticEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "text == %@", text)
-        do {
-            let result = try context.fetch(request)
-            return result.first
-        }  catch {
-            print(error)
-        }
-        return nil
-    }
-    
-    func getMeaningEntity(partOfSpeech: String, definitions: [Definition]) -> MeaningEntity? {
-        var definitionEntities: [DefinitionEntity] = []
-        for definition in definitions {
-            let entity = getDefinition(definition: definition.definition)
-            if entity != nil {
-                definitionEntities.append(entity!)
-            }
-        }
-        let request: NSFetchRequest<MeaningEntity> = MeaningEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "(partOfSpeech == %@) AND (definitions IN %@) AND (%@ in definitions)", partOfSpeech, definitionEntities, definitionEntities)
-        do {
-            let result = try context.fetch(request)
-            return result.first
-        }  catch {
-            print(error)
-        }
-        return nil
-    }
-    
-    func getDefinition(definition: String) -> DefinitionEntity? {
-        let request: NSFetchRequest<DefinitionEntity> = DefinitionEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "definition == %@", definition)
-        do {
-            let result = try context.fetch(request)
-            return result.first
-        }  catch {
-            print(error)
-        }
-        return nil
-    }
-    
-    func getAntonym(antonym: String) -> AntonymEntity? {
-        let request: NSFetchRequest<AntonymEntity> = AntonymEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "antonym == %@", antonym)
-        do {
-            let result = try context.fetch(request)
-            return result.first
-        }  catch {
-            print(error)
-        }
-        return nil
-    }
-    
-    func getSynonym(synonym: String) -> SynonymEntity? {
-        let request: NSFetchRequest<SynonymEntity> = SynonymEntity.fetchRequest()
-        request.predicate = NSPredicate(format: "synonym == %@", synonym)
-        do {
-            let result = try context.fetch(request)
-            return result.first
-        }  catch {
-            print(error)
-        }
-        return nil
-    }
-    
+       
     func deleteSavedWord(wordEntity: WordEntity) {
         context.delete(wordEntity)
+        do {
+            try context.save()
+        } catch {
+            print(error)
+        }
     }
     
     func saveWord(wordEntity: WordEntity) {
