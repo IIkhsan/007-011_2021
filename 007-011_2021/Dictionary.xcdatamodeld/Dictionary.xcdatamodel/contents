@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Definitions" representedClassName=".CDDefinitions" syncable="YES">
+        <attribute name="definition" optional="YES" attributeType="String"/>
+        <attribute name="example" optional="YES" attributeType="String"/>
+        <relationship name="meanings_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Meanings" inverseName="definitions" inverseEntity="Meanings"/>
+    </entity>
+    <entity name="Meanings" representedClassName=".CDMeanings" syncable="YES">
+        <attribute name="partOfSpeech" optional="YES" attributeType="String"/>
+        <relationship name="definitions" toMany="YES" deletionRule="Nullify" destinationEntity="Definitions" inverseName="meanings_id" inverseEntity="Definitions"/>
+        <relationship name="word_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Word" inverseName="meanings" inverseEntity="Word"/>
+    </entity>
+    <entity name="Phonetics" representedClassName=".CDPhonetics" syncable="YES">
+        <attribute name="audio" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="word_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Word" inverseName="phonetics" inverseEntity="Word"/>
+    </entity>
+    <entity name="Word" representedClassName=".CDWord" syncable="YES">
+        <attribute name="origin" optional="YES" attributeType="String"/>
+        <attribute name="phonetic" optional="YES" attributeType="String"/>
+        <attribute name="word" attributeType="String"/>
+        <relationship name="meanings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Meanings" inverseName="word_id" inverseEntity="Meanings"/>
+        <relationship name="phonetics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Phonetics" inverseName="word_id" inverseEntity="Phonetics"/>
+    </entity>
+    <elements>
+        <element name="Definitions" positionX="-98.2578125" positionY="-196.98046875" width="128" height="88"/>
+        <element name="Meanings" positionX="-94.84765625" positionY="-311.09375" width="128" height="88"/>
+        <element name="Phonetics" positionX="-372.20703125" positionY="-133.48828125" width="128" height="88"/>
+        <element name="Word" positionX="-361.046875" positionY="-326.234375" width="128" height="118"/>
+    </elements>
+</model>
