@@ -13,30 +13,36 @@ final class NetworkService {
     let decoder = JSONDecoder()
     
     func getWord(word: String, completion: @escaping ((Result<[Word], Error>) -> Void)) {
-        let session = URLSession(configuration: configuration)
-        let wordURL = URL(string:"https://api.dictionaryapi.dev/api/v2/entries/en/" + word)!
-        var request = URLRequest(url: wordURL)
-        request.cachePolicy = .reloadIgnoringCacheData
-        request.httpMethod = "GET"
-        
-        let dataTask = session.dataTask(with: request) { data, response, error in
+        let operationQueue = OperationQueue()
+        operationQueue.addOperation {
+            let session = URLSession(configuration: self.configuration)
+            guard let wordURL = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(word)") else {
+                completion(.failure(NSLocalizedString("Invalid url!", comment: "Invalid url") as! Error))
+                return
+            }
+            var request = URLRequest(url: wordURL)
+            request.cachePolicy = .reloadIgnoringCacheData
+            request.httpMethod = "GET"
             
-            var result: Result<[Word], Error> = .success([])
-            
-            if let error = error {
-                result = .failure(error)
-            } else if let data = data {
-                do {
-                    let words = try self.decoder.decode([Word].self, from: data)
-                    result = .success(words)
-                } catch {
+            let dataTask = session.dataTask(with: request) { data, response, error in
+                
+                var result: Result<[Word], Error> = .success([])
+                
+                if let error = error {
                     result = .failure(error)
+                } else if let data = data {
+                    do {
+                        let words = try self.decoder.decode([Word].self, from: data)
+                        result = .success(words)
+                    } catch {
+                        result = .failure(error)
+                    }
                 }
+                
+                completion(result)
             }
             
-            completion(result)
+            dataTask.resume()
         }
-        
-        dataTask.resume()
     }
 }

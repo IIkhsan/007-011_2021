@@ -59,8 +59,16 @@ extension SearchingViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "SearchingTableViewCell", for: indexPath) as? SearchingTableViewCell else { return UITableViewCell() }
         
         cell.setWord(word: searchingWords[indexPath.row])
-//        cell.setPost(post: posts[indexPath.row])
 
         return cell as UITableViewCell
-    }    
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if searchingWords[0].word != "No such word!" {
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(identifier: "SavingWordViewController") as! SavingWordViewController
+            vc.word = searchingWords[indexPath.row]
+            navigationController?.present(vc, animated: true, completion: nil)
+        }
+    }
 }

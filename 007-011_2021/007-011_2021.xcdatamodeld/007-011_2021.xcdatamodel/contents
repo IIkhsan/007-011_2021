@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Definition" representedClassName=".DefinitionEntity" syncable="YES">
+        <attribute name="definition" optional="YES" attributeType="String"/>
+        <attribute name="example" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Meaning" representedClassName=".MeaningEntity" syncable="YES">
+        <attribute name="partOfSpeech" optional="YES" attributeType="String"/>
+        <relationship name="definitions" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Definition"/>
+    </entity>
+    <entity name="Phonetic" representedClassName=".PhoneticEntity" syncable="YES">
+        <attribute name="audio" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Word" representedClassName=".WordEntity" syncable="YES">
+        <attribute name="word" attributeType="String"/>
+        <relationship name="meanings" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Meaning"/>
+        <relationship name="phonetics" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Phonetic"/>
+    </entity>
+    <elements>
+        <element name="Meaning" positionX="216.65234375" positionY="-112.78125" width="128" height="59"/>
+        <element name="Definition" positionX="266.10546875" positionY="30.2578125" width="128" height="59"/>
+        <element name="Phonetic" positionX="-38.4296875" positionY="-125.80859375" width="128" height="59"/>
+        <element name="Word" positionX="81.2734375" positionY="-330.9921875" width="152.08203125" height="74"/>
+    </elements>
+</model>
