@@ -11,8 +11,13 @@ class DataStoreInteractor {
     // private properties
     private let dataStoreService = DataStoreService()
     
+    // public functions
     func saveWord(word: Word) {
         dataStoreService.saveWord(word: word)
+    }
+    
+    func deleteWord(word: Word) {
+        dataStoreService.deleteWord(word: word)
     }
     
     func getAllWords() -> [Word] {

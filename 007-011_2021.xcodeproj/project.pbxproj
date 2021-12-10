@@ -114,6 +114,30 @@
 			path = "007-011_2021";
 			sourceTree = "<group>";
 		};
+		920C8231276391DE00E5E7C1 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				92C69171274ACDEB00684757 /* NetworkService.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		920C8232276391EC00E5E7C1 /* DataStoreService */ = {
+			isa = PBXGroup;
+			children = (
+				921CA3932762599E00659F6D /* DataStoreService.swift */,
+			);
+			path = DataStoreService;
+			sourceTree = "<group>";
+		};
+		920C8233276391FC00E5E7C1 /* DataStoreInteractor */ = {
+			isa = PBXGroup;
+			children = (
+				9289D750276297F20012C316 /* DataStoreInteractor .swift */,
+			);
+			path = DataStoreInteractor;
+			sourceTree = "<group>";
+		};
 		921CA392276244E800659F6D /* Entities  */ = {
 			isa = PBXGroup;
 			children = (
@@ -177,8 +201,8 @@
 		92C69170274ACDD800684757 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				92C69171274ACDEB00684757 /* NetworkService.swift */,
-				921CA3932762599E00659F6D /* DataStoreService.swift */,
+				920C8232276391EC00E5E7C1 /* DataStoreService */,
+				920C8231276391DE00E5E7C1 /* NetworkService */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -197,7 +221,7 @@
 		92EA1536276297AD0031D6FB /* Interactors */ = {
 			isa = PBXGroup;
 			children = (
-				9289D750276297F20012C316 /* DataStoreInteractor .swift */,
+				920C8233276391FC00E5E7C1 /* DataStoreInteractor */,
 			);
 			path = Interactors;
 			sourceTree = "<group>";

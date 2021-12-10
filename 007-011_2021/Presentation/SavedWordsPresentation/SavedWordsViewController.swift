@@ -50,4 +50,12 @@ extension SavedWordsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell as UITableViewCell
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if editingStyle == .delete {
+            dataStoreInteractor.deleteWord(word: savedWords[indexPath.row])
+            savedWords = dataStoreInteractor.getAllWords()
+            tableView.deleteRows(at: [indexPath], with: .left)
+        }
+    }
 }

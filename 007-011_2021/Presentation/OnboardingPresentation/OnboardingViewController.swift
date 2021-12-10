@@ -8,34 +8,37 @@
 import UIKit
 
 class OnboardingViewController: UIViewController {
-//    let networkService: NetworkService = NetworkService()
-
+    
+    // private properties
+    private let userDefaults = UserDefaults.standard
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+//        print(userDefaults.bool(forKey: "isFirstRun"))
+        configure()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        configure()
     }
     
     @IBAction func okayButtonAction(_ sender: Any) {
+        userDefaults.set(true, forKey: "isFirstRun")
+        makeNavigation()
+    }
+    
+    // private functions
+    private func makeNavigation() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier:  "SavedWordsViewController") as? SavedWordsViewController else { return }
         navigationController?.pushViewController(viewController, animated: true)
     }
-    //    private func getWord() {
-//        DispatchQueue.global(qos: .userInitiated).async {
-//            self.networkService.getWord { result in
-//                switch result {
-//                case .success(let word):
-//                    print(word[0])
-//
-//                case .failure(let error):
-//                    print(error)
-//                }
-//            }
-//        }
-//    }
     
-//    private func configure() {
-//        guard let onboardingView = view as? OnboardingView else { return }
-//    }
+    private func configure() {
+        if userDefaults.bool(forKey: "isFirstRun") {
+            userDefaults.set(true, forKey: "isFirstRun")
+            makeNavigation()
+        }
+    }
 }

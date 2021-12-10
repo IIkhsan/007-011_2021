@@ -151,9 +151,19 @@ class DataStoreService {
         
         return false
     }
-//
-////    func deleteWord(deletedWord: Word) {
-////        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "WordEntity")
-////    }
-//}
+    
+    func deleteWord(word: Word) {
+        let request = WordEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "word == %@", word.word)
+        
+        do {
+            let wordEntities = try viewContext.fetch(request)
+            guard let wordEntity = wordEntities.first else { return }
+            viewContext.delete(wordEntity)
+            
+            try viewContext.save()
+        } catch {
+            print(error)
+        }
+    }
 }
