@@ -88,7 +88,6 @@
 				DF93AA9CA95D93578BEE9C83 /* Pods-007-011_2021.debug.xcconfig */,
 				8A2770A81AE2BD659F3373A5 /* Pods-007-011_2021.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -609,7 +608,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 939KD425D9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "007-011_2021/Info.plist";
+				INFOPLIST_FILE = "007-011_2021/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -638,7 +637,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 939KD425D9;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "007-011_2021/Info.plist";
+				INFOPLIST_FILE = "007-011_2021/Resources/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

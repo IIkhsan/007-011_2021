@@ -77,7 +77,7 @@
         <scene sceneID="IVB-0D-5uC">
             <objects>
                 <navigationController id="K2b-Fe-ou1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Words" id="X0p-iG-yW5"/>
+                    <tabBarItem key="tabBarItem" title="Words" image="book" catalog="system" selectedImage="book.fill" id="X0p-iG-yW5"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zSb-dZ-I5A">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -121,10 +121,10 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SavedWordsTableViewCell" id="cxd-bz-xgL" customClass="SavedWordsTableViewCell" customModule="_07_011_2021" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cxd-bz-xgL" id="Ycx-9v-sIA">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P3p-lP-tKh">
@@ -134,7 +134,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EeS-vP-nKl">
-                                                    <rect key="frame" x="345" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="345" y="11" width="42" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" systemColor="systemGray3Color"/>
                                                     <nil key="highlightedColor"/>
@@ -143,6 +143,8 @@
                                             <constraints>
                                                 <constraint firstItem="P3p-lP-tKh" firstAttribute="top" secondItem="Ycx-9v-sIA" secondAttribute="top" constant="11" id="2P3-AW-aJB"/>
                                                 <constraint firstItem="EeS-vP-nKl" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="P3p-lP-tKh" secondAttribute="trailing" constant="8" symbolic="YES" id="ALF-K8-5mv"/>
+                                                <constraint firstAttribute="bottom" secondItem="P3p-lP-tKh" secondAttribute="bottom" constant="12" id="FzE-Fx-KBO"/>
+                                                <constraint firstAttribute="bottom" secondItem="EeS-vP-nKl" secondAttribute="bottom" constant="11.5" id="S1v-U5-G6T"/>
                                                 <constraint firstItem="EeS-vP-nKl" firstAttribute="top" secondItem="Ycx-9v-sIA" secondAttribute="top" constant="11" id="ZMd-oh-s1v"/>
                                                 <constraint firstItem="P3p-lP-tKh" firstAttribute="leading" secondItem="Ycx-9v-sIA" secondAttribute="leading" constant="34" id="fwg-Vi-cVH"/>
                                                 <constraint firstAttribute="trailing" secondItem="EeS-vP-nKl" secondAttribute="trailing" constant="27" id="tIr-is-VdM"/>
@@ -165,7 +167,7 @@
                             <constraint firstItem="i3C-F8-Fpc" firstAttribute="leading" secondItem="DwC-Jq-TKn" secondAttribute="leading" id="wFG-ra-kVR"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Words" id="lvD-cS-Jjw"/>
+                    <tabBarItem key="tabBarItem" title="Words" selectedImage="book" catalog="system" id="lvD-cS-Jjw"/>
                     <navigationItem key="navigationItem" id="kGG-fd-SKQ"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
@@ -180,7 +182,7 @@
         <scene sceneID="kd8-AZ-XOo">
             <objects>
                 <navigationController id="EYa-dw-fkR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Search" id="CyK-0D-q2W"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="magnifyingglass" catalog="system" selectedImage="magnifyingglass" id="CyK-0D-q2W"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="YQH-xN-km4">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -210,20 +212,21 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordTableViewCell" id="UCk-bQ-fcy" customClass="WordTableViewCell" customModule="_07_011_2021" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UCk-bQ-fcy" id="dFq-2e-gBg">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SgN-xt-02a">
-                                                    <rect key="frame" x="30" y="11" width="42" height="21"/>
+                                                    <rect key="frame" x="30" y="11" width="42" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="SgN-xt-02a" secondAttribute="bottom" constant="11.5" id="BPq-Uv-HIF"/>
                                                 <constraint firstItem="SgN-xt-02a" firstAttribute="top" secondItem="dFq-2e-gBg" secondAttribute="top" constant="11" id="C6m-a0-9yC"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="SgN-xt-02a" secondAttribute="trailing" constant="20" symbolic="YES" id="mzZ-xm-Hlo"/>
                                                 <constraint firstItem="SgN-xt-02a" firstAttribute="leading" secondItem="dFq-2e-gBg" secondAttribute="leading" constant="30" id="qFj-ZW-J1i"/>
@@ -248,7 +251,7 @@
                             <constraint firstItem="Yme-tj-NZi" firstAttribute="leading" secondItem="iOG-MI-KCh" secondAttribute="leading" id="gkV-U1-ath"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="qZn-Fk-hzm"/>
+                    <tabBarItem key="tabBarItem" title="Search" selectedImage="magnifyingglass" catalog="system" id="qZn-Fk-hzm"/>
                     <navigationItem key="navigationItem" id="MXA-ZE-MJk"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <connections>
@@ -339,7 +342,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="book" catalog="system" width="128" height="99"/>
         <image name="book.fill" catalog="system" width="128" height="95"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
