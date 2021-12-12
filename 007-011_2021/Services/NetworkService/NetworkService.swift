@@ -8,10 +8,11 @@
 import Foundation
 
 final class NetworkService {
+    // private properties
+    private let configuration = URLSessionConfiguration.default
+    private let decoder = JSONDecoder()
     
-    let configuration = URLSessionConfiguration.default
-    let decoder = JSONDecoder()
-    
+    // MARK: - Public functions
     func getWord(word: String, completion: @escaping ((Result<[Word], Error>) -> Void)) {
         let operationQueue = OperationQueue()
         operationQueue.addOperation {
@@ -21,7 +22,7 @@ final class NetworkService {
                 return
             }
             var request = URLRequest(url: wordURL)
-            request.cachePolicy = .reloadIgnoringCacheData
+            request.cachePolicy = .reloadIgnoringLocalCacheData
             request.httpMethod = "GET"
             
             let dataTask = session.dataTask(with: request) { data, response, error in

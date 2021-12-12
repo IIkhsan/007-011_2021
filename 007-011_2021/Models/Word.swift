@@ -8,6 +8,7 @@
 import Foundation
 
 struct Word: Codable {
+    // properties 
     let word: String
     let phonetics: [Phonetic]?
     let meanings: [Meaning]?

@@ -8,13 +8,15 @@
 import UIKit
 
 class SearchingViewController: UIViewController {
-    
+    // Outlet properties
     @IBOutlet weak var searchingTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
     
+    // private properties 
     private let networkService: NetworkService = NetworkService()
     private var searchingWords: [Word] = []
     
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,6 +24,7 @@ class SearchingViewController: UIViewController {
         tableView.dataSource = self
     }
     
+    // MARK: - Button actions
     @IBAction func findButtonAction(_ sender: Any) {
         guard let searchingText: String = searchingTextField.text else { return }
         
@@ -49,6 +52,7 @@ class SearchingViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource, UITableViewDeletage
 extension SearchingViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         

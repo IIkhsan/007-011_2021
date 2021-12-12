@@ -11,7 +11,7 @@ class DataStoreInteractor {
     // private properties
     private let dataStoreService = DataStoreService()
     
-    // public functions
+    // MARK: - Public functions
     func saveWord(word: Word) {
         dataStoreService.saveWord(word: word)
     }
@@ -35,6 +35,7 @@ class DataStoreInteractor {
         return dataStoreService.isContainsWord(word: word)
     }
     
+    // MARK: - Private functions
     private func castMeaningsSetToArray(meaningEntitiesSet: NSSet) -> [Meaning] {
         var meanings: [Meaning] = []
         guard let meaningEntities = meaningEntitiesSet.allObjects as? [MeaningEntity] else { return [] }

@@ -8,12 +8,14 @@
 import UIKit
 
 class SavedWordsViewController: UIViewController {
+    // Outlet properties
     @IBOutlet weak var tableView: UITableView!
     
-    // properties
+    // private properties
     private let dataStoreInteractor = DataStoreInteractor()
     private var savedWords: [Word] = []
     
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +32,7 @@ class SavedWordsViewController: UIViewController {
         }
     }
     
+    // MARK: - Button actions
     @IBAction func searchingButtonAction(_ sender: Any) {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier:  "SearchingViewController") as? SearchingViewController else { return }
@@ -37,6 +40,7 @@ class SavedWordsViewController: UIViewController {
     }
 }
 
+// MARK: - UITableViewDataSource, UITableViewDeletage
 extension SavedWordsViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return savedWords.count

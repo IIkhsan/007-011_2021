@@ -12,10 +12,10 @@ class OnboardingViewController: UIViewController {
     // private properties
     private let userDefaults = UserDefaults.standard
     
+    // MARK: - View life cycle
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-//        print(userDefaults.bool(forKey: "isFirstRun"))
         configure()
     }
     
@@ -23,12 +23,13 @@ class OnboardingViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    // MARK: - Button actions
     @IBAction func okayButtonAction(_ sender: Any) {
         userDefaults.set(true, forKey: "isFirstRun")
         makeNavigation()
     }
     
-    // private functions
+    // MARK: - Private functions
     private func makeNavigation() {
         let storyboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         guard let viewController = storyboard.instantiateViewController(withIdentifier:  "SavedWordsViewController") as? SavedWordsViewController else { return }

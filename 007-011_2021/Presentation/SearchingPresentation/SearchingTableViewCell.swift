@@ -8,10 +8,11 @@
 import UIKit
 
 class SearchingTableViewCell: UITableViewCell {
-    
+    // Outlet properties
     @IBOutlet weak var wordLabel: UILabel!
     @IBOutlet weak var transcriptionLabel: UILabel!
     
+    // MARK: - Standart configure functions
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -20,6 +21,7 @@ class SearchingTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    // MARK: - Public functions
     func setWord(word: Word) {
         wordLabel.text = word.word
         let transcription = word.phonetics?[0].text

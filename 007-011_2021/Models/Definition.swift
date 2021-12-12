@@ -8,6 +8,7 @@
 import Foundation
 
 struct Definition: Codable {
+    // properties 
     let definition: String?
     let example: String?
 }
