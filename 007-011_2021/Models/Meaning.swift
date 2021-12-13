@@ -8,6 +8,7 @@
 import Foundation
 
 struct Meaning: Codable {
+    // properties
     let partOfSpeech: String?
     let definitions: [Definition]?
 }
