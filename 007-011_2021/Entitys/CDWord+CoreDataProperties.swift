@@ -2,7 +2,7 @@
 //  CDWord+CoreDataProperties.swift
 //  
 //
-//  Created by Тимур Миргалиев on 02.12.2021.
+//  Created by Тимур Миргалиев on 11.12.2021.
 //
 //
 
@@ -13,7 +13,7 @@ import CoreData
 extension CDWord {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDWord> {
-        return NSFetchRequest<CDWord>(entityName: "Word")
+        return NSFetchRequest<CDWord>(entityName: "CDWord")
     }
 
     @NSManaged public var origin: String?

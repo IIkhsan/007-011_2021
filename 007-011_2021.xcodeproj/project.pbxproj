@@ -14,14 +14,6 @@
 		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
 		B55EAA5E9AB67710CC408EE7 /* Pods_007_011_2021.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFE2DE805F7E2B254B7D0B5 /* Pods_007_011_2021.framework */; };
 		E507FCA12758FCE500C60D18 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E507FCA02758FCE500C60D18 /* Alamofire */; };
-		E527CD6927595947001A7AA2 /* CDWord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E527CD6127595947001A7AA2 /* CDWord+CoreDataClass.swift */; };
-		E527CD6A27595947001A7AA2 /* CDWord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E527CD6227595947001A7AA2 /* CDWord+CoreDataProperties.swift */; };
-		E527CD6B27595947001A7AA2 /* CDPhonetics+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E527CD6327595947001A7AA2 /* CDPhonetics+CoreDataProperties.swift */; };
-		E527CD6C27595947001A7AA2 /* CDDefinitions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E527CD6427595947001A7AA2 /* CDDefinitions+CoreDataClass.swift */; };
-		E527CD6D27595947001A7AA2 /* CDPhonetics+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E527CD6527595947001A7AA2 /* CDPhonetics+CoreDataClass.swift */; };
-		E527CD6E27595947001A7AA2 /* CDMeanings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E527CD6627595947001A7AA2 /* CDMeanings+CoreDataProperties.swift */; };
-		E527CD6F27595947001A7AA2 /* CDMeanings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E527CD6727595947001A7AA2 /* CDMeanings+CoreDataClass.swift */; };
-		E527CD7027595947001A7AA2 /* CDDefinitions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E527CD6827595947001A7AA2 /* CDDefinitions+CoreDataProperties.swift */; };
 		E53281B727510E4B0014114D /* CustomSerchingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53281B627510E4B0014114D /* CustomSerchingTableViewCell.swift */; };
 		E53281BB275114E10014114D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53281BA275114E10014114D /* StartScreenViewController.swift */; };
 		E56B591027493BD30042EAD0 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B590F27493BD30042EAD0 /* GeneralViewController.swift */; };
@@ -34,6 +26,14 @@
 		E56B5924274FD5750042EAD0 /* DetailSearchingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B5923274FD5750042EAD0 /* DetailSearchingViewController.swift */; };
 		E5D6795E27521168008F9868 /* Dictionary.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = E5D6795C27521168008F9868 /* Dictionary.xcdatamodeld */; };
 		E5E100002753CB1000A4B73C /* DataStoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E1FFFF2753CB1000A4B73C /* DataStoreManager.swift */; };
+		E5E7A29A2765039C00AA316F /* CDDefinitions+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7A2922765039C00AA316F /* CDDefinitions+CoreDataProperties.swift */; };
+		E5E7A29B2765039C00AA316F /* CDMeanings+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7A2932765039C00AA316F /* CDMeanings+CoreDataClass.swift */; };
+		E5E7A29C2765039C00AA316F /* CDWord+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7A2942765039C00AA316F /* CDWord+CoreDataClass.swift */; };
+		E5E7A29D2765039C00AA316F /* CDMeanings+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7A2952765039C00AA316F /* CDMeanings+CoreDataProperties.swift */; };
+		E5E7A29E2765039C00AA316F /* CDPhonetics+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7A2962765039C00AA316F /* CDPhonetics+CoreDataProperties.swift */; };
+		E5E7A29F2765039C00AA316F /* CDDefinitions+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7A2972765039C00AA316F /* CDDefinitions+CoreDataClass.swift */; };
+		E5E7A2A02765039C00AA316F /* CDPhonetics+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7A2982765039C00AA316F /* CDPhonetics+CoreDataClass.swift */; };
+		E5E7A2A12765039C00AA316F /* CDWord+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E7A2992765039C00AA316F /* CDWord+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,14 +47,6 @@
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F0FBF748AC10686B75002F7 /* Pods-007-011_2021.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-007-011_2021.release.xcconfig"; path = "Target Support Files/Pods-007-011_2021/Pods-007-011_2021.release.xcconfig"; sourceTree = "<group>"; };
 		BDFE2DE805F7E2B254B7D0B5 /* Pods_007_011_2021.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_007_011_2021.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E527CD6127595947001A7AA2 /* CDWord+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CDWord+CoreDataClass.swift"; path = "007-011_2021/CDWord+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		E527CD6227595947001A7AA2 /* CDWord+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CDWord+CoreDataProperties.swift"; path = "007-011_2021/CDWord+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		E527CD6327595947001A7AA2 /* CDPhonetics+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CDPhonetics+CoreDataProperties.swift"; path = "007-011_2021/CDPhonetics+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		E527CD6427595947001A7AA2 /* CDDefinitions+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CDDefinitions+CoreDataClass.swift"; path = "007-011_2021/CDDefinitions+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		E527CD6527595947001A7AA2 /* CDPhonetics+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CDPhonetics+CoreDataClass.swift"; path = "007-011_2021/CDPhonetics+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		E527CD6627595947001A7AA2 /* CDMeanings+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CDMeanings+CoreDataProperties.swift"; path = "007-011_2021/CDMeanings+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		E527CD6727595947001A7AA2 /* CDMeanings+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CDMeanings+CoreDataClass.swift"; path = "007-011_2021/CDMeanings+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		E527CD6827595947001A7AA2 /* CDDefinitions+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "CDDefinitions+CoreDataProperties.swift"; path = "007-011_2021/CDDefinitions+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		E53281B627510E4B0014114D /* CustomSerchingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSerchingTableViewCell.swift; sourceTree = "<group>"; };
 		E53281BA275114E10014114D /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E56B590F27493BD30042EAD0 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
@@ -67,6 +59,14 @@
 		E56B5923274FD5750042EAD0 /* DetailSearchingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailSearchingViewController.swift; sourceTree = "<group>"; };
 		E5D6795D27521168008F9868 /* Dictionary.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Dictionary.xcdatamodel; sourceTree = "<group>"; };
 		E5E1FFFF2753CB1000A4B73C /* DataStoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataStoreManager.swift; sourceTree = "<group>"; };
+		E5E7A2922765039C00AA316F /* CDDefinitions+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDDefinitions+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E5E7A2932765039C00AA316F /* CDMeanings+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDMeanings+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E5E7A2942765039C00AA316F /* CDWord+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDWord+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E5E7A2952765039C00AA316F /* CDMeanings+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDMeanings+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E5E7A2962765039C00AA316F /* CDPhonetics+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPhonetics+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		E5E7A2972765039C00AA316F /* CDDefinitions+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDDefinitions+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E5E7A2982765039C00AA316F /* CDPhonetics+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDPhonetics+CoreDataClass.swift"; sourceTree = "<group>"; };
+		E5E7A2992765039C00AA316F /* CDWord+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CDWord+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,16 +111,13 @@
 		4DA9A26A2748EFFF00070A45 /* 007-011_2021 */ = {
 			isa = PBXGroup;
 			children = (
+				4DA9A2792748F00100070A45 /* Info.plist */,
+				E5E7A2FF27666C0700AA316F /* Resourse */,
 				E507FC732757DB4100C60D18 /* Entitys */,
 				E56B5920274EBFCC0042EAD0 /* Controller */,
 				E56B591F274EBFC60042EAD0 /* View */,
 				E56B591E274EBFBB0042EAD0 /* Model */,
 				E56B591B274B7D1E0042EAD0 /* Word Struct */,
-				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
-				4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */,
-				4DA9A2742748F00100070A45 /* Assets.xcassets */,
-				4DA9A2792748F00100070A45 /* Info.plist */,
-				E5D6795C27521168008F9868 /* Dictionary.xcdatamodeld */,
 			);
 			path = "007-011_2021";
 			sourceTree = "<group>";
@@ -128,14 +125,14 @@
 		E507FC732757DB4100C60D18 /* Entitys */ = {
 			isa = PBXGroup;
 			children = (
-				E527CD6427595947001A7AA2 /* CDDefinitions+CoreDataClass.swift */,
-				E527CD6827595947001A7AA2 /* CDDefinitions+CoreDataProperties.swift */,
-				E527CD6727595947001A7AA2 /* CDMeanings+CoreDataClass.swift */,
-				E527CD6627595947001A7AA2 /* CDMeanings+CoreDataProperties.swift */,
-				E527CD6527595947001A7AA2 /* CDPhonetics+CoreDataClass.swift */,
-				E527CD6327595947001A7AA2 /* CDPhonetics+CoreDataProperties.swift */,
-				E527CD6127595947001A7AA2 /* CDWord+CoreDataClass.swift */,
-				E527CD6227595947001A7AA2 /* CDWord+CoreDataProperties.swift */,
+				E5E7A2972765039C00AA316F /* CDDefinitions+CoreDataClass.swift */,
+				E5E7A2922765039C00AA316F /* CDDefinitions+CoreDataProperties.swift */,
+				E5E7A2982765039C00AA316F /* CDPhonetics+CoreDataClass.swift */,
+				E5E7A2962765039C00AA316F /* CDPhonetics+CoreDataProperties.swift */,
+				E5E7A2942765039C00AA316F /* CDWord+CoreDataClass.swift */,
+				E5E7A2992765039C00AA316F /* CDWord+CoreDataProperties.swift */,
+				E5E7A2932765039C00AA316F /* CDMeanings+CoreDataClass.swift */,
+				E5E7A2952765039C00AA316F /* CDMeanings+CoreDataProperties.swift */,
 			);
 			path = Entitys;
 			sourceTree = "<group>";
@@ -179,6 +176,17 @@
 				E53281BA275114E10014114D /* StartScreenViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		E5E7A2FF27666C0700AA316F /* Resourse */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A2742748F00100070A45 /* Assets.xcassets */,
+				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
+				4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */,
+				E5D6795C27521168008F9868 /* Dictionary.xcdatamodeld */,
+			);
+			path = Resourse;
 			sourceTree = "<group>";
 		};
 		FFA8235DB010C6139C508C87 /* Pods */ = {
@@ -313,25 +321,25 @@
 			files = (
 				E56B5918274B7C370042EAD0 /* Definitions.swift in Sources */,
 				E56B591027493BD30042EAD0 /* GeneralViewController.swift in Sources */,
-				E527CD6E27595947001A7AA2 /* CDMeanings+CoreDataProperties.swift in Sources */,
 				E56B591227498BBB0042EAD0 /* NetworkManager.swift in Sources */,
 				E53281BB275114E10014114D /* StartScreenViewController.swift in Sources */,
 				E56B5922274EC4D30042EAD0 /* SearchViewController.swift in Sources */,
-				E527CD6927595947001A7AA2 /* CDWord+CoreDataClass.swift in Sources */,
 				E56B5924274FD5750042EAD0 /* DetailSearchingViewController.swift in Sources */,
-				E527CD6F27595947001A7AA2 /* CDMeanings+CoreDataClass.swift in Sources */,
-				E527CD7027595947001A7AA2 /* CDDefinitions+CoreDataProperties.swift in Sources */,
+				E5E7A29B2765039C00AA316F /* CDMeanings+CoreDataClass.swift in Sources */,
+				E5E7A29A2765039C00AA316F /* CDDefinitions+CoreDataProperties.swift in Sources */,
 				E56B5916274B7C0A0042EAD0 /* Meanings.swift in Sources */,
-				E527CD6A27595947001A7AA2 /* CDWord+CoreDataProperties.swift in Sources */,
+				E5E7A2A02765039C00AA316F /* CDPhonetics+CoreDataClass.swift in Sources */,
+				E5E7A29F2765039C00AA316F /* CDDefinitions+CoreDataClass.swift in Sources */,
 				E53281B727510E4B0014114D /* CustomSerchingTableViewCell.swift in Sources */,
+				E5E7A29D2765039C00AA316F /* CDMeanings+CoreDataProperties.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
+				E5E7A2A12765039C00AA316F /* CDWord+CoreDataProperties.swift in Sources */,
 				E5D6795E27521168008F9868 /* Dictionary.xcdatamodeld in Sources */,
+				E5E7A29E2765039C00AA316F /* CDPhonetics+CoreDataProperties.swift in Sources */,
 				E56B591A274B7C580042EAD0 /* Phonetics.swift in Sources */,
-				E527CD6B27595947001A7AA2 /* CDPhonetics+CoreDataProperties.swift in Sources */,
 				E5E100002753CB1000A4B73C /* DataStoreManager.swift in Sources */,
-				E527CD6C27595947001A7AA2 /* CDDefinitions+CoreDataClass.swift in Sources */,
+				E5E7A29C2765039C00AA316F /* CDWord+CoreDataClass.swift in Sources */,
 				E56B5914274A79D00042EAD0 /* Word.swift in Sources */,
-				E527CD6D27595947001A7AA2 /* CDPhonetics+CoreDataClass.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

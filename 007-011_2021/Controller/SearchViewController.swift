@@ -9,16 +9,17 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    //MARK: - Properties
     var serchingWords: [Word] = []
     
+    //MARK: - Private properties
     private let networkManager = NetworkManager()
     
     //MARK: - UI
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var searchingWord: UITextField!
     
-    //MARK: - Life ........
-    
+    //MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
@@ -26,6 +27,7 @@ class SearchViewController: UIViewController {
         searchingWord.delegate = self
     }
     
+    //MARK: - Action Button
     @IBAction func didClickSearchButton(_ sender: Any) {
         let word: String = searchingWord.text ?? ""
         let someUrl = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(word)")
@@ -44,7 +46,6 @@ class SearchViewController: UIViewController {
 }
 
 //MARK: - UITableViewDataSource, UITableViewDelegate
-
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -52,7 +53,6 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         let cell =  tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! CustomSerchingTableViewCell
         let word = serchingWords[indexPath.row]
         cell.configure(title: word.word, detail: word.phonetic ?? "")
@@ -64,16 +64,12 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
             return
         }
         vc.word = serchingWords[indexPath.row]
-       
         navigationController?.pushViewController(vc, animated: true)
     }
 }
 
-
 //MARK: - UITextFieldDelegate
-
 extension SearchViewController: UITextFieldDelegate {
-    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchingWord.resignFirstResponder()
         didClickSearchButton((Any).self)

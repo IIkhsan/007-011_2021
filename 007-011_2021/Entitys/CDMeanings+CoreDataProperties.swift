@@ -2,7 +2,7 @@
 //  CDMeanings+CoreDataProperties.swift
 //  
 //
-//  Created by Тимур Миргалиев on 02.12.2021.
+//  Created by Тимур Миргалиев on 11.12.2021.
 //
 //
 
@@ -13,7 +13,7 @@ import CoreData
 extension CDMeanings {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDMeanings> {
-        return NSFetchRequest<CDMeanings>(entityName: "Meanings")
+        return NSFetchRequest<CDMeanings>(entityName: "CDMeanings")
     }
 
     @NSManaged public var partOfSpeech: String?

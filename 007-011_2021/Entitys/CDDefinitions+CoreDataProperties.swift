@@ -2,7 +2,7 @@
 //  CDDefinitions+CoreDataProperties.swift
 //  
 //
-//  Created by Тимур Миргалиев on 02.12.2021.
+//  Created by Тимур Миргалиев on 11.12.2021.
 //
 //
 
@@ -13,7 +13,7 @@ import CoreData
 extension CDDefinitions {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDDefinitions> {
-        return NSFetchRequest<CDDefinitions>(entityName: "Definitions")
+        return NSFetchRequest<CDDefinitions>(entityName: "CDDefinitions")
     }
 
     @NSManaged public var definition: String?

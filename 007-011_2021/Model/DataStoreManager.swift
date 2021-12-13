@@ -25,7 +25,6 @@ class DataStoreManager {
     }()
 
     // MARK: - CRUD
-
     func saveContext () {
         let context = persistentContainer.viewContext
         if context.hasChanges {
@@ -38,6 +37,7 @@ class DataStoreManager {
         }
     }
     
+    //MARK: - Add to Core Data methods
     func addCdWord(word: Word) {
         let cdWord = CDWord(context: viewContext)
         cdWord.word = word.word
@@ -73,8 +73,7 @@ class DataStoreManager {
         return cdDefinition
     }
     
-    //MARK: - transformations
-    
+    //MARK: - Transformations To Set
     func transformPhoneticsToSet(phonetics: [Phonetics]) -> NSSet {
         var cdPhonetics: [CDPhonetics] = []
         for phonetic in phonetics {
@@ -99,6 +98,7 @@ class DataStoreManager {
         return NSSet(array: cdDefinition)
     }
     
+    //MARK: - Transformations to Entites
     func tranformSetToMeanings(cdMeanings: NSSet) -> [Meanings] {
         var meanings: [Meanings] = []
         let meaningsEntity = cdMeanings.allObjects as? [CDMeanings]
@@ -126,6 +126,7 @@ class DataStoreManager {
         return phonetics
     }
     
+    //MARK: - General methods
     func getAllWords() -> [Word] {
         let fetchRequest = CDWord.fetchRequest()
         var words: [Word] = []
@@ -140,6 +141,7 @@ class DataStoreManager {
         return words
     }
     
+    /// checks if the word is in the database
     func isContains(word: Word) -> Bool {
         let fetchRequest = CDWord.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "word == %@", word.word)
@@ -156,6 +158,7 @@ class DataStoreManager {
         return false
     }
     
+    /// removes a word from the database
     func removeWord(word: Word) {
         let fetchRequest = CDWord.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "word == %@", word.word)
@@ -169,4 +172,3 @@ class DataStoreManager {
         }
     }
 }
-

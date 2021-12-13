@@ -2,7 +2,7 @@
 //  CDPhonetics+CoreDataProperties.swift
 //  
 //
-//  Created by Тимур Миргалиев on 02.12.2021.
+//  Created by Тимур Миргалиев on 11.12.2021.
 //
 //
 
@@ -13,7 +13,7 @@ import CoreData
 extension CDPhonetics {
 
     @nonobjc public class func fetchRequest() -> NSFetchRequest<CDPhonetics> {
-        return NSFetchRequest<CDPhonetics>(entityName: "Phonetics")
+        return NSFetchRequest<CDPhonetics>(entityName: "CDPhonetics")
     }
 
     @NSManaged public var audio: String?

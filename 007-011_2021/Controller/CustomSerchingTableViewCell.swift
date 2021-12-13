@@ -10,7 +10,6 @@ import AVFoundation
 class CustomSerchingTableViewCell: UITableViewCell {
 
     //MARK: - UI
-    
     @IBOutlet weak var titleOfWord: UILabel!
     @IBOutlet weak var detailOfWord: UILabel!
     
