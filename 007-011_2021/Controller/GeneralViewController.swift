@@ -23,19 +23,19 @@ class GeneralViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         if UserDefaults.standard.value(forKey: "StartScreen") == nil {
             let vc = storyboard?.instantiateViewController(withIdentifier: "StartScreen") as? StartScreenViewController
             vc?.modalPresentationStyle = .fullScreen
             present(vc ?? UIViewController(), animated: false)
         } else {
-        super.viewWillAppear(animated)
-        arrayOfWords = dataStoreManager.getAllWords()
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-         }
-       }
+            super.viewWillAppear(animated)
+            arrayOfWords = dataStoreManager.getAllWords()
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
+        }
     }
 }
 

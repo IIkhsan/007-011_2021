@@ -14,7 +14,6 @@
 		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
 		B55EAA5E9AB67710CC408EE7 /* Pods_007_011_2021.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDFE2DE805F7E2B254B7D0B5 /* Pods_007_011_2021.framework */; };
 		E507FCA12758FCE500C60D18 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = E507FCA02758FCE500C60D18 /* Alamofire */; };
-		E53281B727510E4B0014114D /* CustomSerchingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53281B627510E4B0014114D /* CustomSerchingTableViewCell.swift */; };
 		E53281BB275114E10014114D /* StartScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E53281BA275114E10014114D /* StartScreenViewController.swift */; };
 		E56B591027493BD30042EAD0 /* GeneralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B590F27493BD30042EAD0 /* GeneralViewController.swift */; };
 		E56B591227498BBB0042EAD0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E56B591127498BBB0042EAD0 /* NetworkManager.swift */; };
@@ -47,7 +46,6 @@
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5F0FBF748AC10686B75002F7 /* Pods-007-011_2021.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-007-011_2021.release.xcconfig"; path = "Target Support Files/Pods-007-011_2021/Pods-007-011_2021.release.xcconfig"; sourceTree = "<group>"; };
 		BDFE2DE805F7E2B254B7D0B5 /* Pods_007_011_2021.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_007_011_2021.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E53281B627510E4B0014114D /* CustomSerchingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSerchingTableViewCell.swift; sourceTree = "<group>"; };
 		E53281BA275114E10014114D /* StartScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScreenViewController.swift; sourceTree = "<group>"; };
 		E56B590F27493BD30042EAD0 /* GeneralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralViewController.swift; sourceTree = "<group>"; };
 		E56B591127498BBB0042EAD0 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -113,7 +111,7 @@
 			children = (
 				4DA9A2792748F00100070A45 /* Info.plist */,
 				E5E7A2FF27666C0700AA316F /* Resourse */,
-				E507FC732757DB4100C60D18 /* Entitys */,
+				E507FC732757DB4100C60D18 /* Entities */,
 				E56B5920274EBFCC0042EAD0 /* Controller */,
 				E56B591F274EBFC60042EAD0 /* View */,
 				E56B591E274EBFBB0042EAD0 /* Model */,
@@ -122,7 +120,7 @@
 			path = "007-011_2021";
 			sourceTree = "<group>";
 		};
-		E507FC732757DB4100C60D18 /* Entitys */ = {
+		E507FC732757DB4100C60D18 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				E5E7A2972765039C00AA316F /* CDDefinitions+CoreDataClass.swift */,
@@ -134,7 +132,7 @@
 				E5E7A2932765039C00AA316F /* CDMeanings+CoreDataClass.swift */,
 				E5E7A2952765039C00AA316F /* CDMeanings+CoreDataProperties.swift */,
 			);
-			path = Entitys;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		E56B591B274B7D1E0042EAD0 /* Word Struct */ = {
@@ -172,7 +170,6 @@
 				E56B590F27493BD30042EAD0 /* GeneralViewController.swift */,
 				E56B5921274EC4D30042EAD0 /* SearchViewController.swift */,
 				E56B5923274FD5750042EAD0 /* DetailSearchingViewController.swift */,
-				E53281B627510E4B0014114D /* CustomSerchingTableViewCell.swift */,
 				E53281BA275114E10014114D /* StartScreenViewController.swift */,
 			);
 			path = Controller;
@@ -330,7 +327,6 @@
 				E56B5916274B7C0A0042EAD0 /* Meanings.swift in Sources */,
 				E5E7A2A02765039C00AA316F /* CDPhonetics+CoreDataClass.swift in Sources */,
 				E5E7A29F2765039C00AA316F /* CDDefinitions+CoreDataClass.swift in Sources */,
-				E53281B727510E4B0014114D /* CustomSerchingTableViewCell.swift in Sources */,
 				E5E7A29D2765039C00AA316F /* CDMeanings+CoreDataProperties.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
 				E5E7A2A12765039C00AA316F /* CDWord+CoreDataProperties.swift in Sources */,
