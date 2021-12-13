@@ -116,8 +116,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" horizontalCompressionResistancePriority="751" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="The word you want to find " minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PTM-nc-x0Z">
-                                <rect key="frame" x="20" y="90" width="309.5" height="34"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <rect key="frame" x="20" y="90" width="319.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="253" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUo-Mq-6UU">
@@ -169,7 +169,7 @@
                             <constraint firstItem="oQQ-oS-vU4" firstAttribute="trailing" secondItem="YUo-Mq-6UU" secondAttribute="trailing" constant="20" id="RAa-so-fxm"/>
                             <constraint firstItem="YUo-Mq-6UU" firstAttribute="top" secondItem="oQQ-oS-vU4" secondAttribute="top" constant="4" id="X7J-jh-ahq"/>
                             <constraint firstItem="PTM-nc-x0Z" firstAttribute="top" secondItem="oQQ-oS-vU4" secondAttribute="top" constant="2" id="YqS-1g-q4s"/>
-                            <constraint firstItem="YUo-Mq-6UU" firstAttribute="leading" secondItem="PTM-nc-x0Z" secondAttribute="trailing" constant="20" id="hw2-LA-gPN"/>
+                            <constraint firstItem="YUo-Mq-6UU" firstAttribute="leading" secondItem="PTM-nc-x0Z" secondAttribute="trailing" constant="10" id="hw2-LA-gPN"/>
                             <constraint firstItem="dTj-Wc-RV4" firstAttribute="top" secondItem="PTM-nc-x0Z" secondAttribute="bottom" constant="20" id="vFf-vX-9H6"/>
                         </constraints>
                     </view>
