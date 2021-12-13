@@ -10,31 +10,31 @@ import UIKit
 class SearchViewController: UIViewController {
 
     //MARK: - Properties
-    var serchingWords: [Word] = []
+    var searchingWords: [Word] = []
     
     //MARK: - Private properties
     private let networkManager = NetworkManager()
     
     //MARK: - UI
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchingWord: UITextField!
+    @IBOutlet weak var wordTextField: UITextField!
     
     //MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
-        searchingWord.delegate = self
+        wordTextField.delegate = self
     }
     
     //MARK: - Action Button
     @IBAction func didClickSearchButton(_ sender: Any) {
-        let word: String = searchingWord.text ?? ""
+        let word: String = wordTextField.text ?? ""
         let someUrl = URL(string: "https://api.dictionaryapi.dev/api/v2/entries/en/\(word)")
         networkManager.obtainWords(comletion: { result in
             switch result {
             case .success(let words):
-                self.serchingWords = words
+                self.searchingWords = words
                         DispatchQueue.main.async {
                             self.tableView.reloadData()
                         }
@@ -49,13 +49,14 @@ class SearchViewController: UIViewController {
 extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return serchingWords.count
+        return searchingWords.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell =  tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath) as! CustomSerchingTableViewCell
-        let word = serchingWords[indexPath.row]
-        cell.configure(title: word.word, detail: word.phonetic ?? "")
+        let cell =  tableView.dequeueReusableCell(withIdentifier: "searchCell", for: indexPath)
+        let word = searchingWords[indexPath.row]
+        cell.textLabel?.text = word.word
+        cell.detailTextLabel?.text = word.phonetic
         return cell
     }
     
@@ -63,7 +64,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
         guard let vc = storyboard?.instantiateViewController(withIdentifier: "DeatilSearchingViewController") as? DetailSearchingViewController else {
             return
         }
-        vc.word = serchingWords[indexPath.row]
+        vc.word = searchingWords[indexPath.row]
         navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -71,7 +72,7 @@ extension SearchViewController: UITableViewDataSource, UITableViewDelegate {
 //MARK: - UITextFieldDelegate
 extension SearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchingWord.resignFirstResponder()
+        wordTextField.resignFirstResponder()
         didClickSearchButton((Any).self)
         return true
     }

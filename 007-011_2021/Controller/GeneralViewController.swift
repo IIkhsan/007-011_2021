@@ -25,8 +25,8 @@ class GeneralViewController: UIViewController {
     }
 
     override func viewWillAppear(_ animated: Bool) {
-        if UserDefaults.standard.value(forKey: "onboarding") == nil {
-            let vc = storyboard?.instantiateViewController(withIdentifier: "OnboardingViewController") as? StartScreenViewController
+        if UserDefaults.standard.value(forKey: "StartScreen") == nil {
+            let vc = storyboard?.instantiateViewController(withIdentifier: "StartScreen") as? StartScreenViewController
             vc?.modalPresentationStyle = .fullScreen
             present(vc ?? UIViewController(), animated: false)
         } else {

@@ -13,7 +13,6 @@ class DataStoreManager {
     lazy var viewContext = persistentContainer.viewContext
     
     // MARK: - Core Data stack
-
     lazy var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "Dictionary")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
