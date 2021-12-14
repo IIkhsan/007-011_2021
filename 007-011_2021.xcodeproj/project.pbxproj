@@ -8,38 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */; };
-		4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26F2748EFFF00070A45 /* ViewController.swift */; };
 		4DA9A2732748EFFF00070A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2712748EFFF00070A45 /* Main.storyboard */; };
 		4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2742748F00100070A45 /* Assets.xcassets */; };
 		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
 		B9D61F7C2765FF820059D0E1 /* DictionaryModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B9D61F7A2765FF820059D0E1 /* DictionaryModel.xcdatamodeld */; };
-		B9D61F7E27663B170059D0E1 /* DictionaryRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61F7D27663B170059D0E1 /* DictionaryRepository.swift */; };
 		B9D61F8127663CC70059D0E1 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61F8027663CC70059D0E1 /* Word.swift */; };
 		B9D61F8527663D2C0059D0E1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61F8427663D2C0059D0E1 /* NetworkService.swift */; };
 		B9D61F8A2766411C0059D0E1 /* Errors.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61F892766411C0059D0E1 /* Errors.swift */; };
-		B9D61F8C2766477A0059D0E1 /* DbService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61F8B2766477A0059D0E1 /* DbService.swift */; };
+		B9D61F8C2766477A0059D0E1 /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61F8B2766477A0059D0E1 /* PersistableService.swift */; };
 		B9D61F8F27664FAC0059D0E1 /* WordEntity+Converters.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61F8E27664FAC0059D0E1 /* WordEntity+Converters.swift */; };
 		B9D61FAE27669A120059D0E1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61FAD27669A120059D0E1 /* SceneDelegate.swift */; };
 		B9D61FB027669A3D0059D0E1 /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61FAF27669A3D0059D0E1 /* SearchController.swift */; };
+		B9D61FB2276794C60059D0E1 /* NetworkDictionaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61FB1276794C60059D0E1 /* NetworkDictionaryViewController.swift */; };
+		B9D61FB42767A2AA0059D0E1 /* PersistableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61FB32767A2AA0059D0E1 /* PersistableViewController.swift */; };
+		B9D61FB6276837B50059D0E1 /* RootTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9D61FB5276837B50059D0E1 /* RootTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4DA9A2682748EFFF00070A45 /* 007-011_2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "007-011_2021.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4DA9A26F2748EFFF00070A45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		4DA9A2722748EFFF00070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA9A2742748F00100070A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA9A2772748F00100070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B9D61F7B2765FF820059D0E1 /* DictionaryModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DictionaryModel.xcdatamodel; sourceTree = "<group>"; };
-		B9D61F7D27663B170059D0E1 /* DictionaryRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryRepository.swift; sourceTree = "<group>"; };
 		B9D61F8027663CC70059D0E1 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
 		B9D61F8427663D2C0059D0E1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B9D61F892766411C0059D0E1 /* Errors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Errors.swift; sourceTree = "<group>"; };
-		B9D61F8B2766477A0059D0E1 /* DbService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbService.swift; sourceTree = "<group>"; };
+		B9D61F8B2766477A0059D0E1 /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
 		B9D61F8E27664FAC0059D0E1 /* WordEntity+Converters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+Converters.swift"; sourceTree = "<group>"; };
 		B9D61FAD27669A120059D0E1 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		B9D61FAF27669A3D0059D0E1 /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
+		B9D61FB1276794C60059D0E1 /* NetworkDictionaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDictionaryViewController.swift; sourceTree = "<group>"; };
+		B9D61FB32767A2AA0059D0E1 /* PersistableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableViewController.swift; sourceTree = "<group>"; };
+		B9D61FB5276837B50059D0E1 /* RootTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,19 +74,16 @@
 		4DA9A26A2748EFFF00070A45 /* 007-011_2021 */ = {
 			isa = PBXGroup;
 			children = (
+				B9D61FB7276851B30059D0E1 /* Resources */,
 				B9D61FAC276699390059D0E1 /* Controllers */,
 				B9D61F88276640700059D0E1 /* Utils */,
-				B9D61F8327663D1C0059D0E1 /* Repositories */,
 				B9D61F8227663D130059D0E1 /* Services */,
 				B9D61F7F27663CAD0059D0E1 /* Models */,
 				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
 				B9D61FAD27669A120059D0E1 /* SceneDelegate.swift */,
-				4DA9A26F2748EFFF00070A45 /* ViewController.swift */,
 				4DA9A2712748EFFF00070A45 /* Main.storyboard */,
-				4DA9A2742748F00100070A45 /* Assets.xcassets */,
 				4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */,
 				4DA9A2792748F00100070A45 /* Info.plist */,
-				B9D61F7A2765FF820059D0E1 /* DictionaryModel.xcdatamodeld */,
 			);
 			path = "007-011_2021";
 			sourceTree = "<group>";
@@ -102,17 +101,9 @@
 			isa = PBXGroup;
 			children = (
 				B9D61F8427663D2C0059D0E1 /* NetworkService.swift */,
-				B9D61F8B2766477A0059D0E1 /* DbService.swift */,
+				B9D61F8B2766477A0059D0E1 /* PersistableService.swift */,
 			);
 			path = Services;
-			sourceTree = "<group>";
-		};
-		B9D61F8327663D1C0059D0E1 /* Repositories */ = {
-			isa = PBXGroup;
-			children = (
-				B9D61F7D27663B170059D0E1 /* DictionaryRepository.swift */,
-			);
-			path = Repositories;
 			sourceTree = "<group>";
 		};
 		B9D61F88276640700059D0E1 /* Utils */ = {
@@ -135,8 +126,20 @@
 			isa = PBXGroup;
 			children = (
 				B9D61FAF27669A3D0059D0E1 /* SearchController.swift */,
+				B9D61FB1276794C60059D0E1 /* NetworkDictionaryViewController.swift */,
+				B9D61FB32767A2AA0059D0E1 /* PersistableViewController.swift */,
+				B9D61FB5276837B50059D0E1 /* RootTabBarController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		B9D61FB7276851B30059D0E1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A2742748F00100070A45 /* Assets.xcassets */,
+				B9D61F7A2765FF820059D0E1 /* DictionaryModel.xcdatamodeld */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,10 +213,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */,
-				B9D61F8C2766477A0059D0E1 /* DbService.swift in Sources */,
-				B9D61F7E27663B170059D0E1 /* DictionaryRepository.swift in Sources */,
+				B9D61F8C2766477A0059D0E1 /* PersistableService.swift in Sources */,
+				B9D61FB6276837B50059D0E1 /* RootTabBarController.swift in Sources */,
 				B9D61F8127663CC70059D0E1 /* Word.swift in Sources */,
+				B9D61FB2276794C60059D0E1 /* NetworkDictionaryViewController.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
 				B9D61FAE27669A120059D0E1 /* SceneDelegate.swift in Sources */,
 				B9D61F8A2766411C0059D0E1 /* Errors.swift in Sources */,
@@ -221,6 +224,7 @@
 				B9D61FB027669A3D0059D0E1 /* SearchController.swift in Sources */,
 				B9D61F7C2765FF820059D0E1 /* DictionaryModel.xcdatamodeld in Sources */,
 				B9D61F8527663D2C0059D0E1 /* NetworkService.swift in Sources */,
+				B9D61FB42767A2AA0059D0E1 /* PersistableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

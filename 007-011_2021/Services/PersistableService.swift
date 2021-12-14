@@ -8,7 +8,12 @@
 import Foundation
 import CoreData
 
-class DbService {
+class PersistableService {
+    // To make sure we have just one instance of container
+    static let shared = PersistableService()
+    
+    private init() {}
+    
     // MARK: Core Data
     lazy private var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "DictionaryModel")
@@ -34,10 +39,10 @@ class DbService {
     }
     
     // MARK: CRUD functions
-    func fetchWords(startsWith beginning: String?) -> [Word] {
+    func fetchWords(startsWith beginning: String? = nil) -> [Word] {
         let request = WordEntity.fetchRequest()
         if let beginning = beginning {
-            request.predicate = NSPredicate(format: "word LIKE[c] %@", beginning)
+            request.predicate = NSPredicate(format: "word LIKE[c] %@", "*\(beginning)*")
         }
         if let wordEntities = try? viewContext.fetch(request) {
             return wordEntities.map { $0.toWord() }
@@ -46,7 +51,19 @@ class DbService {
         }
     }
     
+    func fetchWordExact(_ word: String) -> WordEntity? {
+        let request = WordEntity.fetchRequest()
+        request.predicate = NSPredicate(format: "word == %@", word)
+        return (try? viewContext.fetch(request))?.first
+    }
+    
     func addWord(word: Word) {
+        
+        // check if word already exists
+        if fetchWordExact(word.word) != nil {
+            return
+        }
+        
         let wordEntity = WordEntity(context: viewContext)
         wordEntity.word = word.word
         wordEntity.phonetic = word.phonetic
