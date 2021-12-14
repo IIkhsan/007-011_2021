@@ -7,5 +7,7 @@
 
 import Foundation
 
-let networkService = NetworkService()
-let persistableService = PersistableService()
+class Interactor {
+    static let networkService = NetworkService()
+    static let persistableService = PersistableService()
+}

@@ -14,8 +14,8 @@ class SavedWordsViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField!
     
     //MARK: - Properties
-    var data: [Word] = persistableService.getAllWords()
-    
+    var data: [Word] = Interactor.persistableService.getAllWords()
+
     //MARK: - View controller's cycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +35,48 @@ class SavedWordsViewController: UIViewController {
     private func configure() {
         tableView.dataSource = self
         tableView.delegate = self
+        searchTextField.delegate = self
+    }
+}
+
+// MARK: - UITextFieldDelegate
+extension SavedWordsViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField, reason: UITextField.DidEndEditingReason) {
+        Interactor.networkService.getWord(word: textField.text ?? "" ) { [weak self] result in
+            switch result {
+            case .success(let word):
+                DispatchQueue.main.async {
+                    self?.performSegue(withIdentifier: "search", sender: word[0])
+                }
+                DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1), execute: {
+                    textField.text = ""
+                })
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "search", let viewController = segue.destination as? SearchWordsViewController, let word = sender as? Word {
+            viewController.word = word
+            viewController.delegate = self
+        }
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.resignFirstResponder()
+        return true
+    }
+}
+
+// MARK: - SearchWordsViewController
+extension SavedWordsViewController: SearchWordsViewControllerDelegate {
+    
+    func saveNewWord(word: Word) {
+        Interactor.persistableService.addWordToCoreData(word: word)
+        data = Interactor.persistableService.getAllWords()
+        tableView.reloadData()
     }
 }
 
@@ -51,8 +93,8 @@ extension SavedWordsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        persistableService.removeWordEntity(word: data[indexPath.row])
-        data = persistableService.getAllWords()
+        Interactor.persistableService.removeWordEntity(word: data[indexPath.row])
+        data = Interactor.persistableService.getAllWords()
         tableView.deleteRows(at: [indexPath], with: .left)
     }
 }

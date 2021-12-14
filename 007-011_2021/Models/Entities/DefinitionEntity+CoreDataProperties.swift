@@ -18,7 +18,7 @@ extension DefinitionEntity {
 
     @NSManaged public var definition: String?
     @NSManaged public var example: String?
-    @NSManaged public var meaning: MeaningEntity
+    @NSManaged public var meaning: MeaningEntity?
 
 }
 

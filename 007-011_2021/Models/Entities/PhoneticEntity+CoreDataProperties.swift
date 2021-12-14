@@ -18,8 +18,7 @@ extension PhoneticEntity {
 
     @NSManaged public var audio: String?
     @NSManaged public var text: String
-    @NSManaged public var word: WordEntity
-
+    @NSManaged public var word: WordEntity?
 }
 
 extension PhoneticEntity : Identifiable {
