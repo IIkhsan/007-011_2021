@@ -6,17 +6,21 @@
 //
 
 import UIKit
+import AVFoundation
 
 class SavingWordViewController: UIViewController {
     // Outlet properties
     @IBOutlet weak var saveButton: UIButton!
     @IBOutlet weak var definitionLabel: UILabel!
+    @IBOutlet weak var playAudioLabel: UILabel!
+    @IBOutlet weak var playAudioButton: UIButton!
     
     // public properties
     var word: Word?
     
     // private properties
-    let dataStoreInteractor = DataStoreInteractor()
+    private let dataStoreInteractor = DataStoreInteractor()
+    private var player: AVPlayer?
     
     // MARK: - View life cycle
     override func viewDidLoad() {
@@ -33,10 +37,24 @@ class SavingWordViewController: UIViewController {
         saveButton.isEnabled = false
     }
     
+    @IBAction func playAudioButtonAction(_ sender: Any) {
+        guard let guardWord = word else { return }
+        let guardPhonetics = guardWord.phonetics ?? []
+        let audio = guardPhonetics[0].audio ?? nil
+        
+        if audio != nil {
+            guard let url = URL(string: "https:\(audio ?? "")") else { return }
+            let playerItem = AVPlayerItem(url: url)
+            player = AVPlayer.init(playerItem: playerItem)
+            player?.play()
+        }
+    }
+    
     // MARK: - Private functions
     private func configure() {
         guard let guardWord = word else { return }
         let guardMeanings = guardWord.meanings ?? []
+        let guardPhonetics = guardWord.phonetics ?? []
         
         if !guardMeanings.isEmpty {
             let definitions = guardMeanings[0].definitions ?? []
@@ -48,8 +66,19 @@ class SavingWordViewController: UIViewController {
             }
         }
         
+        if !guardPhonetics.isEmpty {
+            let phonetic = guardPhonetics[0]
+            
+            if phonetic.audio == nil {
+                playAudioLabel.text = "No audio"
+                playAudioButton.isEnabled = false
+            }
+        }
+        
         if dataStoreInteractor.isContainsWord(word: guardWord) {
             saveButton.isEnabled = false
         }
+        
+        
     }
 }

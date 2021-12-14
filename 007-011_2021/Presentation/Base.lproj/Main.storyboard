@@ -308,21 +308,42 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Play audio:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0ts-Tu-F7a">
+                                <rect key="frame" x="16.000000000000007" y="137" width="102.66666666666669" height="24"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="clJ-aM-gMS">
+                                <rect key="frame" x="126" y="134" width="40" height="31"/>
+                                <color key="tintColor" red="0.95686274770000002" green="0.73333334920000004" blue="0.39607840779999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="play.fill" catalog="system" title=""/>
+                                <connections>
+                                    <action selector="playAudioButtonAction:" destination="s4k-jy-nAC" eventType="touchUpInside" id="Cka-rB-6Bo"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QP4-JU-1t2"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="0ts-Tu-F7a" firstAttribute="leading" secondItem="cI2-AK-5wd" secondAttribute="leading" id="1ic-WA-to4"/>
                             <constraint firstItem="cI2-AK-5wd" firstAttribute="leading" secondItem="QP4-JU-1t2" secondAttribute="leading" constant="16" id="6wf-D0-pU7"/>
                             <constraint firstItem="nsu-3i-bfr" firstAttribute="top" secondItem="QP4-JU-1t2" secondAttribute="top" constant="18" id="I9l-UM-Qvm"/>
                             <constraint firstItem="QP4-JU-1t2" firstAttribute="bottom" secondItem="7up-VZ-apf" secondAttribute="bottom" constant="122" id="JHW-HM-6oV"/>
                             <constraint firstItem="nsu-3i-bfr" firstAttribute="centerX" secondItem="QP4-JU-1t2" secondAttribute="centerX" constant="5" id="Sbc-1J-n1R"/>
                             <constraint firstItem="cI2-AK-5wd" firstAttribute="top" secondItem="nsu-3i-bfr" secondAttribute="bottom" constant="10" id="WSg-ST-2vJ"/>
                             <constraint firstItem="QP4-JU-1t2" firstAttribute="trailing" secondItem="cI2-AK-5wd" secondAttribute="trailing" constant="20" id="isu-fN-3Jm"/>
+                            <constraint firstItem="0ts-Tu-F7a" firstAttribute="top" secondItem="cI2-AK-5wd" secondAttribute="bottom" constant="14" id="kAk-mU-xDj"/>
+                            <constraint firstItem="clJ-aM-gMS" firstAttribute="leading" secondItem="0ts-Tu-F7a" secondAttribute="trailing" constant="7.3333333333333144" id="uuU-ng-GNy"/>
+                            <constraint firstItem="clJ-aM-gMS" firstAttribute="top" secondItem="cI2-AK-5wd" secondAttribute="bottom" constant="11" id="vQC-0V-aft"/>
                             <constraint firstItem="7up-VZ-apf" firstAttribute="centerX" secondItem="QP4-JU-1t2" secondAttribute="centerX" id="vf7-ge-CbU"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="definitionLabel" destination="cI2-AK-5wd" id="0Qx-0A-6De"/>
+                        <outlet property="definitionLabel" destination="cI2-AK-5wd" id="yGX-GR-Dfo"/>
+                        <outlet property="playAudioButton" destination="clJ-aM-gMS" id="fSJ-Ol-Jz5"/>
+                        <outlet property="playAudioLabel" destination="0ts-Tu-F7a" id="nBh-cd-mHT"/>
                         <outlet property="saveButton" destination="7up-VZ-apf" id="4eu-kO-dJw"/>
                     </connections>
                 </viewController>
@@ -333,6 +354,7 @@
     </scenes>
     <resources>
         <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="play.fill" catalog="system" width="116" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
