@@ -10,13 +10,13 @@ import UIKit
 class WordDetailViewController: UIViewController {
     
     // MARK: - IBOutlets
-    @IBOutlet weak var secondTableView: UITableView!
     @IBOutlet weak var firstTableView: UITableView!
     @IBOutlet weak var wordLabel: UILabel!
     
     // MARK: - Dependencies
     var word: Word?
-    let persistableService: PersistableService = PersistableService()
+    let interactor: Interactor = Interactor()
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,16 +25,12 @@ class WordDetailViewController: UIViewController {
         firstTableView.delegate = self
         firstTableView.dataSource = self
         firstTableView.rowHeight = UITableView.automaticDimension
-        
-        secondTableView.delegate = self
-        secondTableView.dataSource = self
-        secondTableView.rowHeight = UITableView.automaticDimension
     }
     
     // MARK: - @IBAction
     @IBAction func saveButtonPressed(_ sender: Any) {
         if let word = self.word {
-            persistableService.saveWordEntity(word)
+            interactor.saveWord(word)
         }
         navigationController?.popViewController(animated: true)
     }
@@ -43,24 +39,30 @@ class WordDetailViewController: UIViewController {
 //MARK: - UITableViewDelegate, UITableViewDataSource
 extension WordDetailViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 4
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if tableView == firstTableView {
-            guard let phonetiCell = tableView.dequeueReusableCell(withIdentifier: "PhoneticsTableViewCell") as? PhoneticsTableViewCell else { return UITableViewCell() }
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "PhoneticsMeaninsTableViewCell") as? PhoneticsMeaninsTableViewCell else { return UITableViewCell() }
+        switch indexPath.row {
+
+        case 0:
             if !(word?.phonetics.isEmpty ?? false) {
-                phonetiCell.config(phoneticText: word?.phonetics[0].text ?? "No info")
+                cell.config(title: "Phonetic", value: word?.phonetics[0].text ?? "No info")
             } else {
-                phonetiCell.config( phoneticText: "None")
+                cell.config(title: "Phonetic", value: "None")
             }
-            return phonetiCell
-        } else {
-            guard let meaningCell = tableView.dequeueReusableCell(withIdentifier: "MeaningsTableViewCell") as? MeaningsTableViewCell else { return UITableViewCell() }
-            meaningCell.config(partOfSpeech: word?.meanings[0].partOfSpeech ?? "No value", definition: word?.meanings[0].definitions[0].definition ?? "No info", example: word?.meanings[0].definitions[0].example ?? "No info")
-            return meaningCell
+        case 1:
+            cell.config(title: "Part of speech", value: word?.meanings[0].partOfSpeech ?? "No info")
+        case 2:
+            cell.config(title: "Definition", value: word?.meanings[0].definitions[0].definition ?? "No info" )
+        case 3:
+            cell.config(title: "Example", value: word?.meanings[0].definitions[0].example ?? "No info")
+        default:
+            cell.config(title: "Label", value: "Label")
         }
+        return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

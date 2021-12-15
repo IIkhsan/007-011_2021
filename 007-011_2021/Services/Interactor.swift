@@ -10,12 +10,17 @@ import Foundation
 class Interactor {
     
     // MARK: - Dependencies
-     private let networkService: NetworkService = NetworkService.shared
-     private let persistableService: PersistableService = PersistableService.shared
+    private let networkService: NetworkService = NetworkService.shared
+    private let persistableService: PersistableService = PersistableService.shared
     static let shared = Interactor()
     
     func getWords(request: String, completion: @escaping (Result<[Word], Error>) -> Void) {
         networkService.getWord(request: request, completion: completion)
+    }
+    
+    //MARK: - Functions
+    func saveWord(_ word: Word) {
+        persistableService.saveWordEntity(word)
     }
     
     func fetchWords() -> [Word] {
