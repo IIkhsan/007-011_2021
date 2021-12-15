@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="AntonymsEntity" representedClassName="AntonymsEntity" syncable="YES">
+        <attribute name="antonymValue" attributeType="String"/>
+        <relationship name="definition" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DefinitionsEntity" inverseName="antonyms" inverseEntity="DefinitionsEntity"/>
+    </entity>
+    <entity name="DefinitionsEntity" representedClassName="DefinitionsEntity" syncable="YES">
+        <attribute name="definition" optional="YES" attributeType="String"/>
+        <attribute name="example" optional="YES" attributeType="String"/>
+        <relationship name="antonyms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="AntonymsEntity" inverseName="definition" inverseEntity="AntonymsEntity"/>
+        <relationship name="meanings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MeaningsEntity" inverseName="definitions" inverseEntity="MeaningsEntity"/>
+        <relationship name="synonyms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="SynonymsEntity" inverseName="definition" inverseEntity="SynonymsEntity"/>
+    </entity>
+    <entity name="MeaningsEntity" representedClassName="MeaningsEntity" syncable="YES">
+        <attribute name="partOfSpeech" optional="YES" attributeType="String"/>
+        <relationship name="definitions" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="DefinitionsEntity" inverseName="meanings" inverseEntity="DefinitionsEntity"/>
+        <relationship name="word" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WordEntity" inverseName="meanings" inverseEntity="WordEntity"/>
+    </entity>
+    <entity name="PhoneticsEntity" representedClassName="PhoneticsEntity" syncable="YES">
+        <attribute name="audio" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="word" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WordEntity" inverseName="phonetics" inverseEntity="WordEntity"/>
+    </entity>
+    <entity name="SynonymsEntity" representedClassName="SynonymsEntity" syncable="YES">
+        <attribute name="synonymValue" optional="YES" attributeType="String"/>
+        <relationship name="definition" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DefinitionsEntity" inverseName="synonyms" inverseEntity="DefinitionsEntity"/>
+    </entity>
+    <entity name="WordEntity" representedClassName="WordEntity" syncable="YES">
+        <attribute name="meaning" optional="YES" attributeType="String"/>
+        <attribute name="phonetic" optional="YES" attributeType="String"/>
+        <attribute name="word" attributeType="String"/>
+        <relationship name="meanings" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="MeaningsEntity" inverseName="word" inverseEntity="MeaningsEntity"/>
+        <relationship name="phonetics" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="PhoneticsEntity" inverseName="word" inverseEntity="PhoneticsEntity"/>
+    </entity>
+    <elements>
+        <element name="AntonymsEntity" positionX="-153" positionY="72" width="128" height="59"/>
+        <element name="DefinitionsEntity" positionX="-7.61383056640625" positionY="134.6005249023438" width="128" height="104"/>
+        <element name="MeaningsEntity" positionX="8.61798095703125" positionY="-63.30215454101562" width="128" height="74"/>
+        <element name="PhoneticsEntity" positionX="-341.2801513671875" positionY="131.0961608886719" width="128" height="74"/>
+        <element name="SynonymsEntity" positionX="-144" positionY="81" width="128" height="59"/>
+        <element name="WordEntity" positionX="-277.1954956054688" positionY="-64.96563720703125" width="128" height="104"/>
+    </elements>
+</model>

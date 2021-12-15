@@ -9,6 +9,8 @@ import Foundation
 
 struct Word: Codable {
     let word: String
-//    let meanings: [Meanings]
-//    let phonetics: [Phonetics]
+    let phonetic: String?
+    let meaning: String?
+    let phonetics: [Phonetics]
+    let meanings: [Meanings]
 }

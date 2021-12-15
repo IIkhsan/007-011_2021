@@ -14,7 +14,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var pageControl: UIPageControl!
     
-    //Properties
+    //MARK: - Properties
     var slides: [WelcomeSlide] = []
     
     var currentPage = 0 {
@@ -36,14 +36,14 @@ class WelcomeViewController: UIViewController {
             WelcomeSlide(title: "Welcome", description: "Welcome to dictionary app", image: #imageLiteral(resourceName: "welcome_0")),
             WelcomeSlide(title: "About us", description:  "The dictionary will help you learn new words. Easy to use - effective in learning.", image: #imageLiteral(resourceName: "icons8-literature-64")),
         ]
-        
+    
         pageControl.numberOfPages = slides.count
     }
     
     //MARK: - IBActions
     @IBAction func nextButtonClicked(_ sender: UIButton) {
         if currentPage == slides.count - 1 {
-            let controller = storyboard?.instantiateViewController(identifier: "NavigationController") as! UINavigationController
+            let controller = storyboard?.instantiateViewController(identifier: "TabBarController") as! UITabBarController
             controller.modalPresentationStyle = .fullScreen
             controller.modalTransitionStyle = .flipHorizontal
             present(controller, animated: true, completion: nil)

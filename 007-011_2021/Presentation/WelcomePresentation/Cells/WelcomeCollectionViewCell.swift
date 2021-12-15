@@ -9,13 +9,13 @@ import UIKit
 
 class WelcomeCollectionViewCell: UICollectionViewCell {
     
-    //Properties
-    static let identifier = String(describing: WelcomeCollectionViewCell.self)
-    
     // MARK: - IBOutlets
     @IBOutlet weak var slideImageView: UIImageView!
     @IBOutlet weak var slideTitleLabel: UILabel!
     @IBOutlet weak var slideDescriptionLabel: UILabel!
+    
+    //Properties
+    static let identifier = String(describing: WelcomeCollectionViewCell.self)
     
     //MARK: - Functions
     func config(_ slide: WelcomeSlide) {

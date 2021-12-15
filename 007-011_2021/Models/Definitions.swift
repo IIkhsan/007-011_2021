@@ -8,9 +8,8 @@
 import Foundation
 
 struct Definitions: Codable {
-    let definition: String
-    let example: String
-//    let synonyms: String?
-//    let antonyms: String?
-    let meanings: [Meanings]
+    let definition: String?
+    let example: String?
+    let synonyms: [String]
+    let antonyms: [String]
 }

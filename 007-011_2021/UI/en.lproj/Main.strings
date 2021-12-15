@@ -1,0 +1,18 @@
+
+/* Class = "UILabel"; text = "Description"; ObjectID = "6f5-jt-p1l"; */
+"6f5-jt-p1l.text" = "Description";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "A89-qV-uB6"; */
+"A89-qV-uB6.text" = "Title";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "SJH-M0-OA3"; */
+"SJH-M0-OA3.text" = "Title";
+
+/* Class = "UIButton"; configuration.title = "Next"; ObjectID = "moQ-kp-gm0"; */
+"moQ-kp-gm0.configuration.title" = "Next";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "moQ-kp-gm0"; */
+"moQ-kp-gm0.normalTitle" = "Button";
+
+/* Class = "UINavigationItem"; title = "Search"; ObjectID = "xPa-iU-QEj"; */
+"xPa-iU-QEj.title" = "Search";
