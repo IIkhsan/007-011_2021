@@ -6,5 +6,5 @@ target '007-011_2021' do
   use_frameworks!
 
   # Pods for 007-011_2021
-	pod 'Alamofire', '~> 5.5'
+	pod 'Alamofire'
 end
