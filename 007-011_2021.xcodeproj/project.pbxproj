@@ -37,6 +37,7 @@
 		D64E103A276556720056B0DE /* PhoneticsEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E102E276556720056B0DE /* PhoneticsEntity+CoreDataProperties.swift */; };
 		D64E103C276556720056B0DE /* WordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E1030276556720056B0DE /* WordEntity.swift */; };
 		D64E10462766153D0056B0DE /* WordDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D64E10452766153D0056B0DE /* WordDetailViewController.swift */; };
+		D66AFE68276AB13700C58EF3 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66AFE67276AB13700C58EF3 /* Package.swift */; };
 		D6ADD74A274D652C00F53FD1 /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD749274D652C00F53FD1 /* PersistableService.swift */; };
 		D6ADD74D274D6B3400F53FD1 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD74B274D6B3400F53FD1 /* Model.xcdatamodeld */; };
 		D6ADD764274DAB3200F53FD1 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6ADD763274DAB3200F53FD1 /* WelcomeViewController.swift */; };
@@ -78,6 +79,7 @@
 		D64E102E276556720056B0DE /* PhoneticsEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticsEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		D64E1030276556720056B0DE /* WordEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEntity.swift; sourceTree = "<group>"; };
 		D64E10452766153D0056B0DE /* WordDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordDetailViewController.swift; sourceTree = "<group>"; };
+		D66AFE67276AB13700C58EF3 /* Package.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Package.swift; path = "007-011_2021/Package.swift"; sourceTree = SOURCE_ROOT; };
 		D6ADD749274D652C00F53FD1 /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
 		D6ADD74C274D6B3400F53FD1 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		D6ADD763274DAB3200F53FD1 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				D6ADD767274DBE3600F53FD1 /* Resources */,
 				D6ADD765274DBDFC00F53FD1 /* Presentation */,
 				4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */,
+				D66AFE67276AB13700C58EF3 /* Package.swift */,
 				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
 			);
 			path = "007-011_2021";
@@ -136,7 +139,6 @@
 				81C4B5B74A011F0642F6D9F3 /* Pods-007-011_2021.debug.xcconfig */,
 				FE6FDA5FEF12080BC6A6965F /* Pods-007-011_2021.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -451,6 +453,7 @@
 				D621365527679D5B0046C09F /* SearchWordViewController.swift in Sources */,
 				D6ADD74D274D6B3400F53FD1 /* Model.xcdatamodeld in Sources */,
 				D6ADD74A274D652C00F53FD1 /* PersistableService.swift in Sources */,
+				D66AFE68276AB13700C58EF3 /* Package.swift in Sources */,
 				D6331E4A274EAE0C002F08D9 /* NetworkService.swift in Sources */,
 				D6331E572750DFE3002F08D9 /* Antonyms.swift in Sources */,
 				D64E10462766153D0056B0DE /* WordDetailViewController.swift in Sources */,
