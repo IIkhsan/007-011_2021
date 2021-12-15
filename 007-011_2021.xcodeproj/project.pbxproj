@@ -18,12 +18,6 @@
 		7444B0CC274A560800296E2F /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0CB274A560800296E2F /* NetworkService.swift */; };
 		7444B0CE274A654200296E2F /* SavedWordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0CD274A654200296E2F /* SavedWordsTableViewController.swift */; };
 		7444B0D1274A9FF000296E2F /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7444B0D0274A9FF000296E2F /* Word.swift */; };
-		7453EF592757806E00E6255E /* WordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7453EF532757806E00E6255E /* WordEntity.swift */; };
-		7453EF5A2757806E00E6255E /* PhoneticEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7453EF542757806E00E6255E /* PhoneticEntity.swift */; };
-		7453EF5B2757806E00E6255E /* SynonymEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7453EF552757806E00E6255E /* SynonymEntity.swift */; };
-		7453EF5C2757806E00E6255E /* AntonymEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7453EF562757806E00E6255E /* AntonymEntity.swift */; };
-		7453EF5D2757806E00E6255E /* MeaningEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7453EF572757806E00E6255E /* MeaningEntity.swift */; };
-		7453EF5E2757806E00E6255E /* DefinitionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7453EF582757806E00E6255E /* DefinitionEntity.swift */; };
 		7456305227567AA800426309 /* WordFormatTransfer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7456305127567AA800426309 /* WordFormatTransfer.swift */; };
 		745B2A89275BC91A004C3B34 /* SearchWords.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 745B2A88275BC91A004C3B34 /* SearchWords.storyboard */; };
 		745B2A8C275BCAFA004C3B34 /* SearchWordsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745B2A8B275BCAFA004C3B34 /* SearchWordsTableViewController.swift */; };
@@ -38,13 +32,22 @@
 		74796F8F275CD6D5009224B0 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74796F8E275CD6D5009224B0 /* OnboardingSlide.swift */; };
 		74796F92275CE1C8009224B0 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74796F91275CE1C8009224B0 /* OnboardingModel.swift */; };
 		74796F94275CECE1009224B0 /* OnboardingUserDefaultsKeyValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74796F93275CECE1009224B0 /* OnboardingUserDefaultsKeyValues.swift */; };
+		747E1BA22769EFC400F5BA0E /* WordEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E1B9C2769EFC400F5BA0E /* WordEntity.swift */; };
+		747E1BA32769EFC400F5BA0E /* PhoneticEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E1B9D2769EFC400F5BA0E /* PhoneticEntity.swift */; };
+		747E1BA42769EFC400F5BA0E /* SynonymEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E1B9E2769EFC400F5BA0E /* SynonymEntity.swift */; };
+		747E1BA52769EFC400F5BA0E /* AntonymEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E1B9F2769EFC400F5BA0E /* AntonymEntity.swift */; };
+		747E1BA62769EFC400F5BA0E /* MeaningEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E1BA02769EFC400F5BA0E /* MeaningEntity.swift */; };
+		747E1BA72769EFC400F5BA0E /* DefinitionEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747E1BA12769EFC400F5BA0E /* DefinitionEntity.swift */; };
 		74D82A1727591C520019DDCB /* WordTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D82A1527591C520019DDCB /* WordTableViewCell.swift */; };
 		74D82A1827591C520019DDCB /* WordTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 74D82A1627591C520019DDCB /* WordTableViewCell.xib */; };
 		74D82A1A27591EAA0019DDCB /* CellType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D82A1927591EAA0019DDCB /* CellType.swift */; };
 		74D82A1D27591FC00019DDCB /* SavedWordsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D82A1C27591FC00019DDCB /* SavedWordsModel.swift */; };
+		7DB364E73E1D7026610D8620 /* Pods_007_011_2021.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36BB59C5E58FB4B59013661A /* Pods_007_011_2021.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2600AADE16A63962227D3B34 /* Pods-007-011_2021.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-007-011_2021.release.xcconfig"; path = "Target Support Files/Pods-007-011_2021/Pods-007-011_2021.release.xcconfig"; sourceTree = "<group>"; };
+		36BB59C5E58FB4B59013661A /* Pods_007_011_2021.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_007_011_2021.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA9A2682748EFFF00070A45 /* 007-011_2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "007-011_2021.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,12 +61,6 @@
 		7444B0CB274A560800296E2F /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7444B0CD274A654200296E2F /* SavedWordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsTableViewController.swift; sourceTree = "<group>"; };
 		7444B0D0274A9FF000296E2F /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
-		7453EF532757806E00E6255E /* WordEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordEntity.swift; sourceTree = "<group>"; };
-		7453EF542757806E00E6255E /* PhoneticEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneticEntity.swift; sourceTree = "<group>"; };
-		7453EF552757806E00E6255E /* SynonymEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynonymEntity.swift; sourceTree = "<group>"; };
-		7453EF562757806E00E6255E /* AntonymEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntonymEntity.swift; sourceTree = "<group>"; };
-		7453EF572757806E00E6255E /* MeaningEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeaningEntity.swift; sourceTree = "<group>"; };
-		7453EF582757806E00E6255E /* DefinitionEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionEntity.swift; sourceTree = "<group>"; };
 		7456305127567AA800426309 /* WordFormatTransfer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFormatTransfer.swift; sourceTree = "<group>"; };
 		745B2A88275BC91A004C3B34 /* SearchWords.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SearchWords.storyboard; sourceTree = "<group>"; };
 		745B2A8B275BCAFA004C3B34 /* SearchWordsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchWordsTableViewController.swift; sourceTree = "<group>"; };
@@ -78,10 +75,17 @@
 		74796F8E275CD6D5009224B0 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		74796F91275CE1C8009224B0 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
 		74796F93275CECE1009224B0 /* OnboardingUserDefaultsKeyValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingUserDefaultsKeyValues.swift; sourceTree = "<group>"; };
+		747E1B9C2769EFC400F5BA0E /* WordEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordEntity.swift; sourceTree = "<group>"; };
+		747E1B9D2769EFC400F5BA0E /* PhoneticEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhoneticEntity.swift; sourceTree = "<group>"; };
+		747E1B9E2769EFC400F5BA0E /* SynonymEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SynonymEntity.swift; sourceTree = "<group>"; };
+		747E1B9F2769EFC400F5BA0E /* AntonymEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AntonymEntity.swift; sourceTree = "<group>"; };
+		747E1BA02769EFC400F5BA0E /* MeaningEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeaningEntity.swift; sourceTree = "<group>"; };
+		747E1BA12769EFC400F5BA0E /* DefinitionEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DefinitionEntity.swift; sourceTree = "<group>"; };
 		74D82A1527591C520019DDCB /* WordTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTableViewCell.swift; sourceTree = "<group>"; };
 		74D82A1627591C520019DDCB /* WordTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WordTableViewCell.xib; sourceTree = "<group>"; };
 		74D82A1927591EAA0019DDCB /* CellType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellType.swift; sourceTree = "<group>"; };
 		74D82A1C27591FC00019DDCB /* SavedWordsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedWordsModel.swift; sourceTree = "<group>"; };
+		D65C1AC984856D2C01A681A8 /* Pods-007-011_2021.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-007-011_2021.debug.xcconfig"; path = "Target Support Files/Pods-007-011_2021/Pods-007-011_2021.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DB364E73E1D7026610D8620 /* Pods_007_011_2021.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +105,8 @@
 			children = (
 				4DA9A26A2748EFFF00070A45 /* 007-011_2021 */,
 				4DA9A2692748EFFF00070A45 /* Products */,
+				6678EF9E38ADF3C71AF5477F /* Pods */,
+				B2F6D29FF7F4165476B98DC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -114,7 +121,7 @@
 		4DA9A26A2748EFFF00070A45 /* 007-011_2021 */ = {
 			isa = PBXGroup;
 			children = (
-				7453EF522757806E00E6255E /* CoreData */,
+				747E1B9B2769EFC400F5BA0E /* CoreData */,
 				7407E82F2753DBEE004A8B2F /* Resources */,
 				7444B0CF274A658900296E2F /* Entities */,
 				74057E0A274A42F2004C9231 /* Services */,
@@ -125,6 +132,15 @@
 				4DA9A2792748F00100070A45 /* Info.plist */,
 			);
 			path = "007-011_2021";
+			sourceTree = "<group>";
+		};
+		6678EF9E38ADF3C71AF5477F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D65C1AC984856D2C01A681A8 /* Pods-007-011_2021.debug.xcconfig */,
+				2600AADE16A63962227D3B34 /* Pods-007-011_2021.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 		74057E02274A3F4D004C9231 /* Presentation */ = {
@@ -217,19 +233,6 @@
 			path = Entities;
 			sourceTree = "<group>";
 		};
-		7453EF522757806E00E6255E /* CoreData */ = {
-			isa = PBXGroup;
-			children = (
-				7453EF532757806E00E6255E /* WordEntity.swift */,
-				7453EF542757806E00E6255E /* PhoneticEntity.swift */,
-				7453EF552757806E00E6255E /* SynonymEntity.swift */,
-				7453EF562757806E00E6255E /* AntonymEntity.swift */,
-				7453EF572757806E00E6255E /* MeaningEntity.swift */,
-				7453EF582757806E00E6255E /* DefinitionEntity.swift */,
-			);
-			path = CoreData;
-			sourceTree = "<group>";
-		};
 		745B2A85275BC8D6004C3B34 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -298,6 +301,27 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		747E1B9B2769EFC400F5BA0E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				747E1B9C2769EFC400F5BA0E /* WordEntity.swift */,
+				747E1B9D2769EFC400F5BA0E /* PhoneticEntity.swift */,
+				747E1B9E2769EFC400F5BA0E /* SynonymEntity.swift */,
+				747E1B9F2769EFC400F5BA0E /* AntonymEntity.swift */,
+				747E1BA02769EFC400F5BA0E /* MeaningEntity.swift */,
+				747E1BA12769EFC400F5BA0E /* DefinitionEntity.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B2F6D29FF7F4165476B98DC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				36BB59C5E58FB4B59013661A /* Pods_007_011_2021.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -305,6 +329,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DA9A27C2748F00100070A45 /* Build configuration list for PBXNativeTarget "007-011_2021" */;
 			buildPhases = (
+				154FF7102132201F7E9CF986 /* [CP] Check Pods Manifest.lock */,
 				4DA9A2642748EFFF00070A45 /* Sources */,
 				4DA9A2652748EFFF00070A45 /* Frameworks */,
 				4DA9A2662748EFFF00070A45 /* Resources */,
@@ -342,6 +367,9 @@
 				Base,
 			);
 			mainGroup = 4DA9A25F2748EFFF00070A45;
+			packageReferences = (
+				7431863E276A3C9900EDA254 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = 4DA9A2692748EFFF00070A45 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -367,39 +395,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		154FF7102132201F7E9CF986 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-007-011_2021-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4DA9A2642748EFFF00070A45 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7453EF592757806E00E6255E /* WordEntity.swift in Sources */,
 				7432543B27556B6F0075A5F1 /* WordServicesInteractor.swift in Sources */,
-				7453EF5B2757806E00E6255E /* SynonymEntity.swift in Sources */,
 				7444B0CC274A560800296E2F /* NetworkService.swift in Sources */,
 				7471ECF92769EA8D0004A0E7 /* Definition.swift in Sources */,
 				7444B0D1274A9FF000296E2F /* Word.swift in Sources */,
+				747E1BA42769EFC400F5BA0E /* SynonymEntity.swift in Sources */,
 				74796F92275CE1C8009224B0 /* OnboardingModel.swift in Sources */,
-				7453EF5E2757806E00E6255E /* DefinitionEntity.swift in Sources */,
-				7453EF5C2757806E00E6255E /* AntonymEntity.swift in Sources */,
 				7471ECFB2769EAB50004A0E7 /* Phonetic .swift in Sources */,
 				745B2A8C275BCAFA004C3B34 /* SearchWordsTableViewController.swift in Sources */,
 				74796F8F275CD6D5009224B0 /* OnboardingSlide.swift in Sources */,
+				747E1BA32769EFC400F5BA0E /* PhoneticEntity.swift in Sources */,
 				74D82A1A27591EAA0019DDCB /* CellType.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
 				7407E8322753DC2C004A8B2F /* MainModel.xcdatamodeld in Sources */,
 				74796F89275CD455009224B0 /* OnboardingCollectionViewCell.swift in Sources */,
+				747E1BA52769EFC400F5BA0E /* AntonymEntity.swift in Sources */,
+				747E1BA22769EFC400F5BA0E /* WordEntity.swift in Sources */,
 				74D82A1D27591FC00019DDCB /* SavedWordsModel.swift in Sources */,
+				747E1BA72769EFC400F5BA0E /* DefinitionEntity.swift in Sources */,
 				745B2A8F275BD22A004C3B34 /* SearchWordsModel.swift in Sources */,
-				7453EF5D2757806E00E6255E /* MeaningEntity.swift in Sources */,
 				74796F94275CECE1009224B0 /* OnboardingUserDefaultsKeyValues.swift in Sources */,
 				74057E0C274A4306004C9231 /* PersistableService.swift in Sources */,
 				74D82A1727591C520019DDCB /* WordTableViewCell.swift in Sources */,
-				7453EF5A2757806E00E6255E /* PhoneticEntity.swift in Sources */,
 				74796F83275CD3D8009224B0 /* OnboardingViewController.swift in Sources */,
 				7456305227567AA800426309 /* WordFormatTransfer.swift in Sources */,
 				745B2A91275BE08B004C3B34 /* SearchWordVCDelegate.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
 				7444B0CE274A654200296E2F /* SavedWordsTableViewController.swift in Sources */,
+				747E1BA62769EFC400F5BA0E /* MeaningEntity.swift in Sources */,
 				7471ECF72769EA690004A0E7 /* Meaning.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +589,7 @@
 		};
 		4DA9A27D2748F00100070A45 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D65C1AC984856D2C01A681A8 /* Pods-007-011_2021.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -554,7 +608,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.itis.-07-011-2021";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itis.-07-011-2resfsdsf";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -564,6 +618,7 @@
 		};
 		4DA9A27E2748F00100070A45 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2600AADE16A63962227D3B34 /* Pods-007-011_2021.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -582,7 +637,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.itis.-07-011-2021";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.itis.-07-011-2resfsdsf";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -612,6 +667,17 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7431863E276A3C9900EDA254 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		7407E8302753DC2C004A8B2F /* MainModel.xcdatamodeld */ = {

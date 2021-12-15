@@ -18,6 +18,7 @@ class SavedWordsTableViewController: UITableViewController {
     
     //MARK: - Lifecycle
     override func viewDidLoad() {
+        super.viewDidLoad()
         setUpSearchBar()
         setUpDelegates()
         tableView.register(UINib(nibName: "WordTableViewCell", bundle: nil), forCellReuseIdentifier: "wordCell")
