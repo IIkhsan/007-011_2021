@@ -260,21 +260,13 @@
 		74796F80275CD3A8009224B0 /* Onboarding  */ = {
 			isa = PBXGroup;
 			children = (
+				74C63F14276A4C3C005A887F /* Controller */,
 				74796F93275CECE1009224B0 /* OnboardingUserDefaultsKeyValues.swift */,
 				74796F90275CE1BA009224B0 /* Model */,
 				74796F8B275CD527009224B0 /* View */,
 				74796F85275CD401009224B0 /* Cells */,
-				74796F81275CD3B7009224B0 /* Controller */,
-				74796F82275CD3D8009224B0 /* OnboardingViewController.swift */,
 			);
 			path = "Onboarding ";
-			sourceTree = "<group>";
-		};
-		74796F81275CD3B7009224B0 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controller;
 			sourceTree = "<group>";
 		};
 		74796F85275CD401009224B0 /* Cells */ = {
@@ -312,6 +304,14 @@
 				747E1BA12769EFC400F5BA0E /* DefinitionEntity.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		74C63F14276A4C3C005A887F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				74796F82275CD3D8009224B0 /* OnboardingViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		B2F6D29FF7F4165476B98DC1 /* Frameworks */ = {
@@ -368,7 +368,6 @@
 			);
 			mainGroup = 4DA9A25F2748EFFF00070A45;
 			packageReferences = (
-				7431863E276A3C9900EDA254 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 4DA9A2692748EFFF00070A45 /* Products */;
 			projectDirPath = "";
@@ -667,17 +666,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		7431863E276A3C9900EDA254 /* XCRemoteSwiftPackageReference "ChartView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AppPear/ChartView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCVersionGroup section */
 		7407E8302753DC2C004A8B2F /* MainModel.xcdatamodeld */ = {

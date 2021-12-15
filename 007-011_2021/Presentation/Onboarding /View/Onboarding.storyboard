@@ -35,19 +35,26 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" adjustsImageSizeForAccessibilityContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1Nl-Ri-b9U">
-                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="650"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="500"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" priority="999" constant="650" id="iid-ez-XDh"/>
+                                                        <constraint firstAttribute="height" priority="999" constant="500" id="FO5-h0-1h2"/>
+                                                        <constraint firstAttribute="height" relation="lessThanOrEqual" constant="500" id="iid-ez-XDh"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oS6-Z4-N3g">
-                                                    <rect key="frame" x="10" y="669" width="394" height="27.5"/>
+                                                    <rect key="frame" x="10" y="665.5" width="394" height="27.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27.5" id="cpe-RL-ulD"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f8-cL-2zs">
-                                                    <rect key="frame" x="10" y="698.5" width="394" height="20.5"/>
+                                                    <rect key="frame" x="10" y="695" width="394" height="24"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="24" id="dyC-Ql-rDu"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
