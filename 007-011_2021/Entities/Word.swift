@@ -15,23 +15,4 @@ struct WordElement: Codable {
     let meanings: [Meaning]
 }
 
-// MARK: - Meaning
-struct Meaning: Codable {
-    let partOfSpeech: String
-    let definitions: [Definition]
-}
-
-// MARK: - Definition
-struct Definition: Codable {
-    let definition: String
-    let example: String?
-    let synonyms, antonyms: [String]
-}
-
-// MARK: - Phonetic
-struct Phonetic: Codable {
-    let text: String
-    let audio: String?
-}
-
 typealias Word = WordElement

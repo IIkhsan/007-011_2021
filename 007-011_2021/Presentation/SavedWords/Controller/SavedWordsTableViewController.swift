@@ -9,11 +9,11 @@ import UIKit
 import CoreLocation
 
 class SavedWordsTableViewController: UITableViewController {
-
-    //MARK: - IBOutlets
-    private let searchController = UISearchController()
     
     //MARK: - Properties
+    lazy var searchController = {
+        return UISearchController()
+    }()
     let model = SavedWordsModel()
     
     //MARK: - Lifecycle
