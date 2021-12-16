@@ -6,5 +6,5 @@ target '007-011_2021' do
   use_frameworks!
 
   pod 'SnapKit', '~> 5.0'
-pod 'lottie-ios', '~> 3.2'
+  pod 'lottie-ios', '~> 3.2'
 end

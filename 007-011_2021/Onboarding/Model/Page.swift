@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Page{
+struct Page {
     let animationName: String
     let title: String
     let description: String
