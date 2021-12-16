@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="SearchWordsTableViewCell" customModule="_07_011_2021" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="70"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w2C-ej-HFT">
+                        <rect key="frame" x="20" y="27" width="120" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="bLJ-HG-SR9"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phonetics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pGf-1G-4du">
+                        <rect key="frame" x="166" y="27" width="120" height="21"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="fFs-5G-iLu"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="42I-eY-5Cm">
+                        <rect key="frame" x="309" y="22" width="85" height="31"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <buttonConfiguration key="configuration" style="plain"/>
+                        <connections>
+                            <action selector="addWordFromSearchAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4Mr-IX-m33"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pGf-1G-4du" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="47B-GS-tag"/>
+                    <constraint firstAttribute="trailing" secondItem="42I-eY-5Cm" secondAttribute="trailing" constant="20" id="6id-Gh-4tm"/>
+                    <constraint firstItem="w2C-ej-HFT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="27" id="EIa-mL-5Mj"/>
+                    <constraint firstItem="42I-eY-5Cm" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="22" id="QRE-HO-YCb"/>
+                    <constraint firstItem="w2C-ej-HFT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="WSi-dS-mpd"/>
+                    <constraint firstAttribute="bottom" secondItem="42I-eY-5Cm" secondAttribute="bottom" constant="17" id="YMc-dM-121"/>
+                    <constraint firstAttribute="bottom" secondItem="w2C-ej-HFT" secondAttribute="bottom" constant="22" id="c6Y-uz-r6N"/>
+                    <constraint firstAttribute="bottom" secondItem="pGf-1G-4du" secondAttribute="bottom" constant="22" id="clG-eY-sqb"/>
+                    <constraint firstItem="42I-eY-5Cm" firstAttribute="leading" secondItem="pGf-1G-4du" secondAttribute="trailing" constant="23" id="noa-i4-szJ"/>
+                    <constraint firstItem="pGf-1G-4du" firstAttribute="leading" secondItem="w2C-ej-HFT" secondAttribute="trailing" constant="26" id="pIP-N5-FYS"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="addWordFromSearchButton" destination="42I-eY-5Cm" id="nvu-eK-L3a"/>
+                <outlet property="searchWordPhoneticsLabel" destination="pGf-1G-4du" id="9K3-n1-4h9"/>
+                <outlet property="searchWordTitleLabel" destination="w2C-ej-HFT" id="auo-hb-nJl"/>
+            </connections>
+            <point key="canvasLocation" x="132" y="100"/>
+        </tableViewCell>
+    </objects>
+</document>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="PJY-AS-Bgh" customClass="OnboardingCollectionViewCell" customModule="_07_011_2021" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8kh-96-vpb">
+                <rect key="frame" x="0.0" y="0.0" width="300" height="600"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bap-59-g4h">
+                        <rect key="frame" x="0.0" y="0.0" width="300" height="470"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IOc-P4-Z4o">
+                        <rect key="frame" x="22" y="486" width="43.5" height="27"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="22"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Welcome back, you have joined at a great time." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="QFv-KH-B8v">
+                        <rect key="frame" x="22" y="521" width="256" height="71"/>
+                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Bap-59-g4h" firstAttribute="height" secondItem="8kh-96-vpb" secondAttribute="height" multiplier="0.8" constant="-10" id="5Yx-mn-IrC"/>
+                    <constraint firstAttribute="trailing" secondItem="Bap-59-g4h" secondAttribute="trailing" id="7x5-oi-hUO"/>
+                    <constraint firstItem="IOc-P4-Z4o" firstAttribute="leading" secondItem="8kh-96-vpb" secondAttribute="leading" constant="22" id="AQU-Sx-g3D"/>
+                    <constraint firstItem="Bap-59-g4h" firstAttribute="top" secondItem="8kh-96-vpb" secondAttribute="top" id="DdG-az-P4C"/>
+                    <constraint firstItem="QFv-KH-B8v" firstAttribute="top" secondItem="IOc-P4-Z4o" secondAttribute="bottom" constant="8" id="YGp-hd-168"/>
+                    <constraint firstItem="Bap-59-g4h" firstAttribute="leading" secondItem="8kh-96-vpb" secondAttribute="leading" id="eRH-dC-oO2"/>
+                    <constraint firstItem="QFv-KH-B8v" firstAttribute="leading" secondItem="8kh-96-vpb" secondAttribute="leading" constant="22" id="kMB-i7-hfq"/>
+                    <constraint firstAttribute="trailing" secondItem="QFv-KH-B8v" secondAttribute="trailing" constant="22" id="qaZ-oh-n9v"/>
+                    <constraint firstAttribute="bottom" secondItem="QFv-KH-B8v" secondAttribute="bottom" constant="8" id="qiz-uJ-i0Z"/>
+                    <constraint firstItem="IOc-P4-Z4o" firstAttribute="top" secondItem="Bap-59-g4h" secondAttribute="bottom" constant="16" id="xg5-Af-MwP"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <connections>
+                <outlet property="animationContainer" destination="Bap-59-g4h" id="H6G-ht-TGo"/>
+                <outlet property="descriptionTextView" destination="QFv-KH-B8v" id="pm4-Gt-usV"/>
+                <outlet property="titleLabel" destination="IOc-P4-Z4o" id="INQ-nJ-FKc"/>
+            </connections>
+            <point key="canvasLocation" x="302.89855072463769" y="79.6875"/>
+        </collectionViewCell>
+    </objects>
+</document>
