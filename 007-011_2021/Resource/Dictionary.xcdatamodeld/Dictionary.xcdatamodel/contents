@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="CDDefinitions" representedClassName=".CDDefinitions" syncable="YES">
+        <attribute name="definition" optional="YES" attributeType="String"/>
+        <attribute name="example" optional="YES" attributeType="String"/>
+        <relationship name="meanings_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMeanings" inverseName="definitions" inverseEntity="CDMeanings"/>
+    </entity>
+    <entity name="CDMeanings" representedClassName=".CDMeanings" syncable="YES">
+        <attribute name="partOfSpeech" optional="YES" attributeType="String"/>
+        <relationship name="definitions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDDefinitions" inverseName="meanings_id" inverseEntity="CDDefinitions"/>
+        <relationship name="word_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDWord" inverseName="meanings" inverseEntity="CDWord"/>
+    </entity>
+    <entity name="CDPhonetics" representedClassName=".CDPhonetics" syncable="YES">
+        <attribute name="audio" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="word_id" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDWord" inverseName="phonetics" inverseEntity="CDWord"/>
+    </entity>
+    <entity name="CDWord" representedClassName=".CDWord" syncable="YES">
+        <attribute name="origin" optional="YES" attributeType="String"/>
+        <attribute name="phonetic" optional="YES" attributeType="String"/>
+        <attribute name="word" optional="YES" attributeType="String"/>
+        <relationship name="meanings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDMeanings" inverseName="word_id" inverseEntity="CDMeanings"/>
+        <relationship name="phonetics" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="CDPhonetics" inverseName="word_id" inverseEntity="CDPhonetics"/>
+    </entity>
+    <elements>
+        <element name="CDDefinitions" positionX="-63" positionY="-18" width="128" height="74"/>
+        <element name="CDMeanings" positionX="-45" positionY="27" width="128" height="74"/>
+        <element name="CDPhonetics" positionX="-36" positionY="36" width="128" height="74"/>
+        <element name="CDWord" positionX="-18" positionY="63" width="128" height="104"/>
+    </elements>
+</model>
