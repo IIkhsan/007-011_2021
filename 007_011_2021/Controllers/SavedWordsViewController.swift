@@ -16,11 +16,7 @@ class SavedWordsViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addNewWordButton.layer.cornerRadius = 20
-        searchBar.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.register(UINib(nibName: NibsNames.savedWordsNibName, bundle: Bundle.main), forCellReuseIdentifier: CellsIdentifiers.savedWordsCellId)
+        configure()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -40,6 +36,16 @@ class SavedWordsViewController: UIViewController, UISearchBarDelegate {
             viewController.modalPresentationStyle = .fullScreen
             present(viewController, animated: false, completion: nil)
         }
+    }
+    
+    // MARK: - Private funcs
+    
+    private func configure() {
+        addNewWordButton.layer.cornerRadius = 20
+        searchBar.delegate = self
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: NibsNames.savedWordsNibName, bundle: Bundle.main), forCellReuseIdentifier: CellsIdentifiers.savedWordsCellId)
     }
     
     // MARK: - IBActions

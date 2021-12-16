@@ -15,12 +15,19 @@ class SearchWordsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configure()
+    }
+    
+    // MARK: - Private funcs
+    
+    private func configure() {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.register(UINib(nibName: NibsNames.searchWordsNibName, bundle: Bundle.main), forCellReuseIdentifier: CellsIdentifiers.searchWordsCellId)
         searchBar.delegate = self
     }
 }
+
 
 // MARK: - UITableViewDelegate
 
