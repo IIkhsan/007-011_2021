@@ -9,21 +9,61 @@
 /* Begin PBXBuildFile section */
 		4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */; };
 		4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */; };
-		4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26F2748EFFF00070A45 /* ViewController.swift */; };
+		4DA9A2702748EFFF00070A45 /* MainListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DA9A26F2748EFFF00070A45 /* MainListViewController.swift */; };
 		4DA9A2732748EFFF00070A45 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2712748EFFF00070A45 /* Main.storyboard */; };
 		4DA9A2752748F00100070A45 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2742748F00100070A45 /* Assets.xcassets */; };
 		4DA9A2782748F00100070A45 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */; };
+		CFD0C1272769378E00F3D7E7 /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C1262769378E00F3D7E7 /* PersistableService.swift */; };
+		CFD0C1292769379D00F3D7E7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C1282769379D00F3D7E7 /* NetworkService.swift */; };
+		CFD0C12B2769468B00F3D7E7 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C12A2769468B00F3D7E7 /* Word.swift */; };
+		CFD0C12D2769475300F3D7E7 /* Phonetic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C12C2769475300F3D7E7 /* Phonetic.swift */; };
+		CFD0C1302769479A00F3D7E7 /* Meaning.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C12F2769479A00F3D7E7 /* Meaning.swift */; };
+		CFD0C1322769482C00F3D7E7 /* Definition.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C1312769482C00F3D7E7 /* Definition.swift */; };
+		CFD0C135276B540500F3D7E7 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C133276B540500F3D7E7 /* Model.xcdatamodeld */; };
+		CFD0C143276B6A3300F3D7E7 /* MeaningEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C137276B6A3300F3D7E7 /* MeaningEntity+CoreDataClass.swift */; };
+		CFD0C144276B6A3300F3D7E7 /* MeaningEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C138276B6A3300F3D7E7 /* MeaningEntity+CoreDataProperties.swift */; };
+		CFD0C145276B6A3300F3D7E7 /* PhoneticEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C139276B6A3300F3D7E7 /* PhoneticEntity+CoreDataClass.swift */; };
+		CFD0C146276B6A3300F3D7E7 /* PhoneticEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C13A276B6A3300F3D7E7 /* PhoneticEntity+CoreDataProperties.swift */; };
+		CFD0C147276B6A3300F3D7E7 /* AntonymEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C13B276B6A3300F3D7E7 /* AntonymEntity+CoreDataClass.swift */; };
+		CFD0C148276B6A3300F3D7E7 /* AntonymEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C13C276B6A3300F3D7E7 /* AntonymEntity+CoreDataProperties.swift */; };
+		CFD0C149276B6A3300F3D7E7 /* WordEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C13D276B6A3300F3D7E7 /* WordEntity+CoreDataClass.swift */; };
+		CFD0C14A276B6A3300F3D7E7 /* WordEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C13E276B6A3300F3D7E7 /* WordEntity+CoreDataProperties.swift */; };
+		CFD0C14B276B6A3300F3D7E7 /* DefinitionEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C13F276B6A3300F3D7E7 /* DefinitionEntity+CoreDataClass.swift */; };
+		CFD0C14C276B6A3300F3D7E7 /* DefinitionEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C140276B6A3300F3D7E7 /* DefinitionEntity+CoreDataProperties.swift */; };
+		CFD0C14D276B6A3300F3D7E7 /* SynonymEntity+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C141276B6A3300F3D7E7 /* SynonymEntity+CoreDataClass.swift */; };
+		CFD0C14E276B6A3300F3D7E7 /* SynonymEntity+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFD0C142276B6A3300F3D7E7 /* SynonymEntity+CoreDataProperties.swift */; };
+		CFFCDF37276E0E5C0091E3FC /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CFFCDF36276E0E5C0091E3FC /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		4DA9A2682748EFFF00070A45 /* 007-011_2021.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "007-011_2021.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4DA9A26F2748EFFF00070A45 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4DA9A26F2748EFFF00070A45 /* MainListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainListViewController.swift; sourceTree = "<group>"; };
 		4DA9A2722748EFFF00070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4DA9A2742748F00100070A45 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4DA9A2772748F00100070A45 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4DA9A2792748F00100070A45 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CFD0C1262769378E00F3D7E7 /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
+		CFD0C1282769379D00F3D7E7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CFD0C12A2769468B00F3D7E7 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		CFD0C12C2769475300F3D7E7 /* Phonetic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Phonetic.swift; sourceTree = "<group>"; };
+		CFD0C12F2769479A00F3D7E7 /* Meaning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meaning.swift; sourceTree = "<group>"; };
+		CFD0C1312769482C00F3D7E7 /* Definition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Definition.swift; sourceTree = "<group>"; };
+		CFD0C134276B540500F3D7E7 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		CFD0C137276B6A3300F3D7E7 /* MeaningEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeaningEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CFD0C138276B6A3300F3D7E7 /* MeaningEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MeaningEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CFD0C139276B6A3300F3D7E7 /* PhoneticEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CFD0C13A276B6A3300F3D7E7 /* PhoneticEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PhoneticEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CFD0C13B276B6A3300F3D7E7 /* AntonymEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AntonymEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CFD0C13C276B6A3300F3D7E7 /* AntonymEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AntonymEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CFD0C13D276B6A3300F3D7E7 /* WordEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CFD0C13E276B6A3300F3D7E7 /* WordEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WordEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CFD0C13F276B6A3300F3D7E7 /* DefinitionEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CFD0C140276B6A3300F3D7E7 /* DefinitionEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DefinitionEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CFD0C141276B6A3300F3D7E7 /* SynonymEntity+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SynonymEntity+CoreDataClass.swift"; sourceTree = "<group>"; };
+		CFD0C142276B6A3300F3D7E7 /* SynonymEntity+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SynonymEntity+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		CFFCDF36276E0E5C0091E3FC /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +96,99 @@
 		4DA9A26A2748EFFF00070A45 /* 007-011_2021 */ = {
 			isa = PBXGroup;
 			children = (
-				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
-				4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */,
-				4DA9A26F2748EFFF00070A45 /* ViewController.swift */,
-				4DA9A2712748EFFF00070A45 /* Main.storyboard */,
-				4DA9A2742748F00100070A45 /* Assets.xcassets */,
-				4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */,
+				CFD0C12E2769476E00F3D7E7 /* Entities */,
+				CFFCDF3A276E84FC0091E3FC /* Delegates */,
+				CFFCDF3B276E85140091E3FC /* Controllers */,
+				CFFCDF3C276E85240091E3FC /* Views */,
+				CFFCDF3D276E85310091E3FC /* Resources */,
 				4DA9A2792748F00100070A45 /* Info.plist */,
+				CFD0C136276B640B00F3D7E7 /* Services */,
 			);
 			path = "007-011_2021";
+			sourceTree = "<group>";
+		};
+		CFD0C12E2769476E00F3D7E7 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				CFFCDF39276E84DE0091E3FC /* DatabaseEntities */,
+				CFFCDF38276E84D50091E3FC /* Models */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		CFD0C136276B640B00F3D7E7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CFD0C1262769378E00F3D7E7 /* PersistableService.swift */,
+				CFD0C1282769379D00F3D7E7 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CFFCDF38276E84D50091E3FC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CFD0C12A2769468B00F3D7E7 /* Word.swift */,
+				CFD0C12C2769475300F3D7E7 /* Phonetic.swift */,
+				CFD0C12F2769479A00F3D7E7 /* Meaning.swift */,
+				CFD0C1312769482C00F3D7E7 /* Definition.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CFFCDF39276E84DE0091E3FC /* DatabaseEntities */ = {
+			isa = PBXGroup;
+			children = (
+				CFD0C137276B6A3300F3D7E7 /* MeaningEntity+CoreDataClass.swift */,
+				CFD0C138276B6A3300F3D7E7 /* MeaningEntity+CoreDataProperties.swift */,
+				CFD0C139276B6A3300F3D7E7 /* PhoneticEntity+CoreDataClass.swift */,
+				CFD0C13A276B6A3300F3D7E7 /* PhoneticEntity+CoreDataProperties.swift */,
+				CFD0C13B276B6A3300F3D7E7 /* AntonymEntity+CoreDataClass.swift */,
+				CFD0C13C276B6A3300F3D7E7 /* AntonymEntity+CoreDataProperties.swift */,
+				CFD0C13D276B6A3300F3D7E7 /* WordEntity+CoreDataClass.swift */,
+				CFD0C13E276B6A3300F3D7E7 /* WordEntity+CoreDataProperties.swift */,
+				CFD0C13F276B6A3300F3D7E7 /* DefinitionEntity+CoreDataClass.swift */,
+				CFD0C140276B6A3300F3D7E7 /* DefinitionEntity+CoreDataProperties.swift */,
+				CFD0C141276B6A3300F3D7E7 /* SynonymEntity+CoreDataClass.swift */,
+				CFD0C142276B6A3300F3D7E7 /* SynonymEntity+CoreDataProperties.swift */,
+			);
+			path = DatabaseEntities;
+			sourceTree = "<group>";
+		};
+		CFFCDF3A276E84FC0091E3FC /* Delegates */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
+				4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */,
+			);
+			path = Delegates;
+			sourceTree = "<group>";
+		};
+		CFFCDF3B276E85140091E3FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A26F2748EFFF00070A45 /* MainListViewController.swift */,
+				CFFCDF36276E0E5C0091E3FC /* DetailViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CFFCDF3C276E85240091E3FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A2712748EFFF00070A45 /* Main.storyboard */,
+				4DA9A2762748F00100070A45 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		CFFCDF3D276E85310091E3FC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4DA9A2742748F00100070A45 /* Assets.xcassets */,
+				CFD0C133276B540500F3D7E7 /* Model.xcdatamodeld */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +262,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4DA9A2702748EFFF00070A45 /* ViewController.swift in Sources */,
+				CFD0C14D276B6A3300F3D7E7 /* SynonymEntity+CoreDataClass.swift in Sources */,
+				CFD0C14A276B6A3300F3D7E7 /* WordEntity+CoreDataProperties.swift in Sources */,
+				CFFCDF37276E0E5C0091E3FC /* DetailViewController.swift in Sources */,
+				CFD0C14C276B6A3300F3D7E7 /* DefinitionEntity+CoreDataProperties.swift in Sources */,
+				CFD0C1292769379D00F3D7E7 /* NetworkService.swift in Sources */,
+				CFD0C1322769482C00F3D7E7 /* Definition.swift in Sources */,
+				4DA9A2702748EFFF00070A45 /* MainListViewController.swift in Sources */,
+				CFD0C145276B6A3300F3D7E7 /* PhoneticEntity+CoreDataClass.swift in Sources */,
+				CFD0C146276B6A3300F3D7E7 /* PhoneticEntity+CoreDataProperties.swift in Sources */,
 				4DA9A26C2748EFFF00070A45 /* AppDelegate.swift in Sources */,
+				CFD0C1272769378E00F3D7E7 /* PersistableService.swift in Sources */,
+				CFD0C14E276B6A3300F3D7E7 /* SynonymEntity+CoreDataProperties.swift in Sources */,
+				CFD0C14B276B6A3300F3D7E7 /* DefinitionEntity+CoreDataClass.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
+				CFD0C12B2769468B00F3D7E7 /* Word.swift in Sources */,
+				CFD0C143276B6A3300F3D7E7 /* MeaningEntity+CoreDataClass.swift in Sources */,
+				CFD0C149276B6A3300F3D7E7 /* WordEntity+CoreDataClass.swift in Sources */,
+				CFD0C144276B6A3300F3D7E7 /* MeaningEntity+CoreDataProperties.swift in Sources */,
+				CFD0C135276B540500F3D7E7 /* Model.xcdatamodeld in Sources */,
+				CFD0C147276B6A3300F3D7E7 /* AntonymEntity+CoreDataClass.swift in Sources */,
+				CFD0C12D2769475300F3D7E7 /* Phonetic.swift in Sources */,
+				CFD0C1302769479A00F3D7E7 /* Meaning.swift in Sources */,
+				CFD0C148276B6A3300F3D7E7 /* AntonymEntity+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +433,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 939KD425D9;
+				DEVELOPMENT_TEAM = 5NAKQ28539;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "007-011_2021/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -297,6 +441,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -317,7 +462,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 939KD425D9;
+				DEVELOPMENT_TEAM = 5NAKQ28539;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "007-011_2021/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -325,6 +470,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -360,6 +506,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		CFD0C133276B540500F3D7E7 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				CFD0C134276B540500F3D7E7 /* Model.xcdatamodel */,
+			);
+			currentVersion = CFD0C134276B540500F3D7E7 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 4DA9A2602748EFFF00070A45 /* Project object */;
 }
