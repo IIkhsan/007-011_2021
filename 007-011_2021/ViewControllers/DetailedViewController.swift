@@ -29,6 +29,7 @@ class DetailedViewController: UIViewController {
         wordLabel.text = word?.word
         phoneticLabel.text = word?.phonetic
         originLabel.text = word?.origin
+        addToFavouritesButton.layer.cornerRadius = 20
         
         if(saved ?? true){
             addToFavouritesButton.isHidden = true

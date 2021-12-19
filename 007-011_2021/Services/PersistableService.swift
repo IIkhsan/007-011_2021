@@ -15,7 +15,7 @@ class PersistableService {
     private let userDefaultsIsNotFirstOpeningOfTheApplicationKey = "isNotFirstOpening"
     
     // MARK: - Core Data stack
-    lazy private var persistentContainer: NSPersistentContainer = {
+    lazy public var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "007-011_2021")
         container.loadPersistentStores(completionHandler: { (storeDescription, error) in
             if let error = error as NSError? {
@@ -56,14 +56,16 @@ class PersistableService {
     }
     
     func getAllSavedWords() -> [WordEntity] {
-        let request: NSFetchRequest<WordEntity> = WordEntity.fetchRequest()
+        let fetchRequest = WordEntity.fetchRequest()
+        var wordEntities: [WordEntity] = []
+        
         do {
-            let result = try context.fetch(request)
-            return result
+            wordEntities = try context.fetch(fetchRequest)
         } catch {
             print(error)
         }
-        return []
+        
+        return wordEntities
     }
     
     func saveWord(_ word: Word) {
@@ -71,11 +73,11 @@ class PersistableService {
         wordEntity.word = word.word
         wordEntity.phonetic = word.phonetic
         wordEntity.origin = word.origin
-        let phonetics = self.convertPhoneticsArrayToSet(phonetics: word.phonetics ?? [])
-        wordEntity.phonetics = phonetics
+        let phonetics: NSSet = self.convertPhoneticsArrayToSet(phonetics: word.phonetics ?? [])
+        wordEntity.addToPhonetics(phonetics)
         
-        let meanings = castMeaningsToSet(word.meanings)
-        wordEntity.meanings = meanings
+        let meanings = self.convertMeaningsArrayToSet(meanings: word.meanings ?? [])
+        wordEntity.addToMeanings(meanings)
         
         do {
             try context.save()
@@ -87,10 +89,28 @@ class PersistableService {
     func convertPhoneticsArrayToSet(phonetics: [Phonetic]) -> NSSet {
         var phoneticsSet: [PhoneticEntity] = []
         for currentPhonetics in phonetics {
-            let temporaryPhonetics = savePhonetics(phonetics: currentPhonetics)
-            phoneticsSet.append(temporaryPhonetics)
+            let temp = savePhonetics(phonetics: currentPhonetics)
+            phoneticsSet.append(temp)
         }
         return NSSet(array: phoneticsSet)
+    }
+    
+    func convertMeaningsArrayToSet(meanings: [Meaning]) -> NSSet {
+        var meaningsSet: [MeaningEntity] = []
+        for meaning in meanings {
+            let temp = saveMeaning(meaning)
+            meaningsSet.append(temp)
+        }
+        return NSSet(array: meaningsSet)
+    }
+    
+    func convertDefinitionsArrayToSet(definitions: [Definition]) -> NSSet {
+        var definitionsSet: [DefinitionEntity] = []
+        for definition in definitions {
+            let temp = saveDefinition(definition)
+            definitionsSet.append(temp)
+        }
+        return NSSet(array: definitionsSet)
     }
     
     func savePhonetics(phonetics: Phonetic) -> PhoneticEntity {
@@ -108,7 +128,7 @@ class PersistableService {
     func saveMeaning(_ meaning: Meaning) -> MeaningEntity {
         let meaningEntity = MeaningEntity(context: context)
         meaningEntity.partOfSpeech = meaning.partOfSpeech
-        meaningEntity.definitions = castDefinitionsToSet(meaning.definitions) as NSSet?
+        meaningEntity.definitions = convertDefinitionsArrayToSet(definitions: meaning.definitions ?? []) as NSSet?
         
         do {
             try context.save()
@@ -135,30 +155,6 @@ class PersistableService {
         return definitionEntity
     }
     
-    func castDefinitionsToSet(_ definitions: [Definition]?) -> NSSet? {
-        return castObjectToSet(definitions, action: saveDefinition)
-    }
-    
-    func castMeaningsToSet(_ meanings: [Meaning]?) -> NSSet? {
-        return castObjectToSet(meanings, action: saveMeaning)
-    }
-
-    
-    private func castObjectToSet<T,U>(_ array: [T]?, action: ((T) -> (U))) -> NSSet? {
-        var entities: [U] = []
-        
-        guard let phonetics = array else {
-            return NSSet(array: entities)
-        }
-        
-        for phonetic in phonetics {
-            entities.append(action(phonetic))
-        }
-        let set = NSSet(array: entities)
-        return set
-    }
-    
-    
     func deleteWord(_ word: Word) {
         let request = WordEntity.fetchRequest()
         
@@ -175,13 +171,11 @@ class PersistableService {
         }
     }
     
-    func isFirstOpeningOfTheApplication() -> Bool {
-        let userDefaults = UserDefaults.standard
-        let key = userDefaultsIsNotFirstOpeningOfTheApplicationKey
-        let isNotFirstOpening = userDefaults.bool(forKey: key)
-        if !isNotFirstOpening {
-            userDefaults.set(true, forKey: key)
-        }
-        return !isNotFirstOpening
+    func isOldUser() -> Bool {
+        return UserDefaults.standard.bool(forKey: "isOldUser")
+    }
+    
+    func setIsOldUser() {
+        UserDefaults.standard.set(true, forKey: "isOldUser")
     }
 }

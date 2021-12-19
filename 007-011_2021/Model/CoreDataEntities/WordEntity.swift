@@ -37,10 +37,10 @@ extension WordEntity {
     @NSManaged public func removeFromMeanings(_ value: MeaningEntity)
 
     @objc(addMeanings:)
-    @NSManaged public func addToMeanings(_ values: Set<MeaningEntity>)
+    @NSManaged public func addToMeanings(_ values: NSSet)
 
     @objc(removeMeanings:)
-    @NSManaged public func removeFromMeanings(_ values: Set<MeaningEntity>)
+    @NSManaged public func removeFromMeanings(_ values: NSSet)
 
 }
 
@@ -54,9 +54,9 @@ extension WordEntity {
     @NSManaged public func removeFromPhonetics(_ value: PhoneticEntity)
 
     @objc(addPhonetics:)
-    @NSManaged public func addToPhonetics(_ values: Set<PhoneticEntity>)
+    @NSManaged public func addToPhonetics(_ values: NSSet)
 
     @objc(removePhonetics:)
-    @NSManaged public func removeFromPhonetics(_ values: Set<PhoneticEntity>)
+    @NSManaged public func removeFromPhonetics(_ values: NSSet)
 
 }

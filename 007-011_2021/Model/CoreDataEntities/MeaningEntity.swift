@@ -35,9 +35,9 @@ extension MeaningEntity {
     @NSManaged public func removeFromDefinitions(_ value: DefinitionEntity)
 
     @objc(addDefinitions:)
-    @NSManaged public func addToDefinitions(_ values: Set<DefinitionEntity>)
+    @NSManaged public func addToDefinitions(_ values: NSSet)
 
     @objc(removeDefinitions:)
-    @NSManaged public func removeFromDefinitions(_ values: Set<DefinitionEntity>)
+    @NSManaged public func removeFromDefinitions(_ values: NSSet)
 
 }

@@ -49,14 +49,44 @@ class WordServicesInteractor {
         let word = wordEntity.word
         let origin = wordEntity.origin
         let phonetic = wordEntity.phonetic ?? ""
-        var meanings: [Meaning] = []
-//        for meaning in wordEntity.meanings {
-//            meanings.append(transferMeaningEntity(meaningEntity: meaning))
-//        }
-        var phonetics: [Phonetic] = []
-//        for phonetic in wordEntity.phonetics {
-//            phonetics.append(transferPhoneticEntity(phoneticEntity: phonetic))
-//        }
+        let meanings: [Meaning] = castMeaningsSetToArray(meaningEntitiesSet: wordEntity.meanings ?? NSSet(array:[]))
+        let phonetics: [Phonetic] = castPhoneticsSetToArray(phoneticEntitiesSet: wordEntity.phonetics ?? NSSet(array:[]))
+
         return Word(word: word, phonetic: phonetic, phonetics: phonetics, origin: origin, meanings: meanings)
+    }
+    
+    // MARK: - Private functions
+    
+    private func castMeaningsSetToArray(meaningEntitiesSet: NSSet) -> [Meaning] {
+        var meanings: [Meaning] = []
+        guard let meaningEntities = meaningEntitiesSet.allObjects as? [MeaningEntity] else { return [] }
+        
+        for meaningEntity in meaningEntities {
+            meanings.append(Meaning(partOfSpeech: meaningEntity.partOfSpeech, definitions: castDefenitionsSetToArray(defenitionEntitiesSet: meaningEntity.definitions ?? [])))
+        }
+        
+        return meanings
+    }
+    
+    private func castDefenitionsSetToArray(defenitionEntitiesSet: NSSet) -> [Definition] {
+        var definitions: [Definition] = []
+        guard let definitionEntities = defenitionEntitiesSet.allObjects as? [DefinitionEntity] else { return [] }
+        
+        for definitionEntity in definitionEntities {
+            definitions.append(Definition(definition: definitionEntity.definition, example: definitionEntity.example, synonyms: definitionEntity.synonyms, antonyms: definitionEntity.antonyms))
+        }
+        
+        return definitions
+    }
+    
+    private func castPhoneticsSetToArray(phoneticEntitiesSet: NSSet) -> [Phonetic] {
+        var phonetics: [Phonetic] = []
+        guard let phoneticEntities = phoneticEntitiesSet.allObjects as? [PhoneticEntity] else { return [] }
+        
+        for phoneticEntity in phoneticEntities {
+            phonetics.append(Phonetic(text: phoneticEntity.text, audio: phoneticEntity.audio))
+        }
+        
+        return phonetics
     }
 }

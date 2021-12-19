@@ -10,12 +10,20 @@ import UIKit
 class SearchTableViewController: UITableViewController {
     
     //MARK: - Properties
+    
     let model = SearchWordsModel()
     let searchController = UISearchController()
     var delegate: SearchVCDelegate? = nil
     
     //MARK: - Lifecycle
+    
     override func viewDidLoad() {
+        if !PersistableService.shared.isOldUser() {
+            let onboardingStoryboard = UIStoryboard(name: "Onboarding", bundle: nil)
+            let viewController = onboardingStoryboard.instantiateViewController(withIdentifier: "OnboardingViewController")
+            viewController.modalPresentationStyle = .fullScreen
+            present(viewController, animated: true)
+        }
         setUpSearchController()
         tableView.register(UINib(nibName: "WordTableViewCell", bundle: nil), forCellReuseIdentifier: "wordCell")
     }
