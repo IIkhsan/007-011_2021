@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="19461" systemVersion="21A559" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="DefinitionEntity" representedClassName="DefinitionEntity" syncable="YES">
+        <attribute name="antonyms" optional="YES" attributeType="String"/>
+        <attribute name="definition" optional="YES" attributeType="String"/>
+        <attribute name="example" optional="YES" attributeType="String"/>
+        <attribute name="synonyms" optional="YES" attributeType="String"/>
+        <relationship name="meaning" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MeaningEntity" inverseName="definitions" inverseEntity="MeaningEntity"/>
+    </entity>
+    <entity name="MeaningEntity" representedClassName="MeaningEntity" syncable="YES">
+        <attribute name="partOfSpeech" optional="YES" attributeType="String"/>
+        <relationship name="definitions" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="DefinitionEntity" inverseName="meaning" inverseEntity="DefinitionEntity"/>
+        <relationship name="word" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WordEntity" inverseName="meanings" inverseEntity="WordEntity"/>
+    </entity>
+    <entity name="PhoneticEntity" representedClassName="PhoneticEntity" syncable="YES">
+        <attribute name="audio" optional="YES" attributeType="String"/>
+        <attribute name="text" optional="YES" attributeType="String"/>
+        <relationship name="word" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="WordEntity" inverseName="phonetics" inverseEntity="WordEntity"/>
+    </entity>
+    <entity name="WordEntity" representedClassName="WordEntity" syncable="YES">
+        <attribute name="origin" optional="YES" attributeType="String"/>
+        <attribute name="phonetic" optional="YES" attributeType="String"/>
+        <attribute name="word" optional="YES" attributeType="String"/>
+        <relationship name="meanings" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="MeaningEntity" inverseName="word" inverseEntity="MeaningEntity"/>
+        <relationship name="phonetics" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PhoneticEntity" inverseName="word" inverseEntity="PhoneticEntity"/>
+    </entity>
+    <elements>
+        <element name="WordEntity" positionX="-63" positionY="-18" width="128" height="104"/>
+        <element name="PhoneticEntity" positionX="-54" positionY="-9" width="128" height="74"/>
+        <element name="MeaningEntity" positionX="0" positionY="45" width="128" height="74"/>
+        <element name="DefinitionEntity" positionX="18" positionY="63" width="128" height="104"/>
+    </elements>
+</model>

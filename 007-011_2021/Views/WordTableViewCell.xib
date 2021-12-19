@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TGz-gx-uvD" customClass="WordTableViewCell" customModule="_07_011_2021" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TGz-gx-uvD" id="9Oq-By-uI3">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IFF-pM-DtL">
+                        <rect key="frame" x="12" y="12" width="41.5" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PlK-xk-NAb">
+                        <rect key="frame" x="157" y="12" width="147" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="IFF-pM-DtL" firstAttribute="top" secondItem="9Oq-By-uI3" secondAttribute="top" constant="12" id="GjO-LZ-isP"/>
+                    <constraint firstAttribute="bottom" secondItem="IFF-pM-DtL" secondAttribute="bottom" constant="12" id="Oqr-AY-r8h"/>
+                    <constraint firstItem="IFF-pM-DtL" firstAttribute="leading" secondItem="9Oq-By-uI3" secondAttribute="leading" constant="12" id="TmK-vg-Lhi"/>
+                    <constraint firstItem="PlK-xk-NAb" firstAttribute="top" secondItem="9Oq-By-uI3" secondAttribute="top" constant="12" id="VmF-Mc-dcS"/>
+                    <constraint firstAttribute="bottom" secondItem="PlK-xk-NAb" secondAttribute="bottom" constant="12" id="bBF-i4-Eaf"/>
+                    <constraint firstItem="PlK-xk-NAb" firstAttribute="leading" relation="lessThanOrEqual" secondItem="IFF-pM-DtL" secondAttribute="trailing" constant="103" id="eMy-YQ-Ooc"/>
+                    <constraint firstAttribute="trailing" secondItem="PlK-xk-NAb" secondAttribute="trailing" constant="16" id="orf-zi-FTZ"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="pyW-ry-r4t"/>
+            <connections>
+                <outlet property="phoneticLabel" destination="PlK-xk-NAb" id="SOr-dB-Sdt"/>
+                <outlet property="wordLabel" destination="IFF-pM-DtL" id="qG0-B3-iFN"/>
+            </connections>
+            <point key="canvasLocation" x="137.68115942028987" y="53.571428571428569"/>
+        </tableViewCell>
+    </objects>
+</document>
