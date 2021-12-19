@@ -12,16 +12,20 @@ class PersistableService {
     
     //MARK: - Properties
     static let shared = PersistableService()
+    private let userDefaultsIsNotFirstOpeningOfTheApplicationKey = "isNotFirstOpening"
     
-    
-    var context: NSManagedObjectContext  {
+    // MARK: - Core Data stack
+    lazy private var persistentContainer: NSPersistentContainer = {
         let container = NSPersistentContainer(name: "007-011_2021")
-        container.loadPersistentStores(completionHandler: { _, error in
-            _ = error.map { fatalError("Unresolved error \($0)") }
+        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+            if let error = error as NSError? {
+                fatalError("Unresolved error \(error), \(error.userInfo)")
+            }
         })
-        let context = container.viewContext
-        return context
-    }
+        return container
+    }()
+    
+    lazy public var context = persistentContainer.viewContext
     
     private init() {
     }
@@ -64,11 +68,14 @@ class PersistableService {
     
     func saveWord(_ word: Word) {
         let wordEntity = WordEntity(context: context)
-        wordEntity.word = word.word ?? ""
+        wordEntity.word = word.word
         wordEntity.phonetic = word.phonetic
         wordEntity.origin = word.origin
-        wordEntity.phonetics = castPhoneticsToSet(word.phonetics)
-        wordEntity.meanings = castMeaningsToSet(word.meanings)
+        let phonetics = self.convertPhoneticsArrayToSet(phonetics: word.phonetics ?? [])
+        wordEntity.phonetics = phonetics
+        
+        let meanings = castMeaningsToSet(word.meanings)
+        wordEntity.meanings = meanings
         
         do {
             try context.save()
@@ -77,24 +84,31 @@ class PersistableService {
         }
     }
     
-    func savePhonetic(_ phonetic: Phonetic) -> PhoneticEntity {
-        let phoneticEntity = PhoneticEntity(context: context)
-        phoneticEntity.audio = phonetic.audio
-        phoneticEntity.text = phonetic.text
-        
+    func convertPhoneticsArrayToSet(phonetics: [Phonetic]) -> NSSet {
+        var phoneticsSet: [PhoneticEntity] = []
+        for currentPhonetics in phonetics {
+            let temporaryPhonetics = savePhonetics(phonetics: currentPhonetics)
+            phoneticsSet.append(temporaryPhonetics)
+        }
+        return NSSet(array: phoneticsSet)
+    }
+    
+    func savePhonetics(phonetics: Phonetic) -> PhoneticEntity {
+        let phoneticsEntity = PhoneticEntity(context: context)
+        phoneticsEntity.audio = phonetics.audio
+        phoneticsEntity.text = phonetics.text
         do {
             try context.save()
         } catch let error {
             print("Error: \(error)")
         }
-        
-        return phoneticEntity
+        return phoneticsEntity
     }
     
     func saveMeaning(_ meaning: Meaning) -> MeaningEntity {
         let meaningEntity = MeaningEntity(context: context)
         meaningEntity.partOfSpeech = meaning.partOfSpeech
-        meaningEntity.definitions = castDefinitionsToSet(meaning.definitions) as NSSet
+        meaningEntity.definitions = castDefinitionsToSet(meaning.definitions) as NSSet?
         
         do {
             try context.save()
@@ -121,19 +135,16 @@ class PersistableService {
         return definitionEntity
     }
     
-    func castDefinitionsToSet(_ definitions: [Definition]?) -> NSSet {
+    func castDefinitionsToSet(_ definitions: [Definition]?) -> NSSet? {
         return castObjectToSet(definitions, action: saveDefinition)
     }
     
-    func castMeaningsToSet(_ meanings: [Meaning]?) -> NSSet {
+    func castMeaningsToSet(_ meanings: [Meaning]?) -> NSSet? {
         return castObjectToSet(meanings, action: saveMeaning)
     }
+
     
-    func castPhoneticsToSet(_ phonetics: [Phonetic]?) -> NSSet {
-        return castObjectToSet(phonetics, action: savePhonetic)
-    }
-    
-    private func castObjectToSet<T,U>(_ array: [T]?, action: ((T) -> (U))) -> NSSet {
+    private func castObjectToSet<T,U>(_ array: [T]?, action: ((T) -> (U))) -> NSSet? {
         var entities: [U] = []
         
         guard let phonetics = array else {
@@ -143,8 +154,8 @@ class PersistableService {
         for phonetic in phonetics {
             entities.append(action(phonetic))
         }
-        
-        return NSSet(array: entities)
+        let set = NSSet(array: entities)
+        return set
     }
     
     
@@ -164,5 +175,13 @@ class PersistableService {
         }
     }
     
-    
+    func isFirstOpeningOfTheApplication() -> Bool {
+        let userDefaults = UserDefaults.standard
+        let key = userDefaultsIsNotFirstOpeningOfTheApplicationKey
+        let isNotFirstOpening = userDefaults.bool(forKey: key)
+        if !isNotFirstOpening {
+            userDefaults.set(true, forKey: key)
+        }
+        return !isNotFirstOpening
+    }
 }

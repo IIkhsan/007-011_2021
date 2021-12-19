@@ -28,8 +28,7 @@
 		0497EADC2762135400CBDEF7 /* WordServicesInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497EADB2762135400CBDEF7 /* WordServicesInteractor.swift */; };
 		0497EADE2762139A00CBDEF7 /* PersistableService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497EADD2762139A00CBDEF7 /* PersistableService.swift */; };
 		0497EAE02762148400CBDEF7 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497EADF2762148400CBDEF7 /* NetworkService.swift */; };
-		0497EAE22762152900CBDEF7 /* WordFormatService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497EAE12762152900CBDEF7 /* WordFormatService.swift */; };
-		0497EAE42762167300CBDEF7 /* Word.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497EAE32762167300CBDEF7 /* Word.swift */; };
+		0497EAE42762167300CBDEF7 /* WordModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497EAE32762167300CBDEF7 /* WordModels.swift */; };
 		0497EAE927621D4000CBDEF7 /* SearchVCDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497EAE827621D4000CBDEF7 /* SearchVCDelegate.swift */; };
 		0497EAEF276229EE00CBDEF7 /* OnboardingSlide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497EAEE276229EE00CBDEF7 /* OnboardingSlide.swift */; };
 		0497EAF127622A0C00CBDEF7 /* OnboardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0497EAF027622A0C00CBDEF7 /* OnboardingModel.swift */; };
@@ -66,8 +65,7 @@
 		0497EADB2762135400CBDEF7 /* WordServicesInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordServicesInteractor.swift; sourceTree = "<group>"; };
 		0497EADD2762139A00CBDEF7 /* PersistableService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistableService.swift; sourceTree = "<group>"; };
 		0497EADF2762148400CBDEF7 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
-		0497EAE12762152900CBDEF7 /* WordFormatService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordFormatService.swift; sourceTree = "<group>"; };
-		0497EAE32762167300CBDEF7 /* Word.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Word.swift; sourceTree = "<group>"; };
+		0497EAE32762167300CBDEF7 /* WordModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordModels.swift; sourceTree = "<group>"; };
 		0497EAE827621D4000CBDEF7 /* SearchVCDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVCDelegate.swift; sourceTree = "<group>"; };
 		0497EAEE276229EE00CBDEF7 /* OnboardingSlide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingSlide.swift; sourceTree = "<group>"; };
 		0497EAF027622A0C00CBDEF7 /* OnboardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingModel.swift; sourceTree = "<group>"; };
@@ -98,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0401CB7C276FA89F0044223E /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				0401CB72276F53D80044223E /* AudioPlayerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
 		0436314C2761000100904C54 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -114,13 +120,12 @@
 		043631512761008F00904C54 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				0401CB7C276FA89F0044223E /* Protocols */,
 				4DA9A26B2748EFFF00070A45 /* AppDelegate.swift */,
 				4DA9A26D2748EFFF00070A45 /* SceneDelegate.swift */,
 				0497EADB2762135400CBDEF7 /* WordServicesInteractor.swift */,
 				0497EADD2762139A00CBDEF7 /* PersistableService.swift */,
 				0497EADF2762148400CBDEF7 /* NetworkService.swift */,
-				0497EAE12762152900CBDEF7 /* WordFormatService.swift */,
-				0401CB72276F53D80044223E /* AudioPlayerProtocol.swift */,
 				0401CB74276F53F60044223E /* AudioPlayer.swift */,
 			);
 			path = Services;
@@ -153,7 +158,7 @@
 				0497EABC2762082600CBDEF7 /* WordTableCellData.swift */,
 				0497EAC5276209C000CBDEF7 /* OnboardingPageData.swift */,
 				0497EAD92762130100CBDEF7 /* SavedWordsModel.swift */,
-				0497EAE32762167300CBDEF7 /* Word.swift */,
+				0497EAE32762167300CBDEF7 /* WordModels.swift */,
 				0497EAEE276229EE00CBDEF7 /* OnboardingSlide.swift */,
 				0497EAF027622A0C00CBDEF7 /* OnboardingModel.swift */,
 				0497EAF227622AB100CBDEF7 /* OnboardingUDKeyValues.swift */,
@@ -365,13 +370,12 @@
 				0497EADC2762135400CBDEF7 /* WordServicesInteractor.swift in Sources */,
 				0401CB75276F53F60044223E /* AudioPlayer.swift in Sources */,
 				0401CB78276F65350044223E /* 007-011_2021.xcdatamodeld in Sources */,
-				0497EAE22762152900CBDEF7 /* WordFormatService.swift in Sources */,
 				0497EAD627620FF000CBDEF7 /* OnboardingPageViewController.swift in Sources */,
 				4DA9A26E2748EFFF00070A45 /* SceneDelegate.swift in Sources */,
 				0497EAF727622B6B00CBDEF7 /* OnboardingCollectionViewCell.swift in Sources */,
 				0497EAC8276209FA00CBDEF7 /* PhoneticEntity.swift in Sources */,
 				0497EACE27620AB300CBDEF7 /* MeaningEntity.swift in Sources */,
-				0497EAE42762167300CBDEF7 /* Word.swift in Sources */,
+				0497EAE42762167300CBDEF7 /* WordModels.swift in Sources */,
 				0497EAF127622A0C00CBDEF7 /* OnboardingModel.swift in Sources */,
 				0497EAE02762148400CBDEF7 /* NetworkService.swift in Sources */,
 				0497EAF327622AB100CBDEF7 /* OnboardingUDKeyValues.swift in Sources */,

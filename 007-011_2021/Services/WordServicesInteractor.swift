@@ -13,17 +13,13 @@ class WordServicesInteractor {
     //MARK: - Properties
     let persistableService: PersistableService = PersistableService.shared
     let networkService: NetworkService = NetworkService.shared
-    lazy var transfer: WordFormatTransfer = {
-        let transfer = WordFormatTransfer(context: persistableService.context)
-        return transfer
-    }()
     
     //MARK: - Public functions
     func getSavedWordsContaining(word: String) -> [Word] {
         let wordEntities = persistableService.getSavedWordsContaining(word: word)
         var result: [Word] = []
         for entity in wordEntities {
-            result.append(transfer.transferWordEntityToElement(wordEntity: entity))
+            result.append(transferWordEntityToElement(wordEntity: entity))
         }
         return result
     }
@@ -44,8 +40,23 @@ class WordServicesInteractor {
         let words = persistableService.getAllSavedWords()
         var result: [Word] = []
         for word in words {
-            result.append(transfer.transferWordEntityToElement(wordEntity: word))
+            result.append(transferWordEntityToElement(wordEntity: word))
         }
         return result
+    }
+    
+    public func transferWordEntityToElement(wordEntity: WordEntity) -> Word {
+        let word = wordEntity.word
+        let origin = wordEntity.origin
+        let phonetic = wordEntity.phonetic ?? ""
+        var meanings: [Meaning] = []
+//        for meaning in wordEntity.meanings {
+//            meanings.append(transferMeaningEntity(meaningEntity: meaning))
+//        }
+        var phonetics: [Phonetic] = []
+//        for phonetic in wordEntity.phonetics {
+//            phonetics.append(transferPhoneticEntity(phoneticEntity: phonetic))
+//        }
+        return Word(word: word, phonetic: phonetic, phonetics: phonetics, origin: origin, meanings: meanings)
     }
 }
