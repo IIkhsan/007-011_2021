@@ -36,6 +36,15 @@ class DetailViewController: UIViewController {
         configure(word: word)
     }
     
+    @IBAction func addToFavoritesButtonPressed(_ sender: UIButton) {
+        guard let word = word else {
+            return
+        }
+        
+        PersistableService.shared.saveWord(word: word)
+    }
+    
+    
     // MARK: - Functions
     
     func configure(word: Word?) {
